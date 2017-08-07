@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../layer_mobile/layer.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		table tr td {
+			font-size: 12px;
+			color: #000;
+			vertical-align: middle;
+			height: 44px;
+			border-bottom: 1px solid #E5E5E5;
+		}
+		
+		table tr td:nth-of-type(1) {
+			width: 40%;
+			padding-left: 12px;
+		}
+		
+		table tr td:nth-of-type(2) {
+			width: 60%;
+			text-align: right;
+			padding-right: 12px;
+		}
+		
+		table {
+			background-color: #fff;
+			width: 100%;
+		}
+		
+		.workOrder {
+			display: block;
+			background-color: #fff;
+			padding-top: 1px;
+		}
+		
+		.workOrder-form {
+			margin-bottom: 12px;
+		}
+		
+		.detai {
+			margin-top: 15px;
+		}
+		
+		.btn {
+			border-radius: 10px;
+			margin: 10px;
+			float: right;
+			width: 80px;
+		}
+		
+		.btn:nth-of-type(1) {
+			border-color: #E04249;
+			color: #E04249;
+		}
+		
+		.btn:nth-of-type(2) {
+			border-color: #ccc;
+			color: #ccc;
+		}
+		
+		.btn:nth-of-type(3) {
+			background-color: #1BA0ED;
+			color: #fff;
+		}
+		/*layer弹框*/
+		
+		.popuo {
+			width: 90%;
+			background-color: #F8F8F8;
+		}
+		
+		.layui-m-layer1 .layui-m-layerchild {
+			border-radius: 10px;
+		}
+		
+		.mui-content {
+			width: 100%;
+			background-color: #F8F8F8;
+		}
+		
+		.mui-content textarea {
+			width: 90%;
+			height: 100px;
+			margin-left: 5%;
+		}
+		
+		textarea {
+			padding: 0px;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>任务详情</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="mui-content">
+			<div class="workOrder">
+				<div class="workOrder-form">
+					<p>工单号：<span class="taskCode"></span></p>
+					<p>客户名称：<span class="userName"></span></p>
+					<p>客户地址：<span class="electricityAddress"></span></p>
+				</div>
+			</div>
+			<div class="detai">
+				<table border="0" cellspacing="" cellpadding="">
+					<tr>
+						<td colspan="2" style="font-size: 18px;font-weight: 400;">业务信息</td>
+					</tr>
+					<tr>
+						<td>客户名称</td>
+						<td class="userName"></td>
+					</tr>
+					<tr>
+						<td>用电地址</td>
+						<td class="electricityAddress"></td>
+					</tr>
+					<tr>
+						<td>工作单号</td>
+						<td class="taskCode"></td>
+					</tr>
+					<tr>
+						<td>客户编号</td>
+						<td class="powerSupplyUnit"></td>
+					</tr>
+					<tr>
+						<td>业务类别</td>
+						<td class="businessType"></td>
+					</tr>
+					<tr>
+						<td>用电性质</td>
+						<td class="businessSubType"></td>
+					</tr>
+					<tr>
+						<td>高可靠性供电</td>
+						<td class="gkkxgd"></td>
+					</tr>
+					<tr>
+						<td>行业用电分类</td>
+						<td class="hyydfl"></td>
+					</tr>
+					<tr>
+						<td>原有容量（kVA）</td>
+						<td class="yyrl"></td>
+					</tr>
+					<tr>
+						<td>增（减）容量（kVA）</td>
+						<td class="zjrl"></td>
+					</tr>
+					<tr>
+						<td>总容量（kVA）</td>
+						<td class="zjrl"></td>
+					</tr>
+					<tr>
+						<td>负荷等级</td>
+						<td class="fhdj"></td>
+					</tr>
+					<tr>
+						<td>是否需要配备应急电</td>
+						<td class="sfxypbyjd"></td>
+					</tr>
+					<tr>
+						<td>用电类别</td>
+						<td class="category"></td>
+					</tr>
+				</table>
+			</div>
+			<button class="btn mui-action-back">关闭</button>
+			<button class="btn">回退</button>
+			<button class="btn">签收</button>
+		</div>
+
+		<script type="text/javascript">
+			mui.init();
+
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index2.html',
+					id: 'index2'
+				})
+			});
+
+			//			点击回退
+			mui('.mui-content').on('tap', '.btn:nth-of-type(2)', function() {
+				layer.open({
+					type: 1,
+					title: '重新分配申请',
+					className: 'popuo',
+					content: '<div class="mui-content"><textarea name="" placeholder="请输入理由"></textarea></div>',
+					btn: ['取消', '确认']
+				})
+			});
+
+			//			获取表单信息
+			var localtaskCode = localStorage.getItem('localtaskCode');
+			var data = {
+				userId: "bbb",
+				userPwd: "bbb",
+				taskCode:localtaskCode
+			}
+			var datastr = JSON.stringify(data);
+			$.ajax({
+				type: "post",
+				url: "http://39.108.104.129/BusExt/Service.ashx?Func=QueryBEWorkOrder",
+				data: datastr,
+				success: function(data) {
+					var formdata = data.taskList[0];
+					$('.userName').html(formdata.userName);
+					$('.electricityAddress').html(formdata.electricityAddress);
+					$('.taskCode').html(formdata.taskCode);
+					$('.powerSupplyUnit').html(formdata.powerSupplyUnit);
+					$('.businessType').html(formdata.businessType);
+					$('.businessSubType').html(formdata.businessSubType);
+					$('.gkkxgd').html(formdata.gkkxgd);
+					$('.hyydfl').html(formdata.hyydfl);
+					$('.yyrl').html(formdata.yyrl);
+					$('.zjrl').html(formdata.zjrl);
+					$('.zjrl').html(formdata.zjrl);
+					$('.fhdj').html(formdata.fhdj);
+					$('.sfxypbyjd').html(formdata.sfxypbyjd);
+					$('.category').html(formdata.category);
+				}
+			});
+
+			//			在办项点击签收事件
+			$('.btn:nth-of-type(3)').on('tap', function(event) {
+				var data1 = {
+					userId: "bbb",
+					userPwd: "bbb",
+					taskCode: localtaskCode,
+					partNumberName: "现场勘查"
+				};
+				var data1str = JSON.stringify(data1);
+				$.ajax({
+					type: "post",
+					url: "http://39.108.104.129/BusExt/Service.ashx?Func=UpdateBEWorkOrderStatus",
+					data: data1str,
+					success: function(data) {
+						console.log(data.status)
+						if(data.status == "Ok") {
+							mui.toast('已签收!已移至在办项！');
+							setTimeout(function() {
+								$('.mui-action-back').trigger('tap');
+							}, 1000)
+						}
+
+					}
+				});
+
+			});
+		</script>
+	</body>
+
+</html>

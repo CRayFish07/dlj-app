@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/hui.css" />
+	</head>
+	<style type="text/css">
+		.mui-icon-checkmarkempty {
+			float: right;
+			margin-right: 15px;
+			display: inline-block;
+			color: #44AC76
+		}
+		
+		.mui-input-row label {
+			width: 70%;
+		}
+		.info-head {
+				width: 100%;
+				height: 43px;
+				background-color: #fff;
+			}
+			
+			.info-head p {
+				font-size: 15px;
+				color: #000;
+				line-height: 30px;
+				margin-left: 12px;
+			}
+			.mui-table-view{
+				margin-bottom: 10px;
+			}
+			.mui-navigate-right{
+				font-size: 15px;
+				font-weight: 700;
+			}
+			.mui-input-row{
+				border-bottom: 1px solid #F1F1F1;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.surveyOpinion{
+				background-color: #fff;
+				border:none;
+				text-align: left;
+				height: 60px;
+				border-top:1px solid #E5E5E5;
+				font-size:12px;
+				color:#D2D1D2;
+				margin-bottom: 5px;
+			}
+			
+		.mui-input-row label {
+			color:#A2A2A2;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>客户受电工程中间检查意见书</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="workOrder">
+			<table border="0" cellspacing="" cellpadding="">
+				<tr>
+					<td>客户名称</td>
+					<td class="userName">李炳全</td>
+				</tr>
+				<tr>
+					<td>用电地址</td>
+					<td class="electricityAddress">广东省东莞市桥头镇郎厦村华夏二环路5号</td>
+				</tr>
+				<tr>
+					<td>工作单号</td>
+					<td class="taskCode">031900100000024398989</td>
+				</tr>
+				<tr>
+					<td>报装容量</td>
+					<td class="contractCapacity">250kVA</td>
+				</tr>
+				<tr>
+					<td>客户联系人</td>
+					<td class="slyy">李炳全</td>
+				</tr>
+				<tr>
+					<td>受理日期</td>
+					<td class="slrq">2017年4月11日</td>
+				</tr>
+				<tr>
+					<td>受理业务员</td>
+					<td class="slyy">麦满枝</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<p>本户受电工程已委托有承装（修）电力设备许可证单位安装，隐蔽工程现已施工完毕，经过自检，工程质量符合国家及电力行业验收标准、技术规范的要求，现向供电部门报请中间检查。</p>
+						<p>客户签名（盖章）：</p>
+						<p>施工单位（盖章）：</p>
+					</td>
+				</tr>
+			</table>
+			
+		</div>
+		<div style="background-color: #E0E0E0;padding-top:10px">
+			<ul class="mui-table-view">
+			<li class="mui-table-view-cell mui-collapse">
+				<a class="mui-navigate-right" href="#">中间检查项目</a>
+				<div class="mui-collapse-content">
+					<div class="mui-input-row">
+						<label>电缆沟深度、弯度及沟底处理</label>
+						<span class="text_span zjjcxm_dlg">合格</span>
+					</div>
+					<div class="mui-input-row">
+						<label>电缆工作井</label>
+						<span class="text_span zjjcxm_gzj">合格</span>
+					</div>
+					<div class="mui-input-row">
+						<label>电缆敷设</label>
+						<span class="text_span zjjcxm_dlfs">合格</span>
+					</div>
+					<div class="mui-input-row">
+						<label>电缆沟(槽、管)</label>
+						<span class="text_span zjjcxm_dlgcg">合格</span>
+					</div>
+					<div class="mui-input-row">
+						<label>接地装置的安装</label>
+						<span class="text_span zjjcxm_jdzz">合格</span>
+					</div>
+					<div class="mui-input-row">
+						<label>是否按图施工</label>
+						<span class="text_span zjjcxm_atsg">合格</span>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell mui-collapse">
+				<a class="mui-navigate-right" href="#">供电企业中间意见</a>
+				<div class="mui-collapse-content">
+					<div class="mui-input-row">
+						<label>检查意见</label>
+						<span class="text_span gdqyyj_jcyj">合格</span>
+					</div>
+					<div class="mui-input-row">
+						<label>供电企业(盖章)</label>
+						<span class="text_span gdqyyj_gdqygz">桥头供电分局</span>
+					</div>
+					<div class="mui-input-row">
+						<label>检查人员签名</label>
+						<span class="text_span gdqyyj_jcryqm">邵海泉、李伟河</span>
+					</div>
+					<div class="mui-input-row">
+						<label>检查日期</label>
+						<span class="text_span gdqyyj_jcrq">2017年04月18日</span>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell mui-collapse">
+				<a class="mui-navigate-right" href="#">客户确认检查意见</a>
+				<div class="mui-collapse-content">
+					<div class="mui-input-row">
+						<label>客户意见</label>
+						<span class="text_span khyj_khyj"></span>
+					</div>
+					<div class="mui-input-row">
+						<label>客户(代表)签名(盖章)</label>
+						<span class="text_span khyj_khdbqm"></span>
+					</div>
+					<div class="mui-input-row">
+						<label>确认日期</label>
+						<span class="text_span khyj_khqrrq"></span>
+					</div>
+					<div class="mui-input-row">
+						<label>施工单位(代表)签名(盖章)</label>
+						<span class="text_span khyj_sgdwqm"></span>
+					</div>
+					<div class="mui-input-row">
+						<label>确认日期</label>
+						<span class="text_span khyj_sgdwqrrq"></span>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<section>
+			<p>注：1.中间检查期限：自受理客户中检查申请之日起，至出具《客户受电工程中间检查意见书》之日止，低电压电力客户不超过3个工作日，中高压电力客户不超过5个工作日。</p>
+			<p>2.如整改要求内容较多，可填写在背面“中间检查整改详细内容”。本意见书一式三份，供电企业、客户、施工单位各执一份。
+			</p>
+		</section>		
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+				var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap',function() {
+				mui.openWindow({
+					url:'index2.html',
+					id:'index2'
+				})
+			});
+			
+			//				全局获取taskCode
+		var localtaskCode2 = localStorage.getItem('taskCode2');
+		var owc = {
+			userId: "bbb", //用户Id
+			userPwd: "bbb", //用户密码
+			taskCode: localtaskCode2 //业扩工作单号
+		};
+		
+		function change(obj) {
+			switch (obj) {
+				case 1:
+				return "合格";
+				break;
+				case 0:
+				return '不合格';
+				break;
+			}
+		}
+		var owcStr = JSON.stringify(owc);
+		//				获取工单详情
+		var url1 = "http://39.108.104.129/BusExt/Service.ashx?Func=QueryBEWorkOrder";
+		$.post(
+			url1,
+			owcStr,
+			function(data, status) {
+				var formdata = data.taskList[0];
+				$('.userName').html(formdata.userName);
+				$('.electricityAddress').html(formdata.electricityAddress);
+				$('.taskCode').html(formdata.taskCode);
+				$('.contractCapacity').html(formdata.contractCapacity);
+				$('.slyy').html(formdata.slyy);
+				$('.slrq').html(formdata.slrq);
+				$('.slyy').html(formdata.slyy);
+			}
+		);
+
+		//				获取中间检查工单
+		var url = "http://39.108.104.129/BusExt/Service.ashx?Func=QueryMidCheckSheet";
+		$.post(
+			url,
+			owcStr,
+			function(data, status) {
+				console.log(data)
+					$('.zjjcxm_dlg').html(data.zjjcxm_dlg);
+					$('.zjjcxm_gzj').html(change(data.zjjcxm_gzj));
+					$('.zjjcxm_dlfs').html(change(data.zjjcxm_dlfs));
+					$('.zjjcxm_dlgcg').html(change(data.zjjcxm_dlgcg));
+					$('.zjjcxm_jdzz').html(change(data.zjjcxm_jdzz));
+					$('.zjjcxm_atsg').html(change(data.zjjcxm_atsg));
+				$('.gdqyyj_jcyj').html(data.gdqyyj_jcyj);
+				$('.gdqyyj_gdqygz').html(data.gdqyyj_gdqygz);
+				$('.khyj_khdbqm').html(data.khyj_khdbqm);
+				$('.khyj_sgdwqm').html(data.khyj_sgdwqm);
+					$('.gdqyyj_jcrq').html(data.gdqyyj_jcrq);
+					$('.khyj_khqrrq').html(data.khyj_khqrrq);
+					$('.khyj_sgdwqrrq').html(data.khyj_sgdwqrrq);
+				$('.khyj_khyj').html(data.khyj_khyj);
+			}
+		);
+			
+		</script>
+	</body>
+
+</html>

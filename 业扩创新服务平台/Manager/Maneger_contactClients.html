@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.css" />
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.btns {
+			width:100%;
+			padding:25px 0px;
+			display: flex;
+			justify-content: space-around;
+		}
+		.btns a {
+			display: block;
+			width:45%;
+			background-color: #1AA1E7;
+			color:#fff;
+			font-size: 16px;
+			border-radius: 20px;
+			height:40px;
+			line-height: 40px;
+			text-align: center;
+		}
+		.mui-icon-chat,.mui-icon-phone{
+			float: left;
+			margin-right:10px;
+		}
+		
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>联系记录</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="mui-content">
+			<table border="0">
+				<tr>
+					<td>客户姓名</td>
+					<td>李四</td>
+				</tr>
+				<tr>
+					<td>电话号码</td>
+					<td id="telNum">1380013800</td>
+				</tr>
+			</table>
+			<div class="btns">
+				<a class="mui-icon mui-icon-phone" id="tel">拨打电话</a>  
+				<a class="mui-icon mui-icon-chat"  id="sms">发送短信</a>
+			</div>
+			<section>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<span class="mui-icon mui-icon-phone"></span>
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>
+									2017年07月10日 12:30:30
+									<span style="float: right;">通话时长03:20</span>
+								</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<span class="mui-icon mui-icon-phone"></span>
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>
+									2017年07月10日 12:30:30
+									<span style="float: right;">通话时长03:20</span>
+								</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<sapn class="mui-icon mui-icon-chat"></sapn>
+							<div class="mui-media-body">
+								请在中间检查日期前完成用户工程
+								<p class='mui-ellipsis'>2017年07月10日 12:30:30</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<sapn class="mui-icon mui-icon-chat"></sapn>
+							<div class="mui-media-body">
+								请在中间检查日期前完成用户工程
+								<p class='mui-ellipsis'>2017年07月10日 12:30:30</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		mui.init();
+		var home = document.getElementsByClassName('mui-icon-home')[0];
+		home.addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'index2.html',
+				id: 'index2'
+			})
+		});
+		$(function() {
+//			点击拨打电话和发送短信
+			var telNum = $('#telNum').html();
+			$('#tel').attr('href',"tel:"+telNum);
+			$('#sms').attr('href',"sms:"+telNum);
+		})   
+	</script>
+
+</html>

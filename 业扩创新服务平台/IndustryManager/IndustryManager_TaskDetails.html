@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../layer_mobile/layer.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		table tr td {
+			font-size: 12px;
+			color: #000;
+			vertical-align: middle;
+			height: 44px;
+			border-bottom: 1px solid #E5E5E5;
+		}
+		
+		table tr td:nth-of-type(1) {
+			width: 40%;
+			padding-left: 12px;
+		}
+		
+		table tr td:nth-of-type(2) {
+			width: 60%;
+			text-align: right;
+			padding-right: 12px;
+		}
+		
+		table {
+			background-color: #fff;
+			width: 100%;
+		}
+		
+		.workOrder {
+			display: block;
+			background-color: #fff;
+			padding-top: 1px;
+		}
+		
+		.workOrder-form {
+			margin-bottom: 12px;
+		}
+		
+		.detai {
+			margin-top: 15px;
+		}
+		
+		.btn {
+			border-radius: 10px;
+			margin: 10px;
+			float: right;
+			width: 80px;
+		}
+		
+		.btn:nth-of-type(1) {
+			border-color: #E04249;
+			color: #E04249;
+		}
+		
+		.btn:nth-of-type(2) {
+			background-color: #1BA0ED;
+			color: #fff;
+		}
+		/*layer弹框*/
+		.popuo {
+			width: 90%;
+			background-color: #F8F8F8;
+		}
+		.layui-m-layer1 .layui-m-layerchild {
+			border-radius: 10px;
+		}
+		.mui-content {
+			width: 100%;
+			background-color:#F8F8F8 ;
+		}
+		.mui-content textarea {
+			width: 90%;
+			height: 100px;
+			margin-left: 5%;
+		}
+		textarea {
+			padding:0px;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>任务详情</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="mui-content">
+			<div class="workOrder">
+				<div class="workOrder-form">
+					<p>工单号：2940478341212</p>
+					<p>客户名称：广州科腾信息技术有限公司</p>
+					<p>客户地址：广州市黄埔大道西平云路163号</p>
+					<p class="progress">业务进度：<span class="SiteSurveyColor">现场勘查</span></p>
+				</div>
+			</div>
+			<div class="detai">
+				<table border="0" cellspacing="" cellpadding="">
+					<tr>
+						<td colspan="2" style="font-size: 18px;font-weight: 400;">业务信息</td>
+					</tr>
+					<tr>
+						<td>客户名称</td>
+						<td>东莞正隆纸制品有限公司</td>
+					</tr>
+					<tr>
+						<td>用电地址</td>
+						<td>广东省东莞市黄江镇裕元工业区</td>
+					</tr>
+					<tr>
+						<td>工作单号</td>
+						<td>031900100000024398989</td>
+					</tr>
+					<tr>
+						<td>客户编号</td>
+						<td>0319200025728646</td>
+					</tr>
+					<tr>
+						<td>业务类别</td>
+						<td>新装</td>
+					</tr>
+					<tr>
+						<td>用电性质</td>
+						<td>永久</td>
+					</tr>
+					<tr>
+						<td>高可靠性供电</td>
+						<td>否，申请高可靠容量</td>
+					</tr>
+					<tr>
+						<td>行业用电分类</td>
+						<td>纸制品制造业</td>
+					</tr>
+					<tr>
+						<td>原有容量（kVA）</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>增（减）容量（kVA）</td>
+						<td>8000</td>
+					</tr>
+					<tr>
+						<td>总容量（kVA）</td>
+						<td>8000</td>
+					</tr>
+					<tr>
+						<td>负荷等级</td>
+						<td>三级</td>
+					</tr>
+					<tr>
+						<td>是否需要配备应急电</td>
+						<td>是</td>
+					</tr>
+					<tr>
+						<td>用电类别</td>
+						<td>大工业</td>
+					</tr>
+				</table>
+			</div>
+			<button class="btn mui-action-back">关闭</button>
+			<button class="btn">组件团队</button>
+		</div>
+		
+		<script type="text/javascript">
+			mui.init();
+
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index4.html',
+					id: 'index4'
+				})
+			});
+
+			$('.btn').on('tap',function() {
+				mui.openWindow({
+					url:'IndustryManager_ComponentTeam.html',
+					id:'IndustryManager_ComponentTeam'
+				})
+			})
+		</script>
+	</body>
+
+</html>

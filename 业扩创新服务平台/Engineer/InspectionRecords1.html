@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		ul {
+			padding-left: 0px;
+		}
+		
+		.mui-content>.mui-table-view:first-child {
+			margin-top: 0px;
+		}
+		
+		.mui-table-view-cell.mui-collapse .mui-collapse-content {
+			padding: 0px;
+		}
+		
+		.ul_wrap li {
+			display: flex;
+			justify-content: space-between;
+			border-bottom: 1px solid #ccc;
+			padding:5px 15px;
+			align-items: center;
+		}
+		.mui-icon-arrowright {
+			font-size: 24px;
+			color: #ccc;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>竣工检验环节</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-collapse mui-active">
+					<a class="mui-navigate-right" href="#">1.资质证明和技术资料</a>
+					<div class="mui-collapse-content">
+						<ul class="ul_wrap">
+							<li id="CompletionMap">
+								<p>竣工图</p>
+								<span class="mui-icon mui-icon-arrowright"></span>
+							</li>
+							<li>
+								<p>安装和检查记录</p>
+								<span class="mui-icon mui-icon-arrowright"></span>
+							</li>
+							<li>
+								<p>专线线路走廊批文</p>
+								<span class="mui-icon mui-icon-arrowright"></span>
+							</li>
+							<li>
+								<p>设备资料</p>
+								<span class="mui-icon mui-icon-arrowright"></span>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">2.型号、规格</a>
+					<div class="mui-collapse-content">
+						<ul class="ul_wrap">
+							<li>
+								<p>暂无内容</p>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">3.外观、标志</a>
+					<div class="mui-collapse-content">
+						<ul class="ul_wrap">
+							<li>
+								<p>暂无内容</p>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">4.电杆组立</a>
+					<div class="mui-collapse-content">
+						<ul class="ul_wrap">
+							<li>
+								<p>暂无内容</p>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">5.拉线</a>
+					<div class="mui-collapse-content">
+						<ul class="ul_wrap">
+							<li>
+								<p>暂无内容</p>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">6.导线距离</a>
+					<div class="mui-collapse-content">
+						<ul class="ul_wrap">
+							<li>
+								<p>暂无内容</p>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">7.金具</a>
+					<div class="mui-collapse-content">
+						<ul class="ul_wrap">
+							<li>
+								<p>暂无内容</p>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">8.相位及接地装置</a>
+					<div class="mui-collapse-content">
+						<ul class="ul_wrap">
+							<li>
+								<p>暂无内容</p>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">9.沿线的障碍物</a>
+					<div class="mui-collapse-content">
+						<ul class="ul_wrap">
+							<li>
+								<p>暂无内容</p>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		var home = document.getElementsByClassName('mui-icon-home')[0];
+		home.addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'index.html',
+				id: 'index'
+			})
+		});
+		var CompletionMap = document.getElementById('CompletionMap');
+		CompletionMap.addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'CompletionMap.html',
+				id: 'CompletionMap'
+			})
+		})
+	</script>
+
+</html>

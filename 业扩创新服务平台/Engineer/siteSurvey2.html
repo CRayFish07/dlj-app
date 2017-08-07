@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/mui.css" />
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../layer_mobile/layer.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.head {
+			background-color: #fff;
+			margin-bottom: 15px;
+		}
+		
+		.state-icon button {
+			border-radius: 20px;
+			background-color: #1BA1E8;
+			color: #fff;
+			margin-right: 15px;
+			width: 100%;
+		}
+		
+		.state-icon button span {
+			font-size: 18px;
+		}
+		
+		.btn {
+			border-color: #1BA1E8;
+			color: #1BA1E8;
+			border-radius: 20px;
+			width: 80%;
+			margin-left: 10%;
+			margin-bottom: 15px;
+		}
+		
+		.workOrder {
+			border-bottom: 0;
+		}
+		
+		.text {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-bottom: 1px dashed #ccc;
+			font-size: 14px;
+			margin-top: 0;
+			color: #8f8f94;
+		}
+		
+		.text input,
+		.text span {
+			width: 60%;
+			margin: 5px 0px;
+			font-size: 14px;
+			text-align: center;
+			color: #000;
+			white-space: normal;
+			padding: 0px;
+		}
+		
+		.text span {
+			width: 70%;
+		}
+		
+		.radios {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 5px 0px;
+		}
+		
+		.mui-switch {
+			width: 54px;
+		}
+		
+		.mui-switch:before {
+			top: -1px;
+		}
+		
+		.mui-navigate-right {
+			font-size: 14px;
+			font-weight: 400;
+		}
+		
+		.mui-table-view {
+			margin-top: 15px;
+		}
+		/*layer弹框*/
+		
+		.popuo p {
+			text-align: left;
+		}
+		
+		.popuo2 {
+			width: 90%;
+			background-color: #F8F8F8;
+		}
+		
+		.popuo2 p {
+			text-align: right;
+			padding-right: 10px;
+		}
+		
+		.popuo2 .wrap p {
+			color: #000000;
+			text-align: left;
+			padding-left: 10px;
+		}
+		
+		.popuo2 .wrap {
+			height: 100px;
+			border-bottom: 1px solid #ccc;
+		}
+		
+		.layui-m-layerchild h3 {
+			border-bottom: 1px solid #ccc;
+		}
+		
+		.photo_wrap {
+			margin-top: 15px;
+			padding: 11px 15px;
+			background-color: #fff;
+		}
+		
+		.add_photo {
+			width: 100px;
+			height: 100px;
+			border: 1px dashed #ccc;
+			color: #ccc;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.photo {
+			width: 100px;
+			height: 100px;
+		}
+		
+		.photo img {
+			width: 100%;
+			height: 100%;
+		}
+		
+		.photos {
+			display: flex;
+		}
+		
+		.layers {
+			width: 100%;
+		}
+		
+		.layers img {
+			width: 100%;
+		}
+		
+		.btns {
+			margin: 15px 0px;
+			display: flex;
+			justify-content: space-around;
+		}
+		
+		.btns button {
+			width: 45%;
+			height: 40px;
+			border-radius: 20px;
+			background-color: #1BA1E8;
+			color: #fff;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>现场勘查环节详情</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="mui-content">
+			<div class="head">
+				<div class="workOrder">
+					<div class="workOrder-form">
+						<p>工单号：<span class="taskCode"></span></p>
+						<p>客户名称：<span class="userName"></span></p>
+						<p>客户地址：<span class="electricityAddress"></span></p>
+						<p>客户编号：<span class="userCode"></span></p>
+						<p>受理日期：2017年5月10日</p>
+					</div>
+					<div class="state-icon">
+						<button><span class="mui-icon mui-icon-location"></span>签到</button>
+					</div>
+				</div>
+				<button class="btn">客户资料维护</button>
+			</div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">接入方式</a>
+					<div class="mui-collapse-content">
+						<p class="text">
+							变压器容量(kVA)
+							<input type="text" name="jrfs_byqrl" placeholder="请输入变压器容量" />
+						</p>
+						<p class="text">
+							变压器台数(台)
+							<input type="text" name="jrfs_byqts" placeholder="请输入变压器台数" value="" />
+						</p>
+						<p class="text">
+							接入方式
+							<input type="text" name="jrfs" placeholder="请输入接入方式" value="" />
+						</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">初步接入方案</a>
+					<div class="mui-collapse-content">
+						<p class="text">
+							电源1
+							<span class="cbjrfs1"></span>
+						</p>
+						<p class="text">
+							线路属性
+							<input type="text" name="cbjrfs1_xlsx" placeholder="请输入线路属性" value="" />
+						</p>
+						<p class="text">
+							额定容量(kVA)
+							<input type="number" name="cbjrfs1_edrl" placeholder="请输入额定容量" value="" />
+						</p>
+						<p class="text">
+							在途容量(kVA)
+							<input type="number" name="cbjrfs1_ztrl" placeholder="请输入在途容量" value="" />
+						</p>
+						<p class="text">
+							可供容量(kVA)
+							<input type="number" name="cbjrfs1_kgrl" placeholder="请输入可供容量" value="" />
+						</p>
+						<p class="text">
+							电源2
+							<span class="cbjrfs2"></span>
+						</p>
+						<p class="text">
+							线路属性
+							<input type="text" name="cbjrfs2_xlsx" placeholder="请输入线路属性" value="" />
+						</p>
+						<p class="text">
+							额定容量(kVA)
+							<input type="number" name="cbjrfs2_edrl" placeholder="请输入额定容量" value="" />
+						</p>
+						<p class="text">
+							在途容量(kVA)
+							<input type="number" name="cbjrfs2_ztrl" placeholder="请输入在途容量" value="" />
+						</p>
+						<p class="text">
+							可供容量(kVA)
+							<input type="number" name="cbjrfs2_kgrl" placeholder="请输入可供容量" value="" />
+						</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">现场勘查情况</a>
+					<div class="mui-collapse-content">
+						<p class="text">
+							推荐电源点
+							<input type="text" name="xckcqk" placeholder="请输入线路属性" value="" />
+						</p>
+						<p class="text">
+							线路属性
+							<input type="text" name="cbjrfs1_xlsx" placeholder="请输入线路属性" value="" />
+						</p>
+						<p class="text">
+							进线距离(m)
+							<input type="text" name="xckcqk_jxjl" placeholder="请输入进线距离" value="" />
+						</p>
+						<p class="text">
+							额定容量(kVA)
+							<input type="number" name="cbjrfs1_edrl" placeholder="请输入额定容量" value="" />
+						</p>
+						<p class="text">
+							在途容量(kVA)
+							<input type="number" name="cbjrfs1_ztrl" placeholder="请输入在途容量" value="" />
+						</p>
+						<p class="text">
+							可供容量(kVA)
+							<input type="number" name="cbjrfs1_kgrl" placeholder="请输入可供容量" value="" />
+						</p>
+						<div class="text">
+							推荐电源点选择原因
+							<div>
+								<div class="radios">
+									供电可靠性较优
+									<div class="mui-switch mui-switch-mini tjdydxzyy_gdkkxjy">
+										<div class="mui-switch-handle"></div>
+									</div>
+								</div>
+								<div class="radios">
+									经济性较优
+									<div class="mui-switch mui-switch-mini tjdydxzyy_jjxjy">
+										<div class="mui-switch-handle"></div>
+									</div>
+								</div>
+								<div class="radios">
+									接火送点时效
+									<div class="mui-switch mui-switch-mini tjdydxzyy_jhsdsx">
+										<div class="mui-switch-handle"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="extra">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<div class="text" id="Description" style="border-bottom: 0;">
+							说明
+							<span class="mui-icon mui-icon-arrowright" style="text-align: right;"></span>
+						</div>
+					</li>
+					<li class="mui-table-view-cell">
+						<div class="text" id="SurveyOpinion" style="border-bottom: 0;">
+							勘查意见
+							<span class="mui-icon mui-icon-arrowright" style="text-align: right;"></span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="photo_wrap">
+				<p>现场图片资料</p>
+				<div class="photos">
+					<div class="add_photo">
+						<span class="mui-icon mui-icon-plusempty"></span>
+					</div>
+				</div>
+			</div>
+			<div class="btns">
+				<button id="confirm">确认</button>
+				<button id="modify">修改</button>
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		mui.init({
+			gestureConfig: {
+				tap: true, //默认为true
+				doubletap: true, //默认为false
+				longtap: true, //默认为false
+				swipe: true, //默认为true
+				drag: true, //默认为true
+				hold: true, //默认为false，不监听
+				release: true //默认为false，不监听
+			}
+		});
+		//		返回主页
+		var home = document.getElementsByClassName('mui-icon-home')[0];
+		home.addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'index.html',
+				id: 'index'
+			})
+		});
+
+		//		前台输入数据
+		var localtaskCode = localStorage.getItem('taskCode');
+		var data = {
+			userId: "aaa",
+			userPwd: "aaa",
+			taskCode: localtaskCode
+		};
+
+		var datastr = JSON.stringify(data);
+
+		//			获取工单信息
+		$.ajax({
+			type: "post",
+			url: "http://39.108.104.129/BusExt/Service.ashx?Func=QueryBEWorkOrder",
+			data: datastr,
+			success: function(data) {
+				$('span.taskCode').html(data.taskList[0].taskCode);
+				$('span.userName').html(data.taskList[0].userName);
+				$('span.electricityAddress').html(data.taskList[0].electricityAddress);
+				$('span.userCode').html(data.taskList[0].userCode);
+			}
+		});
+
+		//			获取表单信息
+		$.ajax({
+			type: "post",
+			url: "http://39.108.104.129/BusExt/Service.ashx?Func=QuerySceneSheet",
+			data: datastr,
+			success: function(data) {
+				$('input[name="jrfs_byqrl"]').val(data.jrfs_byqrl);
+				$('input[name="jrfs_byqts"]').val(data.jrfs_byqts);
+				$('input[name="jrfs"]').val(data.jrfs);
+				$('span[name="cbjrfs1"]').val(data.cbjrfs1);
+				$('input[name="cbjrfs1_xlsx"]').val(data.cbjrfs1_xlsx);
+				$('input[name="cbjrfs1_ztrl"]').val(data.cbjrfs1_ztrl);
+				$('input[name="cbjrfs1_edrl"]').val(data.cbjrfs1_edrl);
+				$('input[name="cbjrfs1_kgrl"]').val(data.cbjrfs1_kgrl);
+				$('span[name="cbjrfs2"]').val(data.cbjrfs2);
+				$('input[name="cbjrfs2_xlsx"]').val(data.cbjrfs2_xlsx);
+				$('input[name="cbjrfs2_edrl"]').val(data.cbjrfs2_edrl);
+				$('input[name="cbjrfs2_ztrl"]').val(data.cbjrfs2_ztrl);
+				$('input[name="cbjrfs2_kgrl"]').val(data.cbjrfs2_kgrl);
+				$('input[name="xckcqk"]').val(data.xckcqk);
+				$('input[name="xckcqk_jxjl"]').val(data.xckcqk_jxjl);
+				if(data.tjdydxzyy_gdkkxjy == '1') {
+					$('.tjdydxzyy_gdkkxjy').addClass('mui-active');
+				} else {
+					$('.tjdydxzyy_gdkkxjy').removeClass('mui-active');
+				};
+				if(data.tjdydxzyy_jjxjy == '1') {
+					$('.tjdydxzyy_jjxjy').addClass('mui-active');
+				} else {
+					$('.tjdydxzyy_jjxjy').removeClass('mui-active');
+				};
+				if(data.tjdydxzyy_jhsdsx == '1') {
+					$('.tjdydxzyy_jhsdsx').addClass('mui-active');
+				} else {
+					$('.tjdydxzyy_jhsdsx').removeClass('mui-active');
+				};
+				$('.popuo2').find('.kcyj').val(data.kcyj);
+			}
+		});
+
+		//			表单上传
+		$('#modify').on('tap', function() {
+			if(flag == 1) {
+				if($('.tjdydxzyy_gdkkxjy').hasClass('mui-active')) {
+						var tjdydxzyy_gdkkxjy_variable = 1;
+					} else {
+						var tjdydxzyy_gdkkxjy_variable = 0;
+					};
+					if($('.tjdydxzyy_jjxjy').hasClass('mui-active')) {
+						var tjdydxzyy_jjxjy_variable = 1;
+					} else {
+						var tjdydxzyy_jjxjy_variable = 0;
+					};
+					if($('.tjdydxzyy_jhsdsx').hasClass('mui-active')) {
+						var tjdydxzyy_jhsdsx_variable = 1;
+					} else {
+						var tjdydxzyy_jhsdsx_variable = 0;
+					};
+				var owc = {
+					"taskCode": localtaskCode, //工作单号
+					"jrfs_byqrl": $('input[name="jrfs_byqrl"]').val(), //接入方式-变压器容量
+					"jrfs_byqts": $('input[name="jrfs_byqts"]').val(), //接入方式-变压器台数
+					"jrfs": $('input[name="jrfs"]').val(), //接入方式
+
+					"cbjrfs1": $('span[name="cbjrfs1"]').html(), //初步接入方式  电源1
+					"cbjrfs1_xlsx": $('input[name="cbjrfs1_xlsx"]').val(), //初步接入方式-线路属性
+					"cbjrfs1_edrl": $('input[name="cbjrfs1_edrl"]').val(), //初步接入方式-额定容量
+					"cbjrfs1_ztrl": $('input[name="cbjrfs1_ztrl"]').val(), //初步接入方式-在途容量
+					"cbjrfs1_kgrl": $('input[name="cbjrfs1_kgrl"]').val(), //初步接入方式-可供容量
+
+					"cbjrfs2": $('span[name="cbjrfs2"]').html(), //初步接入方式  电源2
+					"cbjrfs2_xlsx": $('input[name="cbjrfs2_xlsx"]').val(), //初步接入方式-线路属性
+					"cbjrfs2_edrl": $('input[name="cbjrfs2_edrl"]').val(), //初步接入方式-额定容量
+					"cbjrfs2_ztrl": $('input[name="cbjrfs2_ztrl"]').val(), //初步接入方式-在途容量
+					"cbjrfs2_kgrl": $('input[name="cbjrfs2_kgrl"]').val(), //初步接入方式-可供容量
+
+					"xckcqk": $('input[name="xckcqk"]').val(), //现场勘查情况 推荐电源点  1或者2
+					"xckcqk_jxjl": $('input[name="xckcqk_jxjl"]').val(), //现场勘查情况 进线距离
+					
+					"tjdydxzyy_gdkkxjy":tjdydxzyy_gdkkxjy_variable , //推荐电源点选择原因—供电可靠性较优
+					"tjdydxzyy_jjxjy": tjdydxzyy_jjxjy_variable, //推荐电源点选择原因—经济性较优
+					"tjdydxzyy_jhsdsx": tjdydxzyy_jhsdsx_variable, //推荐电源点选择原因—接火送电时效
+
+					"sm": $('input[name="sm"]').val(),
+					"kcyj": $('.kcyj').html()
+				};
+
+				var owcStr = JSON.stringify(owc);
+				var url = "http://39.108.104.129/BusExt/Service.ashx?Func=UploadSceneSheet";
+				$.post(
+					url,
+					owcStr,
+					function(data, status) {
+						if(data.status == 'Ok') {
+							mui.toast('上传成功！');
+							setTimeout(function() {
+								location.reload();
+							}, 1000)
+						}
+					}
+				);
+			} else {
+				mui.alert('请先签到！');
+			}
+		})
+
+		//		确认表单,进入中间检查环节
+		$('#confirm').on('tap', function() {
+			var data1 = {
+				userId: "aaa",
+				userPwd: "aaa",
+				taskCode: localtaskCode,
+				partNumberName: "中间检查"
+			};
+			var data1str = JSON.stringify(data1);
+			$.ajax({
+				type: "post",
+				url: "http://39.108.104.129/BusExt/Service.ashx?Func=UpdateBEWorkOrderStatus",
+				data: data1str,
+				success: function(data) {
+					console.log(data.status)
+					if(data.status == "Ok") {
+						mui.toast('已签收!此工单进入“中间检查”环节！');
+					}
+
+				}
+			});
+		})
+
+		//		点击客户资料维护按钮
+		$('.btn').on('tap', function() {
+			mui.openWindow({
+				url: 'CustomerMaintenance.html',
+				id: 'CustomerMaintenance'
+			})
+		})
+
+		//			点击说明
+		mui('.extra').on('tap', '#Description', function() {
+			layer.open({
+				title: '说明',
+				btn: '关闭',
+				className: 'popuo',
+				content: '<p>1.产权分界点设置：</p><p>电源1：以客户用电区域红线范围内110kV南宝线新建公用环网柜（或电缆分接箱）开关出线电缆终端头为产权分界点；</p><p>2.实施业扩工程配套项目：是</p><p>3.其它：</p>	'
+			})
+		})
+
+		//			点击勘查意见
+		mui('.extra').on('tap', '#SurveyOpinion', function() {
+			var index = layer.open({
+				type: 1,
+				title: '勘查意见',
+				btn: ['确认', '关闭'],
+				className: 'popuo2',
+				content: '<div class="wrap"><textarea class="kcyj" style="width:90%;height:80%">用电现场</textarea></div><p>业扩勘察人：张全蛋</p><p>日期：2017年0620日</p>	'
+			})
+		})
+
+		//		点击签到
+		var flag = 0;
+		$('.state-icon').on('tap', 'button', function() {
+			if($(this).css('backgroundColor') == 'rgb(204, 204, 204)') {
+				mui.alert('已经签完到啦！');
+			} else {
+				mui.toast('签到成功！');
+				$(this).css('backgroundColor', '#ccc');
+				flag = 1;
+			}
+
+		})
+
+		//-----------------------------------------------------------------------------------------------------------------------------------------	
+		mui.plusReady(function() {
+			//		点击添加照片
+			$('.add_photo').on('tap', function() {
+				if(mui.os.plus) {
+					var a = [{
+						title: "拍照"
+					}, {
+						title: "从手机相册选择"
+					}];
+					plus.nativeUI.actionSheet({
+						cancel: "取消",
+						buttons: a
+					}, function(b) {
+						switch(b.index) {
+							case 1:
+								getImage();
+								break;
+							case 2:
+								galleryImg();
+								break;
+							default:
+								break
+						}
+					})
+				}
+
+			})
+			mui('.photos').on('longtap', '.photo', function() {
+				var Dom = $(this);
+				var btnArray = ['否', '是'];
+				mui.confirm('是否删除此照片？', '', btnArray, function(e) {
+					if(e.index == 1) {
+						Dom.remove();
+					}
+				})
+			})
+			mui('.photos').on('tap', '.photo', function() {
+				var q = $(this).find('img').attr('src');
+				layer.open({
+					type: 1,
+					content: '<div class="layers"><img src=" ' + q + ' "/></div>',
+					btn: '关闭'
+				})
+			})
+
+			function getImage() {
+				var c = plus.camera.getCamera();
+				c.captureImage(function(e) {
+					plus.io.resolveLocalFileSystemURL(e, function(entry) {
+						var s = entry.toLocalURL();
+						var html = '<div class="photo"><img src=" ' + s + ' "/></div>';
+						$('.add_photo').before(html);
+					}, function(e) {
+						mui.toast("读取拍照文件错误：" + e.message);
+					});
+				}, function(s) {
+					mui.toast("error" + s);
+				})
+			}
+
+			function galleryImg() {
+				plus.gallery.pick(function(path) {
+					var html = '<div class="photo"><img src=" ' + path + ' "/></div>';
+					$('.add_photo').before(html);
+				}, function(a) {
+					mui.toast('已取消！')
+				}, {
+					filter: "image"
+				})
+			};
+		})
+	</script>
+
+</html>

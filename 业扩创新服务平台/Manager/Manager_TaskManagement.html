@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--<link rel="stylesheet" href="../css/layer.css" />-->
+		<link rel="stylesheet" type="text/css" href="../css/mui.css" />
+		<link rel="stylesheet" type="text/css" href="../css/hui.css" />
+	</head>
+	<style type="text/css">
+		.sorts {
+			display: flex;
+			justify-content: space-around;
+			border-bottom: 1px solid #F2F2F2;
+			height: 45px;
+			align-items: center;
+			color: #A6A6A6;
+			background-color: #fff;
+		}
+		
+		.btn,
+		.btn2,
+		.btn3 {
+			height: 30px;
+			border-color: #73D5F7;
+			border-radius: 10px;
+			margin: 6px;
+			float: right;
+			color: #73D5F7;
+		}
+		
+		.btn2 {
+			border-color: #ccc;
+			color: #ccc;
+		}
+		
+		.btn3 {
+			border-color: #47B8ED;
+			color: #47B8ED;
+		}
+		
+		.wrap {
+			clear: both;
+			background-color: #fff;
+			overflow: hidden;
+			margin-bottom: 15px;
+		}
+		
+		.hui-list {
+			padding: 0px;
+		}
+		
+		.hui-tab-body {
+			background-color: #EBEBEB;
+			overflow-y: auto;
+		}
+		
+		h4 {
+			text-align: center;
+			font-weight: 400;
+			margin-bottom: 10px;
+		}
+		/*layer弹框*/
+		
+		.popuo,
+		.popuo2 {
+			width: 90%;
+			background-color: #F8F8F8;
+		}
+		
+		.mui-content {
+			width: 100%;
+			background-color: #F8F8F8;
+		}
+		
+		.mui-content textarea {
+			width: 90%;
+			height: 100px;
+			margin-left: 5%;
+		}
+		
+		textarea {
+			padding: 0px;
+		}
+		
+		.layui-m-layercont {
+			color: #fff;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>任务管理</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="hui-tab">
+			<div class="hui-tab-title">
+				<div>待办<span class="mui-badge mui-badge-danger">6</span></div>
+				<div>在办<span class="mui-badge mui-badge-danger">6</span></div>
+				<div>已办<span class="mui-badge mui-badge-danger">6</span></div>
+			</div>
+			<div class="hui-tab-body">
+				<div class="hui-tab-item hui-list">
+					<div class="sorts">
+						<div>
+							<select id="select1">
+								<option selected="selected">环节</option>
+								<option value="业务受理">业务受理</option>
+								<option value="现场勘查">现场勘查</option>
+								<option value="中间检查">中间检查</option>
+								<option value="竣工检验	">竣工检验</option>
+							</select>
+						</div>
+						<div>
+							<select id="select2">
+								<option selected="selected">紧急程度</option>
+								<option value="超时">超时</option>
+								<option value="即将超时">即将超时</option>
+							</select>
+						</div>
+						<div>
+							<select id="select3">
+								<option selected="selected">时间</option>
+								<option value="正序">正序</option>
+								<option value="倒序">倒序</option>
+							</select>
+						</div>
+					</div>
+					<section class="main-body one">
+						<!--<div class="wrap">
+							<div class="workOrder">
+								<div class="workOrder-form">
+									<p>工单号：2940478341212</p>
+									<p>客户名称：广州科腾信息技术有限公司</p>
+									<p>客户地址：广州市黄埔大道西平云路163号</p>
+									<p class="progress">业务进度：<span class="UpcomingColor">待办</span></p>
+								</div>
+							</div>
+							<button type="button" class="btn2">回 退</button>
+							<button type="button" class="btn">签 收</button>
+						</div>-->
+					</section>
+				</div>
+				<div class="hui-tab-item hui-list">
+					<div class="sorts">
+						<div>
+							<select id="select4">
+								<option selected="selected">环节</option>
+								<option value="业务受理">业务受理</option>
+								<option value="现场勘查">现场勘查</option>
+								<option value="中间检查">中间检查</option>
+								<option value="竣工检验">竣工检验</option>
+							</select>
+						</div>
+						<div>
+							<select id="select5">
+								<option selected="selected">紧急程度</option>
+								<option value="超时">超时</option>
+								<option value="即将超时">即将超时</option>
+							</select>
+						</div>
+						<div>
+							<select id="select6">
+								<option selected="selected">时间</option>
+								<option value="正序">正序</option>
+								<option value="倒序">倒序</option>
+							</select>
+						</div>
+					</div>
+					<section class="main-body two">
+						<!--<div class="wrap">
+							<div class="workOrder">
+								<div class="workOrder-form">
+									<p>工单号：2940478341212</p>
+									<p>客户名称：广州科腾信息技术有限公司</p>
+									<p>客户地址：广州市黄埔大道西平云路163号</p>
+									<p class="progress">业务进度：<span class="CompletionInspectionColor">竣工检验</span></p>
+								</div>
+							</div>
+							<button type="button" class="btn2">回 退</button>
+							<button type="button" class="btn3">用户工程进度</button>
+						</div>-->
+					</section>
+				</div>
+				<div class="hui-tab-item hui-list">
+					<div class="sorts">
+						<div>
+							<select id="select7">
+								<option selected="selected">环节</option>
+								<option value="业务受理">业务受理</option>
+								<option value="现场勘查">现场勘查</option>
+								<option value="中间检查">中间检查</option>
+								<option value="竣工检验	">竣工检验</option>
+							</select>
+						</div>
+						<div>
+							<select id="select8">
+								<option selected="selected">紧急程度</option>
+								<option value="超时">超时</option>
+								<option value="即将超时">即将超时</option>
+							</select>
+						</div>
+						<div>
+							<select id="select9">
+								<option selected="selected">时间</option>
+								<option value="正序">正序</option>
+								<option value="倒序">倒序</option>
+							</select>
+						</div>
+					</div>
+					<section class="main-body three">
+						<!--<div class="wrap">
+							<div class="workOrder">
+								<div class="workOrder-form">
+									<p>工单号：2940478341212</p>
+									<p>客户名称：广州科腾信息技术有限公司</p>
+									<p>客户地址：广州市黄埔大道西平云路163号</p>
+									<p class="progress">业务进度：<span class="completedColor">已完成</span></p>
+								</div>
+							</div>
+						</div>-->
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-tab.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-select-beautify.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../layer_mobile/layer.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var saveProgress;
+			hui('#select1').selectBeautify(showVal);
+			hui('#select2').selectBeautify(showVal);
+			hui('#select3').selectBeautify(showVal);
+			hui('#select4').selectBeautify(showVal);
+			hui('#select5').selectBeautify(showVal);
+			hui('#select6').selectBeautify(showVal);
+			hui('#select7').selectBeautify(showVal);
+			hui('#select8').selectBeautify(showVal);
+			hui('#select9').selectBeautify(showVal);
+
+			function showVal(val) {
+				hui.toast('您现在选择的是 : ' + val);
+			}
+
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index2.html',
+					id: 'index2'
+				})
+			});
+
+			//			获取工单列表
+			var data = {
+				userId: "bbb",
+				userPwd: "bbb"
+			};
+			var datastr = JSON.stringify(data);
+			$.ajax({
+				type: "post",
+				url: "http://39.108.104.129/BusExt/Service.ashx?Func=QueryBEWorkOrder",
+				data: datastr,
+				success: function(data) {
+					for(var i = 0; i < data.taskList.length; i++) {
+						if(data.taskList[i].partNumberName == '待办') {
+							var html = '<div class="wrap"><div class="workOrder"><div class="workOrder-form"><p>工单号：<span>' + data.taskList[i].taskCode + '</span></p><p>客户名称：' + data.taskList[i].userName + '</p><p>客户地址：' + data.taskList[i].electricityAddress + '</p><p class="progress">业务进度：<span class="UpcomingColor">待办</span></p></div></div><button type="button" class="btn2">回 退</button> <button type="button" class="btn">签 收</button></div>';
+							$('.one').append(html);
+						} else if(data.taskList[i].partNumberName == '现场勘查' || data.taskList[i].partNumberName == '中间检查' || data.taskList[i].partNumberName == '竣工检验') {
+							var html2 = '<div class="wrap"><div class="workOrder"><div class="workOrder-form"><p>工单号：' + data.taskList[i].taskCode + '</p><p>客户名称：' + data.taskList[i].userName + '</p><p>客户地址：' + data.taskList[i].electricityAddress + '</p><p class="progress">业务进度：<span class="CompletionInspectionColor">' + data.taskList[i].partNumberName + '</span></p></div></div><button type="button" class="btn2">回 退</button> <button type="button" class="btn3">用户工程进度</button></div>';
+							$('.two').append(html2);
+						} else if(data.taskList[i].partNumberName == '已办') {
+							var html3 = '<div class="wrap"><div class="workOrder"><div class="workOrder-form"><p>工单号：' + data.taskList[i].taskCode + '</p><p>客户名称：' + data.taskList[i].userName + '</p><p>客户地址：' + data.taskList[i].electricityAddress + '</p><p class="progress">业务进度：<span class="completedColor">' + data.taskList[i].partNumberName + '</span></p></div></div></div>';
+							$('.three').append(html3);
+						}
+					}
+
+				}
+			});
+
+			$(function() {
+				hui.tab('.hui-tab');
+				var h = $(document).height() - 106;
+				$('.hui-tab-body').height(h);
+
+				//			在办项点击签收事件
+				$('.one').on('tap', '.btn', function(event) {
+					var target = $(event.target.parentNode)
+					var taskCode = target.find('p').eq(0).text().substring(4);
+					var data1 = {
+						userId: "aaa",
+						userPwd: "aaa",
+						taskCode: taskCode,
+						partNumberName: "现场勘查"
+					};
+					var data1str = JSON.stringify(data1);
+					$.ajax({
+						type: "post",
+						url: "http://39.108.104.129/BusExt/Service.ashx?Func=UpdateBEWorkOrderStatus",
+						data: data1str,
+						success: function(data) {
+							console.log(data.status)
+							if(data.status == "Ok") {
+								mui.toast('已签收!已移至在办项！');
+								setTimeout(function() {
+									window.location.reload();
+								}, 1000)
+							}
+
+						}
+					});
+
+				});
+				//			在办项点击用户工程进度事件
+				$('.two').on('tap', '.btn3', function() {
+					layer.open({
+						type: 1,
+						title: '用户工程进度',
+						className: 'popuo2',
+						anim: 'false',
+						content: '<div class="mui-content"><div class="workOrder"><div class="workOrder-form"><p>工单号：2940478341212</p><p>客户名称：广州科腾信息技术有限公司</p><p>客户地址：广州市黄埔大道西平云路163号</p><p class="progress">业务进度：<span class="IntermediateCheckColor">现场勘查</span></p></div></div><div style="padding:30px 0"><div class="progressBar" class="mui-progressbar"><span></span></div><div id="progressSet"><span>0%</span> <span>25%</span> <span>50%</span> <span>75%</span> <span>100%</span></div></div></div>',
+						btn: '关闭',
+						success: function() {
+							if(saveProgress == undefined) {
+								mui(".progressBar").progressbar({
+									progress: 25
+								}).show();
+							} else {
+								mui(".progressBar").progressbar({
+									progress: saveProgress
+								}).show();
+							}
+//							手动设置进度
+							$('#progressSet').on('tap', 'span', function() {
+								var setProgress = saveProgress = parseInt($(this).html());
+								mui(".progressBar").progressbar().setProgress(setProgress);
+							})
+						}
+					})
+				});
+
+				//			在办项点击回退事件
+				mui('.main-body').on('tap', '.btn2', function() {
+					layer.open({
+						type: 1,
+						title: '重新分配申请',
+						className: 'popuo',
+						content: '<div class="mui-content"><textarea name="" placeholder="请输入理由"></textarea></div>',
+						btn: ['取消', '确认']
+					})
+				});
+
+				//		已办项点击详情事件
+				mui('.hui-list:nth-of-type(3)').on('tap', '.workOrder', function(e) {
+					mui.openWindow({
+						url: 'Manager_CompletionInspection.html',
+						id: 'Manager_CompletionInspection'
+					})
+				})
+			})
+
+			//			待办项点击事件
+			mui('.hui-list:nth-of-type(1)').on('tap', '.workOrder', function(event) {
+				var taskCode = $(event.target.parentNode);
+				var localtaskCode = taskCode.find('p span').eq(0).html();
+				localStorage.setItem('localtaskCode', localtaskCode);
+				mui.openWindow({
+					url: 'Maneger_TaskDetails.html',
+					id: 'Maneger_TaskDetails'
+				})
+			})
+
+			//			在办项点击工单详情事件
+			mui('.hui-list:nth-of-type(2)').on('tap', '.workOrder', function(e) {
+				var progress = $(this).find('.progress span').html();
+				if(progress.indexOf('现场勘查') >= 0) {
+					localStorage.setItem('taskCode', $(this).find('p').eq(0).html().substring(4))
+					mui.openWindow({
+						url: 'Manager_SiteSurvey.html',
+						id: 'Manager_SiteSurvey'
+					})
+				};
+				if(progress.indexOf('中间检查') >= 0) {
+					localStorage.setItem('taskCode2', $(this).find('p').eq(0).html().substring(4))
+					mui.openWindow({
+						url: 'Maneger_IntermediateInspectionSubmissions.html',
+						id: 'Maneger_IntermediateInspectionSubmissions'
+					})
+				};
+				if(progress.indexOf('竣工检验') >= 0) {
+					localStorage.setItem('taskCode3', $(this).find('p').eq(0).html().substring(4))
+					mui.openWindow({
+						url: 'Manager_CompletionInspection.html',
+						id: 'Manager_CompletionInspection'
+					})
+				};
+			})
+		</script>
+	</body>
+
+</html>

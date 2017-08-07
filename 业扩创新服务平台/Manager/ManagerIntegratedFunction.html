@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/hui.css" />
+	</head>
+	<style type="text/css">
+		.hui-tab-title {
+			overflow: hidden;
+		}
+		
+		.hui-tab-active {
+			color: #1496FF;
+		}
+		
+		.hui-list {
+			padding: 0px;
+		}
+		
+		.hui-list>p {
+			margin-bottom: 0px;
+			background-color: #E1E1E1;
+			padding: 5px 12px;
+		}
+		.hui-tab-body {
+			overflow: auto;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>综合功能</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="hui-tab">
+			<div class="hui-tab-title">
+				<div>未评价</div>
+				<div>已评价</div>
+			</div>
+			<div class="hui-tab-body">
+				<div class="hui-tab-item hui-list content1">
+					<!--<div class="workOrder">
+						<div class="workOrder-form">
+							<p>工单号：2940478341212</p>
+							<p>客户名称：广州科腾信息技术有限公司</p>
+							<p>客户地址：广州市黄埔大道西平云路163号</p>
+							<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+						</div>
+					</div>
+					<div class="workOrder">
+						<div class="workOrder-form">
+							<p>工单号：2940478341212</p>
+							<p>客户名称：广州科腾信息技术有限公司</p>
+							<p>客户地址：广州市黄埔大道西平云路163号</p>
+							<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+						</div>
+					</div>
+					<div class="workOrder">
+						<div class="workOrder-form">
+							<p>工单号：2940478341212</p>
+							<p>客户名称：广州科腾信息技术有限公司</p>
+							<p>客户地址：广州市黄埔大道西平云路163号</p>
+							<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+						</div>
+					</div>
+					<div class="workOrder">
+						<div class="workOrder-form">
+							<p>工单号：2940478341212</p>
+							<p>客户名称：广州科腾信息技术有限公司</p>
+							<p>客户地址：广州市黄埔大道西平云路163号</p>
+							<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+						</div>
+					</div>-->
+				</div>
+				<div class="hui-tab-item hui-list content2">
+					<!--<div class="workOrder">
+						<div class="workOrder-form">
+							<p>工单号：2940478341212</p>
+							<p>客户名称：广州科腾信息技术有限公司</p>
+							<p>客户地址：广州市黄埔大道西平云路163号</p>
+							<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+						</div>
+					</div>
+					<div class="workOrder">
+						<div class="workOrder-form">
+							<p>工单号：2940478341212</p>
+							<p>客户名称：广州科腾信息技术有限公司</p>
+							<p>客户地址：广州市黄埔大道西平云路163号</p>
+							<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+						</div>
+					</div>
+					<div class="workOrder">
+						<div class="workOrder-form">
+							<p>工单号：2940478341212</p>
+							<p>客户名称：广州科腾信息技术有限公司</p>
+							<p>客户地址：广州市黄埔大道西平云路163号</p>
+							<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+						</div>
+					</div>
+					<div class="workOrder">
+						<div class="workOrder-form">
+							<p>工单号：2940478341212</p>
+							<p>客户名称：广州科腾信息技术有限公司</p>
+							<p>客户地址：广州市黄埔大道西平云路163号</p>
+							<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+						</div>
+					</div>-->
+				</div>
+			</div>
+		</div>
+		
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/hui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-tab.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-accordion.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+			hui.accordion(true, true);
+			
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index2.html',
+					id: 'index2'
+				})
+			})
+			$(function() {
+				var h = $(document).height() - 106;
+				$('.hui-tab-body').height(h);
+			})
+			//			获取工单列表
+			var data = {
+				userId: "bbb",
+				userPwd: "bbb"
+			};
+			var datastr = JSON.stringify(data);
+			$.ajax({
+				type: "post",
+				url: "http://39.108.104.129/BusExt/Service.ashx?Func=QueryBEWorkOrder",
+				data: datastr,
+				success: function(data) {
+					for(var i = 0; i < data.taskList.length; i++) {
+						if(data.taskList[i].partNumberName == '现场勘查' || data.taskList[i].partNumberName == '中间检查' || data.taskList[i].partNumberName == '竣工检验') {
+							var html2 = '<div class="workOrder"><div class="workOrder-form"><p>工单号：' + data.taskList[i].taskCode + '</p><p>客户名称：' + data.taskList[i].userName + '</p><p>客户地址：' + data.taskList[i].electricityAddress + '</p><p class="progress">业务进度：<span class="SiteSurveyColor">' + data.taskList[i].partNumberName + '</span></p></div></div>';
+							$('.content1').append(html2);
+						}
+					}
+
+				}
+			});
+
+			hui.tab('.hui-tab');
+			mui('.content1').on('tap', '.workOrder', function() {
+				localStorage.setItem('taskCodePJ', $(this).find('p').eq(0).html().substring(4));
+				var progress = $(this).find('.SiteSurveyColor').text();
+				localStorage.setItem('progress',progress);
+				mui.openWindow({
+					url: 'ManagePersonnelEvaluation.html',
+					id: "ManagePersonnelEvaluation"
+				})
+			})
+			mui('.content2').on('tap', '.workOrder', function() {
+				mui.openWindow({
+					url: 'ManagePersonnelEvaluation.html',
+					id: "ManagePersonnelEvaluation"
+				})
+			})
+		</script>
+	</body>
+
+</html>

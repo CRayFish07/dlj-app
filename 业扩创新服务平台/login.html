@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style type="text/css">
+		body {
+			background: #fff;
+		}
+		
+		header {
+			width: 100%;
+			height: 333px;
+			text-align: center;
+		}
+		
+		header img {
+			width: 102px;
+			height: 102px;
+			margin-top: 101px;
+		}
+		
+		header p {
+			margin-top: 25px;
+			font-size: 17px;
+		}
+		
+		input[type=text],
+		input[type=password] {
+			border: none;
+			border-bottom: 1px solid #E8E8E8;
+			border-radius: 0px;
+			width: 66%;
+		}
+		
+		section div {
+			display: flex;
+			justify-content: center;
+			vertical-align: middle;
+		}
+		
+		section div img {
+			align-self: center;
+			margin-right: 13px;
+		}
+		
+		input[type=button] {
+			margin-top: 67px;
+			text-align: center;
+			margin-left: 10%;
+			width: 80%;
+			height: 40px;
+			background-color: #1AA1E6;
+			font-size: 18px;
+			color: #fff;
+		}
+	</style>
+
+	<body>
+		<header>
+			<img src="images/logo.png" />
+			<p>东莞业扩创新服务平台</p>
+		</header>
+		<section>
+			<div>
+				<img src="images/user.jpg" style="width:18px;height:20px" />
+				<input type="text" name="" id="username" value="" />
+			</div>
+			<div>
+				<img src="images/password.jpg" style="width:18px;height:20px" />
+				<input type="password" name="" id="password" value="" />
+			</div>
+			<input type="button" value="确  认" id="submit" />
+		</section>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var loginBtn = document.getElementById('submit');
+			loginBtn.addEventListener('tap', function() {
+				var name = document.getElementById('username').value;
+				var psd = document.getElementById('password').value;
+				if(name == 'liyuan' && psd == '123') {
+					mui.openWindow({
+						url: 'Engineer/index.html',
+						id: 'index'
+					})
+				} else if(name == 'lintao' && psd == '123') {
+					mui.openWindow({
+						url: 'Manager/index2.html',
+						id: 'index2'
+					})
+				} else if(name == 'chenjie' && psd == '123'){
+					mui.openWindow({
+						url: 'SeniorEngineer/index3.html',
+						id: 'index3'
+					})
+				}else if(name == 'ddd' && psd == 'ddd'){
+					mui.openWindow({
+						url: 'IndustryManager/index4.html',
+						id: 'index4'
+					})
+				}else {
+					mui.toast('用户名或密码错误!');
+				}
+
+			})
+		</script>
+	</body>
+
+</html>

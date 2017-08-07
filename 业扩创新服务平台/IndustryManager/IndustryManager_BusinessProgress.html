@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.css" />
+		<link rel="stylesheet" type="text/css" href="../css/hui.css" />
+		<script src="../js/hui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-select-beautify.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.sorts {
+			display: flex;
+			justify-content: space-around;
+			border-bottom: 1px solid #F2F2F2;
+			height: 45px;
+			align-items: center;
+			color: #A6A6A6;
+			background-color: #fff;
+		}
+		.mui-content > div {
+			background-color: #fff;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>业务进度</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="mui-content">
+			<div class="sorts">
+				<div>
+					<select id="select1">
+						<option selected="selected">环节</option>
+						<option value="业务受理">业务受理</option>
+						<option value="现场勘查">现场勘查</option>
+						<option value="中间检查">中间检查</option>
+						<option value="竣工检验	">竣工检验</option>
+					</select>
+				</div>
+				<div>
+					<select id="select2">
+						<option selected="selected">紧急程度</option>
+						<option value="超时">超时</option>
+						<option value="即将超时">即将超时</option>
+					</select>
+				</div>
+				<div>
+					<select id="select3">
+						<option selected="selected">时间</option>
+						<option value="正序">正序</option>
+						<option value="倒序">倒序</option>
+					</select>
+				</div>
+			</div>
+			<div>
+				<div class="workOrder">
+					<div class="workOrder-form">
+						<p>工单号：2940478341212</p>
+						<p>客户名称：广州科腾信息技术有限公司</p>
+						<p>客户地址：广州市黄埔大道西平云路163号</p>
+						<p class="progress">业务进度：<span class="SiteSurveyColor">现场勘查</span></p>
+					</div>
+				</div>
+				<div class="workOrder">
+					<div class="workOrder-form">
+						<p>工单号：2940478341212</p>
+						<p>客户名称：广州科腾信息技术有限公司</p>
+						<p>客户地址：广州市黄埔大道西平云路163号</p>
+						<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+					</div>
+				</div>
+				<div class="workOrder">
+					<div class="workOrder-form">
+						<p>工单号：2940478341212</p>
+						<p>客户名称：广州科腾信息技术有限公司</p>
+						<p>客户地址：广州市黄埔大道西平云路163号</p>
+						<p class="progress">业务进度：<span class="CompletionInspectionColor">竣工检验</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		mui.init();
+		var home = document.getElementsByClassName('mui-icon-home')[0];
+		home.addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'index4.html',
+				id: 'index4'
+			})
+		})
+		hui('#select1').selectBeautify(showVal);
+		hui('#select2').selectBeautify(showVal);
+		hui('#select3').selectBeautify(showVal);
+
+		function showVal(val) {
+			hui.toast('您现在选择的是 : ' + val);
+		}
+		
+		mui('.mui-content').on('tap','.workOrder',function() {
+			mui.openWindow({
+				url:'IndustryManager_BusinessProgressShrink.html',
+				id:'IndustryManager_BusinessProgressShrink'
+			})
+		})
+	</script>
+
+</html>

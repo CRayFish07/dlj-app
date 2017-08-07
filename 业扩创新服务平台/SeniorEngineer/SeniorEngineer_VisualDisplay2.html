@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../css/hui.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.css" />
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-picker.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			span.mui-icon {
+				font-size: 14px;
+				color: #007aff;
+				margin-left: -15px;
+				padding-right: 10px;
+			}
+			
+			.mui-bar {
+				height: 64px;
+				background-color: #1BA2E8;
+			}
+			
+			.mui-bar-nav~.mui-content {
+				padding-top: 64px;
+			}
+			
+			section:first-child {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				background-color: #fff;
+			}
+			
+			#select1~div {
+				padding-top: 6px;
+				padding-left: 10px;
+			}
+			
+			input[type='text'] {
+				margin-bottom: 0px;
+				border-radius: 20px;
+				height: 34px;
+			}
+			
+			.search_table {
+				background: url(../images/xialakuang@2x.png) 0 0 no-repeat;
+				background-size: 100%;
+				width: 120px;
+				height: 120px;
+				z-index: 2;
+				top: -5px;
+				left: 20px;
+			}
+			
+			#search_cell {
+				display: flex;
+				justify-content: space-around;
+				width: 30%;
+				position: absolute;
+				top: 12px;
+				color: #999;
+				font-size: 14px;
+				text-align: center;
+			}
+			
+			.title_cell {
+				display: flex;
+				justify-content: space-between;
+				height: 30px;
+				align-items: center;
+			}
+			
+			.content_cell,
+			.slide {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				height: 80px;
+				align-content: space-around;
+			}
+			
+			.slide {
+				height: 140px;
+			}
+			
+			.content_cell button,
+			.slide button {
+				width: 30%;
+				mnargin: 10px;
+				background-color: #EEEEEE;
+				border-radius: 5px;
+				text-align: center;
+				border: 0;
+			}
+			
+			button.selected {
+				background-color: #fff;
+				border: 1px solid #43B5EC;
+				color: #43B5EC;
+			}
+			
+			.mui-off-canvas-left,
+			.mui-off-canvas-right {
+				background-color: #fff;
+			}
+			
+			.side_main {
+				margin: 10px;
+			}
+			
+			.side_main:nth-of-type(1) {
+				margin-top: 20px;
+			}
+			
+			.footer_cell {
+				position: fixed;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+			}
+			
+			.footer_cell button {
+				float: left;
+				border-radius: 0;
+				border: 0;
+				color: #fff;
+			}
+			
+			.mui-off-canvas-wrap.mui-active .mui-off-canvas-backdrop {
+				box-shadow: none;
+			}
+			
+			.mui-off-canvas-right {
+				width: 90%;
+			}
+			
+			section:last-child {
+				position: relative;
+				background: url(../images/newMap.png) 0 0 no-repeat;
+				background-size: 100%;
+				height: 100%;
+			}
+			
+			section:last-child img {
+				position: absolute;
+			}
+			
+			.mui-inner-wrap .mui-scroll {
+				height: 100%;
+			}
+			.workOrder {
+				border:0;
+			}
+			#task {
+				position: absolute;
+				top:0px;
+				left: 0px;
+				right:0px;
+				z-index: 10;
+				background-color: #fff;
+				display: none;
+			}
+			#checkDetail {
+				background-color: #28AAE8;
+				width:70%;
+				border-radius: 20px;
+				color:#fff;
+				margin-left:15%;
+				height:40px;
+				margin-bottom:15px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--侧滑菜单容器-->
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+			<!--菜单部分-->
+			<aside id="offCanvasSide" class="mui-off-canvas-right">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="side_main">
+							<div class="title_cell">
+								<span style="color:#000">选择区局</span>
+								<span id="down" class="mui-icon mui-icon-arrowdown" style="color:#ccc">全部区局</span>
+							</div>
+							<div class="content_cell">
+								<button class="selected">莞城区</button>
+								<button>东城区</button>
+								<button>南城区</button>
+								<button>万江区</button>
+								<button>长安镇</button>
+								<button>厚街镇</button>
+							</div>
+							<div class="slide" style="display: none;">
+								<button>虎门镇</button>
+								<button>石龙镇</button>
+								<button>石碣镇</button>
+								<button>沙田镇</button>
+								<button>黄江镇</button>
+								<button>谢岗镇</button>
+								<button>凤岗镇</button>
+								<button>常平镇</button>
+								<button>横沥镇</button>
+							</div>
+						</div>
+						<div class="side_main">
+							<div class="title_cell">
+								<span style="color:#000">时间状态</span>
+							</div>
+							<div class="content_cell" style="height:34px">
+								<button>已完成</button>
+								<button>进行中</button>
+								<button>超时</button>
+							</div>
+						</div>
+						<div class="side_main">
+							<div class="title_cell">
+								<span style="color:#000">报装时间</span>
+							</div>
+							<div class="content_cell" style="height:34px;display: flex;justify-content: space-around;">
+								<button type="button" class="hui-button hui-button-large" id="btn1" style="width: 48%;height: 34px;line-height: 34px;">开始时间</button>
+								<button type="button" class="hui-button hui-button-large" id="btn2" style="width: 48%;height:34px;line-height: 34px;">结束时间</button>
+							</div>
+						</div>
+						<div class="side_main">
+							<div class="title_cell">
+								<span style="color:#000">电压等级</span>
+							</div>
+							<div class="content_cell">
+								<button>35千伏</button>
+								<button>66千伏</button>
+								<button>110千伏</button>
+								<button>20千伏</button>
+								<button>220千伏</button>
+							</div>
+						</div>
+						<div class="side_main" style="margin-bottom: 60px;">
+							<div class="title_cell">
+								<span style="color:#000">报装容量</span>
+							</div>
+							<div class="content_cell">
+								<button>5000KW</button>
+								<button>10000KW</button>
+								<button>20000KW</button>
+								<button>50000KW</button>
+								<button>其他</button>
+							</div>
+						</div>
+						<div class="footer_cell">
+							<button style="width:50%;background-color: #CC3300;" id="reset">重置</button>
+							<button id="offCanvasHide" style="width: 50%;background-color: #1AA1E7">确定</button>
+						</div>
+					</div>
+				</div>
+			</aside>
+			<div class="mui-inner-wrap">
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+					<h1>可视化展示</h1>
+					<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+				</header>
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<section>
+							<div style="width: 85%;position: relative;padding:5px 10px;">
+								<div id="search_cell">
+									<span>工单号</span>
+									<img src="../images/xiala@3x.png" width="12" height="8" style="margin-top:5px" />
+								</div>
+								<input type="text" class="mui-input" placeholder="">
+								<img src="../images/01_11@2x.png" width="30" height="30" style="position: absolute;right:16px;top:7px;padding:5px" />
+							</div>
+							<div style="width: 15%;">
+								<span id="offCanvasShow" style="padding: 5px;color:#999">
+									筛选
+								</span>
+							</div>
+						</section>
+						<div id="slected_table" style="position: absolute;display: none;">
+							<ul class="mui-table-view search_table">
+								<li class="mui-table-view-cell">工单号</li>
+								<li class="mui-table-view-cell">地址</li>
+								<li class="mui-table-view-cell">工作人员</li>
+							</ul>
+						</div>
+						<section id="task">
+								<div class="workOrder">
+									<div class="workOrder-form">
+										<p>工单号：2940478341212</p>
+										<p>客户名称：广州科腾信息技术有限公司</p>
+										<p>客户地址：广州市黄埔大道西平云路163号</p>
+										<p class="progress">业务进度：<span class="SiteSurveyColor">现场勘查</span></p>
+									</div>
+									<div class="state-icon">
+										<img src="../images/overtime.png" />
+										<span class="overtime">已超时9日</span>
+									</div>
+								</div>
+								<button id="checkDetail">查看详情</button>
+						</section>
+						<section>
+							<img src="../images/blue@2x.png" width="40" height="44" class="blue" style="top:30%;left:30%" />
+							<img src="../images/blue@2x.png" width="40" height="44" class="blue" style="top:31%;left:65%" />
+							<img src="../images/blue@2x.png" width="40" height="44" class="blue" style="top:54%;left:20%" />
+							<img src="../images/blue@2x.png" width="40" height="44" class="blue" style="top:56%;left:47%" />
+							<img src="../images/blue@2x.png" width="40" height="44" class="blue" style="top:41%;left:77%" />
+							<img src="../images/red@2x.png" width="40" height="44" class="red" style="top:60%;left:80%" />
+							<img src="../images/yellow@2x.png" width="40" height="44" class="yellow" style="top:41%;left:56%" />
+							<div style="position: absolute;width:42px;height:42px;top:60%;left:3%;background-color: #fff;border-radius: 50%;">
+								<img src="../images/uodate@2x.png" width="42" height="43" class="yellow" style="padding:10px" />
+							</div>
+							<div style="position: absolute;width:42px;height:42px;top:70%;left:3%;background-color: #fff;border-radius: 50%;">
+								<img src="../images/position@2x.png" width="42" height="43" class="yellow" style="padding:10px" />
+							</div>
+
+						</section>
+					</div>
+				</div>
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+
+		<script>
+			mui.init({
+				swipeBack: false,
+			});
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index3.html',
+					id: 'index3'
+				})
+			});
+			//---------------------------------------------------------------------------
+			$('.red').on('tap',function() {
+				var html = '<img src="../images/overtime.png"> <span class="overtime">已超时9日</span>';
+				$('#task .state-icon').html(html);
+				$('#task .state-icon').show();
+				$('#task').slideToggle();
+			})
+			$('.blue').on('tap',function() {
+				$('#task .state-icon').hide();
+				$('#task').slideToggle();
+			})
+			$('.yellow').on('tap',function() {
+				var html = '<img src="../images/willtimeout.png"> <span class="not-overtime">还剩9日</span>';
+				$('#task .state-icon').html(html);
+				$('#task .state-icon').show();
+				$('#task').slideToggle();
+			})
+//---------------------------------------------------------------------------
+			$('#down').on('tap', function() {
+				$('.slide').slideToggle();
+			})
+//---------------------------------------------------------------------------
+			$('.content_cell:not(:first)').on('tap', 'button', function() {
+				$(this).siblings().removeClass('selected');
+				$(this).addClass('selected');
+			})
+
+			$('.side_main:nth-of-type(1)').find('button').on('tap', function() {
+				if($(this).parent('.slide').length === 1) {
+					console.log($(this))
+					$('.side_main:nth-of-type(1)').find('button').removeClass('selected');
+					$(this).addClass('selected');
+				} else {
+					$('.side_main:nth-of-type(1)').find('button').removeClass('selected');
+					$(this).addClass('selected');
+				}
+
+			})
+
+			$('#reset').on('tap', function() {
+				$('.mui-scroll').find('button').removeClass('selected');
+			})
+			
+			$('#checkDetail').on('tap',function() {
+				mui.openWindow({
+					url:'SeniorEngineer_BusinessProgress.html',
+					id:'SeniorEngineer_BusinessProgress'
+				})
+			});
+//---------------------------------------------------------------------------
+			/* 时间选择器 非关联型绑定 */
+			var picker1 = new huiPicker('#btn1', function() {
+				var year = picker1.getVal(0);
+				var month = picker1.getVal(1);
+				var days = picker1.getVal(2);
+				hui('#btn1').html(year + ' - ' + month + ' - ' + days);
+			});
+			picker1.level = 3;
+			//年份
+			var years = new Array();
+			for(var i = 2000; i <= 2017; i++) {
+				years.push({
+					value: i,
+					text: i
+				});
+			}
+			picker1.bindData(0, years);
+			//月份
+			var months = new Array();
+			for(var i = 1; i <= 12; i++) {
+				if(i < 10) {
+					i = '0' + i;
+				}
+				months.push({
+					value: i,
+					text: i
+				});
+			}
+			picker1.bindData(1, months);
+			//天
+			var days = new Array();
+			for(var i = 1; i <= 31; i++) {
+				if(i < 10) {
+					i = '0' + i;
+				}
+				days.push({
+					value: i,
+					text: i
+				});
+			}
+			picker1.bindData(2, days);
+
+			var picker2 = new huiPicker('#btn2', function() {
+				var year = picker2.getVal(0);
+				var month = picker2.getVal(1);
+				var days = picker2.getVal(2);
+				hui('#btn2').html(year + ' - ' + month + ' - ' + days);
+			});
+			picker2.level = 3;
+			//年份
+			var years = new Array();
+			for(var i = 2000; i <= 2017; i++) {
+				years.push({
+					value: i,
+					text: i
+				});
+			}
+			picker2.bindData(0, years);
+			//月份
+			var months = new Array();
+			for(var i = 1; i <= 12; i++) {
+				if(i < 10) {
+					i = '0' + i;
+				}
+				months.push({
+					value: i,
+					text: i
+				});
+			}
+			picker2.bindData(1, months);
+			//天
+			var days = new Array();
+			for(var i = 1; i <= 31; i++) {
+				if(i < 10) {
+					i = '0' + i;
+				}
+				days.push({
+					value: i,
+					text: i
+				});
+			}
+			picker2.bindData(2, days);
+//---------------------------------------------------------------------------
+			$('#search_cell').on('tap', function() {
+				$('#slected_table').css('display', 'block');
+			})
+			mui('#slected_table').on('tap', 'li', function() {
+				var html = $(this).html();
+				$('#slected_table').css('display', 'none');
+				$('#search_cell span').html(html);
+			})
+
+			document.getElementById('offCanvasShow').addEventListener('tap', function() {
+				mui('.mui-off-canvas-wrap').offCanvas('toggle');
+			});
+			document.getElementById('offCanvasHide').addEventListener('tap', function() {
+				mui('.mui-off-canvas-wrap').offCanvas('close');
+			});
+			//主界面和侧滑菜单界面均支持区域滚动；
+			mui('#offCanvasSideScroll').scroll();
+			mui('#offCanvasContentScroll').scroll();
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/mui.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		section {
+			background-color: #fff;
+			overflow: hidden;
+			margin-bottom: 10px;
+		}
+		
+		section p {
+			padding-left: 15px;
+			margin-top: 10px;
+		}
+		
+		section span {
+			float: right;
+			padding-right: 15px;
+			margin-top: 10px;
+			font-size: 12px;
+		}
+		
+		section>h4 {
+			font-weight: 400;
+			padding: 10px 15px;
+			border-bottom: 1px solid #ccc;
+		}
+		
+		.left_wrap {
+			width: 80%;
+			float: left;
+		}
+		
+		.right_wrap {
+			width: 20%;
+			float: right;
+			position: relative;
+		}
+		.right_wrap > span {
+			position: absolute;
+			top:50%;
+			right:2%;
+			margin-top:-20px;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>检查前准备</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="mui-content">
+			<section>
+				<h4>准备工作</h4>
+				<div class="left_wrap">
+					<p>各类服务表单等是否准备足够</p>
+				</div>
+				<div class="right_wrap">
+					<span class="mui-icon mui-icon-checkmarkempty"></span>
+				</div>
+			</section>
+			<section>
+				<h4>主要工器具</h4>
+				<div class="left_wrap">
+					<p>1.绝缘鞋、工作服、安全帽；</p>
+					<p>2.手电筒；</p>
+					<p>3.低电压感应式验电笔；</p>
+					<p>4.数码相机；</p>
+					<p>5.业务表单；</p>
+					<p>6.皮尺；</p>
+					<p>7.笔；</p>
+				</div>
+				<div class="right_wrap">
+					<span class="mui-icon mui-icon-checkmarkempty"></span>
+				</div>
+			</section>
+			<section>
+				<h4>重要资料核对</h4>
+				<div class="left_wrap">
+					<div>
+						<p>核对施工、试验单位是否与委托单位一致，按规定审核试验报告。</p>
+					</div>
+				</div>
+				<div class="right_wrap">
+					<span class="mui-icon mui-icon-checkmarkempty"></span>
+				</div>
+			</section>
+			<section>
+				<h4>证件及安全交底</h4>
+				<div class="left_wrap">
+					<div>
+						<p>检查前准备好证件，戴好安全帽，穿好工作服，并与施工队双方做好安全技术交底。</p>
+					</div>
+				</div>
+				<div class="right_wrap">
+					<span class="mui-icon mui-icon-checkmarkempty"></span>
+				</div>
+			</section>
+			<section>
+				<h4>工器具及操作</h4>
+				<div class="left_wrap">
+					<div>
+						<p>确保工具器合格无安全隐患，计量装置无缺陷，掌握正确的检查操作行为。</p>
+					</div>
+				</div>
+				<div class="right_wrap">
+					<span class="mui-icon mui-icon-checkmarkempty"></span>
+				</div>
+			</section>
+			<section>
+				<h4>作业环境评估</h4>
+				<div class="left_wrap">
+					<div>
+						<p>在现场进行用电检查时应注意观察作业环境，防高空坠落，地面有坑洼危险，天气恶劣不检查。</p>
+					</div>
+				</div>
+				<div class="right_wrap">
+					<span class="mui-icon mui-icon-checkmarkempty"></span>
+				</div>
+			</section>
+			<section>
+				<h4>麻痹、违章、触碰其他带电设备</h4>
+				<div class="left_wrap">
+					<div>
+						<p>严格执行全过程安全监护，确保人身、设备安全，保持安全距离，做到无替代客户进行电工作业行为。</p>
+					</div>
+				</div>
+				<div class="right_wrap">
+					<span class="mui-icon mui-icon-checkmarkempty"></span>
+				</div>
+			</section>
+			<section>
+				<h4>进入工作现场</h4>
+				<div class="left_wrap">
+					<div>
+						<p>工作负责人向成员交代带电设备和现场安全措施及注意事项。</p>
+					</div>
+				</div>
+				<div class="right_wrap">
+					<span class="mui-icon mui-icon-checkmarkempty"></span>
+				</div>
+			</section>
+		</div>
+		
+		
+		<script type="text/javascript">
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+		home.addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'index2.html',
+				id: 'index2'
+			})
+		});
+//			设置左右div同高
+			for(var i=0;i<$('.left_wrap').length;i++) {
+				var h = $('.left_wrap').eq(i).height();
+				$('.right_wrap').eq(i).css('height',h);
+			}
+		</script>
+	</body>
+
+</html>

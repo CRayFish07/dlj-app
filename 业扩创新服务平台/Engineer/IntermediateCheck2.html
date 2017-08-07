@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/hui.css" />
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/hui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-picker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../layer_mobile/layer.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.mui-icon-checkmarkempty {
+			float: right;
+			margin-right: 15px;
+			display: inline-block;
+			color: #44AC76
+		}
+		
+		.mui-input-row label {
+			width: 80%;
+		}
+		
+		.info-head {
+			width: 100%;
+			height: 43px;
+			background-color: #fff;
+		}
+		
+		.info-head p {
+			font-size: 15px;
+			color: #000;
+			line-height: 30px;
+			margin-left: 12px;
+		}
+		
+		.mui-table-view {
+			margin-bottom: 10px;
+		}
+		
+		.mui-navigate-right {
+			font-size: 15px;
+			font-weight: 700;
+		}
+		
+		.mui-input-row {
+			border-bottom: 1px solid #F1F1F1;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		
+		.surveyOpinion {
+			background-color: #fff;
+			border: none;
+			text-align: left;
+			height: 60px;
+			border-top: 1px solid #E5E5E5;
+			font-size: 14px;
+			color: #D2D1D2;
+			margin-bottom: 5px;
+		}
+		
+		.text_span {
+			padding: 8px 15px;
+			float: right;
+		}
+		
+		.mui-input-row label {
+			color: #A2A2A2;
+		}
+		
+		.btns {
+			padding: 15px 0px;
+			display: flex;
+			justify-content: space-around;
+		}
+		
+		.btns button {
+			width: 45%;
+			height: 40px;
+			border-radius: 20px;
+			background-color: #1BA1E8;
+			color: #fff;
+		}
+		
+		.popuo p {
+			text-align: left;
+		}
+		
+		#Description {
+			font-weight: 200;
+			font-size: 14px;
+		}
+		
+		input[type='text'] {
+			margin-bottom: 0px;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>中间检查</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="workOrder">
+			<table border="0" cellspacing="" cellpadding="">
+				<tr>
+					<td>客户名称</td>
+					<td class="userName">李炳全</td>
+				</tr>
+				<tr>
+					<td>用电地址</td>
+					<td class="electricityAddress">广东省东莞市桥头镇郎厦村华夏二环路5号</td>
+				</tr>
+				<tr>
+					<td>工作单号</td>
+					<td class="taskCode"><input type="text" class="taskCode" /></td>
+				</tr>
+				<tr>
+					<td>报装容量</td>
+					<td class="contractCapacity">250kVA</td>
+				</tr>
+				<tr>
+					<td>客户联系人</td>
+					<td class="slyy">李炳全</td>
+				</tr>
+				<tr>
+					<td>受理日期</td>
+					<td class="slrq">2017年4月11日</td>
+				</tr>
+				<tr>
+					<td>受理业务员</td>
+					<td class="slyy">麦满枝</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<p>本户受电工程已委托有承装（修）电力设备许可证单位安装，隐蔽工程现已施工完毕，经过自检，工程质量符合国家及电力行业验收标准、技术规范的要求，现向供电部门报请中间检查。</p>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+		<div style="background-color: #E0E0E0;padding-top:10px">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">中间检查项目</a>
+					<div class="mui-collapse-content">
+						<div class="mui-input-row">
+							<label>电缆沟深度、弯度及沟底处理</label>
+							<div class="mui-switch mui-switch-mini zjjcxm_dlg">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</div>
+						<div class="mui-input-row">
+							<label>电缆工作井</label>
+							<div class="mui-switch mui-switch-mini zjjcxm_gzj">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</div>
+						<div class="mui-input-row">
+							<label>电缆敷设</label>
+							<div class="mui-switch mui-switch-mini zjjcxm_dlfs">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</div>
+						<div class="mui-input-row">
+							<label>电缆沟(槽、管)</label>
+							<div class="mui-switch mui-switch-mini zjjcxm_dlgcg">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</div>
+						<div class="mui-input-row">
+							<label>接地装置的安装</label>
+							<div class="mui-switch mui-switch-mini zjjcxm_jdzz">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</div>
+						<div class="mui-input-row">
+							<label>是否按图施工</label>
+							<div class="mui-switch mui-switch-mini zjjcxm_atsg">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">供电企业中间意见</a>
+					<div class="mui-collapse-content">
+						<div class="mui-input-row">
+							<label>检查意见</label>
+							<select name="gdqyyj_jcyj" class="gdqyyj_jcyj">
+								<option value="0">不合格</option>
+								<option value="1">合格</option>
+							</select>
+						</div>
+						<div class="mui-input-row">
+							<label>供电企业(盖章)</label>
+							<span class="text_span"><input type="text" name="gdqyyj_gdqygz"/></span>
+						</div>
+						<div class="mui-input-row">
+							<label>检查人员签名</label>
+							<span class="text_span"><input type="text" name="gdqyyj_jcryqm" /></span>
+						</div>
+						<div class="mui-input-row">
+							<label>检查日期</label>
+							<span class="text_span"><button type="button" name="gdqyyj_jcrq" class="hui-button hui-button-large" id="btn1"></button></span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">客户确认检查意见</a>
+					<div class="mui-collapse-content">
+						<div class="mui-input-row">
+							<label>客户意见</label>
+							<select name="khyj_khyj" class="khyj_khyj">
+								<option value="0">不合格</option>
+								<option value="1">合格</option>
+							</select>
+						</div>
+						<div class="mui-input-row">
+							<label>客户(代表)签名(盖章)</label>
+							<span class="text_span"><input type="text" name="khyj_khdbqm"/></span>
+						</div>
+						<div class="mui-input-row">
+							<label>确认日期</label>
+							<span class="text_span"><button type="button" name="khyj_khqrrq" class="hui-button hui-button-large" id="btn2"></button></span>
+						</div>
+						<div class="mui-input-row">
+							<label>施工单位(代表)签名(盖章)</label>
+							<span class="text_span"><input type="text" name="khyj_sgdwqm"/></span>
+						</div>
+						<div class="mui-input-row">
+							<label>确认日期</label>
+							<span class="text_span"><button type="button" name="khyj_sgdwqrrq" class="hui-button hui-button-large" id="btn3"></button></span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="extra">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a id="Description" class="mui-navigate-right" href="#">说明</a>
+						<!--<div class="text" id="Description">
+							说明
+							<span class="mui-icon mui-icon-arrowright"></span>
+						</div>-->
+					</li>
+				</ul>
+			</div>
+
+			<div class="btns">
+				<button id="confirm">确定</button>
+				<button id="modify">修改</button>
+			</div>
+	</body>
+	<script type="text/javascript">
+		mui.init();
+		/* 时间选择器 非关联型绑定 */
+		function datePicker() {
+			var picker1 = new huiPicker('#btn1', function() {
+				var year = picker1.getVal(0);
+				var month = picker1.getVal(1);
+				var days = picker1.getVal(2);
+				hui('#btn1').html(year + ' - ' + month + ' - ' + days);
+			});
+			var picker2 = new huiPicker('#btn2', function() {
+				var year = picker1.getVal(0);
+				var month = picker1.getVal(1);
+				var days = picker1.getVal(2);
+				hui('#btn2').html(year + ' - ' + month + ' - ' + days);
+			});
+			var picker3 = new huiPicker('#btn3', function() {
+				var year = picker1.getVal(0);
+				var month = picker1.getVal(1);
+				var days = picker1.getVal(2);
+				hui('#btn3').html(year + ' - ' + month + ' - ' + days);
+			});
+			picker1.level = 3;
+			picker2.level = 3;
+			picker3.level = 3;
+			//年份
+			var years = new Array();
+			for(var i = 2000; i <= 2017; i++) {
+				years.push({
+					value: i,
+					text: i
+				});
+			}
+			picker1.bindData(0, years);
+			picker2.bindData(0, years);
+			picker3.bindData(0, years);
+			//月份
+			var months = new Array();
+			for(var i = 1; i <= 12; i++) {
+				if(i < 10) {
+					i = '0' + i;
+				}
+				months.push({
+					value: i,
+					text: i
+				});
+			}
+			picker1.bindData(1, months);
+			picker2.bindData(1, months);
+			picker3.bindData(1, months);
+			//天
+			var days = new Array();
+			for(var i = 1; i <= 31; i++) {
+				if(i < 10) {
+					i = '0' + i;
+				}
+				days.push({
+					value: i,
+					text: i
+				});
+			}
+			picker1.bindData(2, days);
+			picker2.bindData(2, days);
+			picker3.bindData(2, days);
+		}
+		datePicker();
+
+		//				返回首页
+		var home = document.getElementsByClassName('mui-icon-home')[0];
+		home.addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'index.html',
+				id: 'index'
+			})
+		});
+
+		//				全局获取taskCode
+		var localtaskCode2 = localStorage.getItem('taskCode2');
+		var owc = {
+			userId: "aaa", //用户Id
+			userPwd: "aaa", //用户密码
+			taskCode: localtaskCode2 //业扩工作单号
+		};
+
+		var owcStr = JSON.stringify(owc);
+		//				获取工单详情
+		var url1 = "http://39.108.104.129/BusExt/Service.ashx?Func=QueryBEWorkOrder";
+		$.post(
+			url1,
+			owcStr,
+			function(data, status) {
+				var formdata = data.taskList[0];
+				$('.userName').html(formdata.userName);
+				$('.electricityAddress').html(formdata.electricityAddress);
+				$('.taskCode').html(formdata.taskCode);
+				$('.contractCapacity').html(formdata.contractCapacity);
+				$('.slyy').html(formdata.slyy);
+				$('.slrq').html(formdata.slrq);
+				$('.slyy').html(formdata.slyy);
+			}
+		);
+
+		//				获取中间检查工单
+		var url = "http://39.108.104.129/BusExt/Service.ashx?Func=QueryMidCheckSheet";
+		$.post(
+			url,
+			owcStr,
+			function(data, status) {
+				if(data.zjjcxm_dlg == 1) {
+					$('.zjjcxm_dlg').addClass('mui-active');
+				} else {
+					$('.zjjcxm_dlg').removeClass('mui-active');
+				};
+				if(data.zjjcxm_gzj == 1) {
+					$('.zjjcxm_gzj').addClass('mui-active');
+				} else {
+					$('.zjjcxm_gzj').removeClass('mui-active');
+				};
+				if(data.zjjcxm_dlfs == 1) {
+					$('.zjjcxm_dlfs').addClass('mui-active');
+				} else {
+					$('.zjjcxm_dlfs').removeClass('mui-active');
+				};
+				if(data.zjjcxm_dlgcg == 1) {
+					$('.zjjcxm_dlgcg').addClass('mui-active');
+				} else {
+					$('.zjjcxm_dlgcg').removeClass('mui-active');
+				};
+				if(data.zjjcxm_jdzz == 1) {
+					$('.zjjcxm_jdzz').addClass('mui-active');
+				} else {
+					$('.zjjcxm_jdzz').removeClass('mui-active');
+				};
+				if(data.zjjcxm_atsg == 1) {
+					$('.zjjcxm_atsg').addClass('mui-active');
+				} else {
+					$('.zjjcxm_atsg').removeClass('mui-active');
+				};
+				$('select[name="gdqyyj_jcyj"]').val(data.gdqyyj_jcyj);
+				$('input[name="gdqyyj_gdqygz"]').val(data.gdqyyj_gdqygz);
+				$('input[name="gdqyyj_jcryqm"]').val(data.gdqyyj_jcryqm);
+				$('input[name="khyj_khdbqm"]').val(data.khyj_khdbqm);
+				$('input[name="khyj_sgdwqm"]').val(data.khyj_sgdwqm);
+				if(data.gdqyyj_jcrq == null || data.gdqyyj_jcrq == '') {
+					$('button[name="gdqyyj_jcrq"]').html('选择时间');
+				} else {
+					$('button[name="gdqyyj_jcrq"]').html(data.gdqyyj_jcrq);
+				};
+				if(data.khyj_khqrrq == null || data.khyj_khqrrq == '') {
+					$('button[name="khyj_khqrrq"]').html('选择时间');
+				} else {
+					$('button[name="khyj_khqrrq"]').html(data.khyj_khqrrq);
+				};
+				if(data.khyj_sgdwqrrq == null || data.khyj_sgdwqrrq == '') {
+					$('button[name="khyj_sgdwqrrq"]').html('选择时间');
+				} else {
+					$('button[name="khyj_sgdwqrrq"]').html(data.khyj_sgdwqrrq);
+				};
+				$('select[name="khyj_khyj"]').val(data.khyj_khyj);
+			}
+		);
+
+		//		上传中间检查工单
+		$('#modify').on('tap', function() {
+			if($('.zjjcxm_dlg').hasClass('mui-active')) {
+				var zjjcxm_dlg_variable = 1;
+			} else {
+				var zjjcxm_dlg_variable = 0;
+			};
+			if($('.zjjcxm_gzj').hasClass('mui-active')) {
+				var zjjcxm_gzj_variable = 1;
+			} else {
+				var zjjcxm_gzj_variable = 0;
+			};
+			if($('.zjjcxm_dlgcg').hasClass('mui-active')) {
+				var zjjcxm_dlgcg_variable = 1;
+			} else {
+				var zjjcxm_dlgcg_variable = 0;
+			};
+			if($('.zjjcxm_dlfs').hasClass('mui-active')) {
+				var zjjcxm_dlfs_variable = 1;
+			} else {
+				var zjjcxm_dlfs_variable = 0;
+			};
+			if($('.zjjcxm_jdzz').hasClass('mui-active')) {
+				var zjjcxm_jdzz_variable = 1;
+			} else {
+				var zjjcxm_jdzz_variable = 0;
+			};
+			if($('.zjjcxm_atsg').hasClass('mui-active')) {
+				var zjjcxm_atsg_variable = 1;
+			} else {
+				var zjjcxm_atsg_variable = 0;
+			};
+
+			var uploadowc = {
+				gdqyyj_jcrq: $('button[name="gdqyyj_jcrq"]').html(),
+				gdqyyj_gdqygz: $('input[name="gdqyyj_gdqygz"]').val(),
+				gdqyyj_jcrq: '2017-7-1',
+				gdqyyj_jcryqm: $('input[name="gdqyyj_jcryqm"]').val(),
+				gdqyyj_jcyj: $('.gdqyyj_jcyj').val(),
+				khyj_khdbqm: $('input[name="khyj_khdbqm"]').val(),
+				khyj_khqrrq: $('button[name="khyj_khqrrq"]').html(),
+				khyj_khyj: $('.khyj_khyj').val(),
+				khyj_sgdwqm: $('input[name="khyj_sgdwqm"]').val(),
+				khyj_sgdwqrrq: $('button[name="khyj_sgdwqrrq"]').html(),
+				taskCode: localtaskCode2,
+				zjjcxm_dlg: zjjcxm_dlg_variable,
+				zjjcxm_gzj: zjjcxm_gzj_variable,
+				zjjcxm_dlgcg:zjjcxm_dlgcg_variable,
+				zjjcxm_dlfs:zjjcxm_dlfs_variable,
+				zjjcxm_jdzz:zjjcxm_jdzz_variable,
+				zjjcxm_atsg:zjjcxm_atsg_variable
+			};
+
+			var uploadowcStr = JSON.stringify(uploadowc);
+			console.log(uploadowc)
+			var url3 = "http://39.108.104.129/BusExt/Service.ashx?Func=UploadMidCheckSheet";
+			$.post(
+				url3,
+				uploadowcStr,
+				function(data, status) {
+					if(data.status == "Ok") {
+						mui.toast('上传成功!')
+						setTimeout(function() {
+							window.location.reload();
+						}, 1000);
+					}
+				}
+			);
+		})
+
+		//		确认进入"竣工检验环节"
+		$('#confirm').on('tap', function() {
+			var confirmData = {
+				userId: "aaa",
+				userPwd: "aaa",
+				taskCode: localtaskCode2,
+				partNumberName: "竣工检验"
+			};
+			var confirmDatastr = JSON.stringify(confirmData);
+			$.ajax({
+				type: "post",
+				url: "http://39.108.104.129/BusExt/Service.ashx?Func=UpdateBEWorkOrderStatus",
+				data: confirmDatastr,
+				success: function(data) {
+					if(data.status == "Ok") {
+						mui.toast('已签收!已移至"竣工检验"环节！');
+					}
+
+				}
+			});
+		})
+
+		//			点击说明
+		mui('.extra').on('tap', '#Description', function() {
+			layer.open({
+				title: '说明',
+				btn: '关闭',
+				className: 'popuo',
+				content: '<p>1.产权分界点设置：</p><p>电源1：以客户用电区域红线范围内110kV南宝线新建公用环网柜（或电缆分接箱）开关出线电缆终端头为产权分界点；</p><p>2.实施业扩工程配套项目：是</p><p>3.其它：</p>	'
+			})
+		})
+	</script>
+
+</html>

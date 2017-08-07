@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/hui.css"/>
+	</head>
+<style type="text/css">
+	.workOrder {
+				background-color: #fff;
+			}
+			.next-btn{
+				position: fixed;
+				left:5%;
+				right:5%;
+				bottom: 10%;
+			}
+			.hui-icons-down2{
+				float: right;
+			}
+</style>
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>项目人员组建</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="workOrder">
+			<div class="workOrder-form">
+				<p style="font-size: 14px;">工单号：2940478341212</p>
+				<p>客户名称：广州科腾信息技术有限公司</p>
+				<p>客户地址：广州市黄埔大道西平云路163号</p>
+				<p>业务进度：中间检查</p>
+			</div>
+		</div>
+		<div style="width:100%; height:40px; line-height:40px; text-align:center; float:left;border:1px solid #E5E5E5;margin: 10px 0px;">
+	        <select id="select1">
+	            <option value="1">请选择分局</option>
+	            <option value="2">分局1</option>
+	            <option value="3">分局2</option>
+	            <option value="4">分局3</option>
+	        </select>
+	    </div>
+	    <div style="width:100%; height:40px; line-height:40px; text-align:center; float:left;border:1px solid #E5E5E5;">
+	        <select id="select2">
+	            <option value="1">请选择班组</option>
+	            <option value="2">班组1</option>
+	            <option value="3">班组2</option>
+	            <option value="4">班组3</option>
+	        </select>
+	    </div>
+		<div class="next-btn">
+			<button>确 认</button>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/hui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-select-beautify.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+				var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap',function() {
+				mui.openWindow({
+					url:'index2.html',
+					id:'index2'
+				})
+			})
+			
+			hui('#select1').selectBeautify();
+			hui('#select2').selectBeautify();
+		</script>
+	</body>
+
+</html>

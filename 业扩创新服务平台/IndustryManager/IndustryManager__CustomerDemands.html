@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/hui.css" />
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-picker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-select-beautify.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		table tr td {
+			font-size: 14px;
+			color: #000;
+			vertical-align: middle;
+			height: 44px;
+			border-bottom: 1px solid #E5E5E5;
+		}
+		table tr td div {
+			text-align: center;
+			border:1px solid #ccc;
+			height:100%;
+			line-height: 40px;
+			border-radius: 3px;
+		}
+		table tr td:nth-of-type(1) {
+			width: 40%;
+			padding-left: 12px;
+		}
+		
+		table tr td:nth-of-type(2) {
+			width: 60%;
+			text-align: right;
+			padding-right: 12px;
+		}
+		
+		table {
+			background-color: #fff;
+			width: 100%;
+		}
+		
+		input[type='text'],
+		select,textarea {
+			margin-bottom: 0px;
+			text-align: center;
+		}
+		.hui-button {
+			background-color: #fff;
+		}
+		button {
+			width:90%;
+			margin: 5%;
+			border-radius: 20px;
+			background-color: #1BA1E8;
+			height:40px;
+			color:#fff;
+			font-size: 16px;
+		}
+		.mui-content > div {
+			background-color: #fff;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>客户诉求</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="mui-content">
+			<table border="0">
+				<tr>
+					<td>客户名称</td>
+					<td><input type="text" placeholder="请输入客户名称"/></td>
+				</tr>
+				<tr>
+					<td>诉求类别</td>
+					<td>
+						<select name="" id="select1">
+							<option value="">咨询</option>
+							<option value="">投诉</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>诉求时间</td>
+					<td>
+						<button type="button" class="hui-button hui-button-large" id="date1" style="border:1px solid #ccc;">选择时间</button>
+					</td>
+				</tr>
+				<tr>
+					<td>联系方式</td>
+					<td><input type="text" placeholder="请输入联系方式" /></td>
+				</tr>
+				<tr>
+					<td>诉求内容</td>
+					<td>
+						<textarea name="" placeholder="请输入诉求内容"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>诉求处理人</td>
+					<td>
+						<select name="" id="select2">
+							<option value="">张三</option>
+							<option value="">李四</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			<div class="btns">
+				<button type="button" >提 交</button>
+			</div>
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var home = document.getElementsByClassName('mui-icon-home')[0];
+		home.addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'index2.html',
+				id: 'index2'
+			})
+		});
+		
+		hui('#select1').selectBeautify();
+		hui('#select2').selectBeautify();
+		
+		var picker1 = new huiPicker('#date1', function() {
+			var year = picker1.getVal(0);
+			var month = picker1.getVal(1);
+			var days = picker1.getVal(2);
+			hui('#date1').html(year + ' - ' + month + ' - ' + days);
+		});
+		picker1.level = 3;
+		//年份
+		var years = new Array();
+		for(var i = 2000; i <= 2017; i++) {
+			years.push({
+				value: i,
+				text: i
+			});
+		}
+		picker1.bindData(0, years);
+		//月份
+		var months = new Array();
+		for(var i = 1; i <= 12; i++) {
+			if(i < 10) {
+				i = '0' + i;
+			}
+			months.push({
+				value: i,
+				text: i
+			});
+		}
+		picker1.bindData(1, months);
+		//天
+		var days = new Array();
+		for(var i = 1; i <= 31; i++) {
+			if(i < 10) {
+				i = '0' + i;
+			}
+			days.push({
+				value: i,
+				text: i
+			});
+		}
+		picker1.bindData(2, days);
+		
+		mui('.btns').on('tap','button',function() {
+			mui.toast('已提交！')
+		})
+	</script>
+
+</html>

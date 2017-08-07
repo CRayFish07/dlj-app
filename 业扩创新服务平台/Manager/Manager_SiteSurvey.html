@@ -1,0 +1,387 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/hui.css" />
+	</head>
+	<style type="text/css">
+		
+		.hui-accordion-title {
+			font-size: 14px;
+		}
+		
+		.mui-content {
+			background-color: #fff;
+		}
+		
+		table tr td {
+			font-size: 12px;
+			color: #000;
+			vertical-align: middle;
+			height: 44px;
+			border-bottom: 1px solid #E5E5E5;
+		}
+		
+		table tr td:nth-of-type(1) {
+			width: 30%;
+			padding-left: 12px;
+		}
+		
+		table tr td:nth-of-type(2) {
+			width: 70%;
+			text-align: right;
+			padding-right: 12px;
+		}
+		
+		table {
+			background-color: #fff;
+			width: 100%;
+		}
+		
+		table tr td p {
+			font-size: 12px;
+		}
+		.btns {
+			width:100%;
+			padding:25px 0px;
+			display: flex;
+			justify-content: space-around;
+		}
+		.btns button {
+			width:40%;
+			background-color: #1AA1E7;
+			color:#fff;
+			font-size: 16px;
+			border-radius: 20px;
+		}
+		/*layer弹框*/
+		.popuo p {
+			text-align: left;
+		}
+		 .popuo2{
+			width: 90%;
+			background-color: #F8F8F8;
+		}
+		.popuo2  p{
+			text-align: right;
+			padding-right:10px;
+		}
+		.popuo2 .wrap p {
+			color:#000000;
+			text-align: left;
+			padding-left: 10px;
+		}
+		.popuo2 .wrap {
+			height:100px;
+			border-bottom: 1px solid #ccc;
+		}
+		.layui-m-layerchild h3 {
+			border-bottom: 1px solid #ccc;
+		}
+	</style>
+		
+	<body style="background-color: #E0E0E0;">
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>现场勘查详情</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="mui-content">
+			<div class="hui-accordion">
+				<div class="hui-accordion-title">业务信息</div>
+				<div class="hui-accordion-content">
+					<table border="0">
+						<tr>
+							<td>客户名称</td>
+							<td class="userName">东莞正隆纸制品有限公司</td>
+						</tr>
+						<tr>
+							<td>用电地址</td>
+							<td class="electricityAddress">广东省东莞市黄江镇裕元工业区</td>
+						</tr>
+						<tr>
+							<td>工作单号</td>
+							<td class="taskCode">03190010000002438989</td>
+						</tr>
+						<tr>
+							<td>客户编号</td>
+							<td class="userCode">0319200025728646</td>
+						</tr>
+						<tr>
+							<td>业务类别</td>
+							<td class="businessType">新装</td>
+						</tr>
+						<tr>
+							<td>用电性质</td>
+							<td class="businessSubType">永久</td>
+						</tr>
+						<tr>
+							<td>高可靠性供电</td>
+							<td class="gkkxgd">否，申请高可靠容量</td>
+						</tr>
+						<tr>
+							<td>行业用电分类</td>
+							<td class="hyydfl">纸制品制造业</td>
+						</tr>
+						<tr>
+							<td>原有容量(kVA)</td>
+							<td class="yyrl">0</td>
+						</tr>
+						<tr>
+							<td>增(减)容量(kVA)</td>
+							<td class="zjrl">8000</td>
+						</tr>
+						<tr>
+							<td>总容量(kVA)</td>
+							<td class="zjrl">8000</td>
+						</tr>
+						<tr>
+							<td>负荷等级</td>
+							<td class="fhdj">三级</td>
+						</tr>
+						<tr>
+							<td>是否需要配备应急电</td>
+							<td class="sfxypbyjd">是</td>
+						</tr>
+						<tr>
+							<td>用电类别</td>
+							<td class="category">大工业</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="hui-accordion">
+				<div class="hui-accordion-title">接入方式</div>
+				<div class="hui-accordion-content">
+					<table border="0">
+						<tr>
+							<td>变压器容量(kVA)</td>
+							<td class="jrfs_byqrl">4x2000</td>
+						</tr>
+						<tr>
+							<td>变压器台数(台)</td>
+							<td class="jrfs_byqts">4</td>
+						</tr>
+						<tr>
+							<td>接入方式</td>
+							<td class="jrfs">单电源接入</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="hui-accordion">
+				<div class="hui-accordion-title">初步接入方案</div>
+				<div class="hui-accordion-content">
+					<table border="0">
+						<tr>
+							<td>电源1</td>
+							<td class="cbjrfs1">拟接入客户用电区域红线范围110KV黄江变电站F9</td>
+						</tr>
+						<tr>
+							<td>线路属性</td>
+							<td class="cbjrfs1_xlsx">混合线路</td>
+						</tr>
+						<tr>
+							<td>额定容量(kVA)</td>
+							<td class="cbjrfs1_edrl">/</td>
+						</tr>
+						<tr>
+							<td>在途容量(kVA)</td>
+							<td class="cbjrfs1_ztrl">/</td>
+						</tr>
+						<tr>
+							<td>可供容量(kVA)</td>
+							<td class="cbjrfs1_kgrl">/</td>
+						</tr>
+						<tr>
+							<td>电源1</td>
+							<td class="cbjrfs2">拟接入客户用电区域红线范围110KV黄江变电站F9</td>
+						</tr>
+						<tr>
+							<td>线路属性</td>
+							<td class="cbjrfs2_xlsx">混合线路</td>
+						</tr>
+						<tr>
+							<td>额定容量(kVA)</td>
+							<td class="cbjrfs2_edrl">/</td>
+						</tr>
+						<tr>
+							<td>在途容量(kVA)</td>
+							<td class="cbjrfs2_ztrl">/</td>
+						</tr>
+						<tr>
+							<td>可供容量(kVA)</td>
+							<td class="cbjrfs2_kgrl">/</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="hui-accordion">
+				<div class="hui-accordion-title">现场勘查情况</div>
+				<div class="hui-accordion-content">
+					<table border="0" id="table">
+						<tr>
+							<td>推荐电源点</td>
+							<td class="xckcqk">电源点1</td>
+						</tr>
+						<tr>
+							<td>线路属性</td>
+							<td class="cbjrfs1_xlsx">混合属性</td>
+						</tr>
+						<tr>
+							<td>进线距离(m)</td>
+							<td class="xckcqk_jxjl">1000</td>
+						</tr>
+						<tr>
+							<td>额定容量(kVA)</td>
+							<td class="cbjrfs1_edrl">/</td>
+						</tr>
+						<tr>
+							<td>在途容量(kVA)</td>
+							<td class="cbjrfs1_ztrl">/</td>
+						</tr>
+						<tr>
+							<td>可供容量(kVA)</td>
+							<td class="cbjrfs1_kgrl">/</td>
+						</tr>
+						<tr>
+							<td>推荐电源点选择原因</td>
+							<td class="tjdydxzyy_gdkkxjy">供电可靠性较优；经济性较优；接火送点时效;</td>
+						</tr>
+						<tr id="Description">
+							<td>说明</td>
+							<td><span class="mui-icon mui-icon-forward sm"></span></td>
+						</tr>
+						<tr id="SurveyOpinion">
+							<td>勘查意见</td>
+							<td><span class="mui-icon mui-icon-forward kcyj"></span></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="btns">
+				<button id="contactClientsBtn">联系客户</button>
+				<button id="InternalDiscussionGroupBtn">内部讨论组</button>
+			</div>
+		</div>
+		
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/hui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-accordion.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../layer_mobile/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+			hui.accordion(true, true);
+				var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap',function() {
+				mui.openWindow({
+					url:'index2.html',
+					id:'index2'
+				})
+			});
+			
+			//		前台输入数据
+		var localtaskCode = localStorage.getItem('taskCode');
+		var data = {
+			userId: "bbb",
+			userPwd: "bbb",
+			taskCode: localtaskCode
+		};
+
+		var datastr = JSON.stringify(data);
+		
+		//			获取工单信息
+		$.ajax({
+			type: "post",
+			url: "http://39.108.104.129/BusExt/Service.ashx?Func=QueryBEWorkOrder",
+			data: datastr,
+			success: function(data) {
+				$('.taskCode').html(data.taskList[0].taskCode);
+				$('.userName').html(data.taskList[0].userName);
+				$('.electricityAddress').html(data.taskList[0].electricityAddress);
+				$('.userCode').html(data.taskList[0].userCode);
+				$('.businessType').html(data.taskList[0].businessType);
+				$('.businessSubType').html(data.taskList[0].businessSubType);
+				$('.gkkxgd').html(data.taskList[0].gkkxgd);
+				$('.hyydfl').html(data.taskList[0].hyydfl);
+				$('.yyrl').html(data.taskList[0].yyrl);
+				$('.zjrl').html(data.taskList[0].zjrl);
+				$('.fhdj').html(data.taskList[0].fhdj);
+				$('.sfxypbyjd').html(data.taskList[0].sfxypbyjd);
+				$('.category').html(data.taskList[0].category);
+			}
+		});
+		
+		//			获取表单信息
+		$.ajax({
+			type: "post",
+			url: "http://39.108.104.129/BusExt/Service.ashx?Func=QuerySceneSheet",
+			data: datastr,
+			success: function(data) {
+				$('.jrfs_byqrl').html(data.jrfs_byqrl);
+				$('.jrfs_byqts').html(data.jrfs_byqts);
+				$('.jrfs').html(data.jrfs);
+				$('.cbjrfs1').html(data.cbjrfs1);
+				$('.cbjrfs1_xlsx').html(data.cbjrfs1_xlsx);
+				$('.cbjrfs1_ztrl').html(data.cbjrfs1_ztrl);
+				$('.cbjrfs1_edrl').html(data.cbjrfs1_edrl);
+				$('.cbjrfs1_kgrl').html(data.cbjrfs1_kgrl);
+				$('.cbjrfs2').html(data.cbjrfs2);
+				$('.cbjrfs2_xlsx').html(data.cbjrfs2_xlsx);
+				$('.cbjrfs2_edrl').html(data.cbjrfs2_edrl);
+				$('.cbjrfs2_ztrl').html(data.cbjrfs2_ztrl);
+				$('.cbjrfs2_kgrl').html(data.cbjrfs2_kgrl);
+					$('.tjdydxzyy_gdkkxjy').html(data.tjdydxzyy_gdkkxjy);
+					$('.tjdydxzyy_jjxjy').html(data.tjdydxzyy_jjxjy);
+					$('.tjdydxzyy_jhsdsx').html(data.tjdydxzyy_jhsdsx);
+				$('.popuo2').find('.kcyj').val(data.kcyj);
+			}
+		});
+			
+			var contactClientsBtn = document.getElementById('contactClientsBtn');
+			var InternalDiscussionGroupBtn = document.getElementById('InternalDiscussionGroupBtn');
+			
+			contactClientsBtn.addEventListener('tap',function() {
+				mui.openWindow({
+					url:'Maneger_contactClients.html',
+					id:'Maneger_contactClients'
+				})
+			});
+			
+			InternalDiscussionGroupBtn.addEventListener('tap',function() {
+				mui.openWindow({
+					url:'Manager_chart.html',
+					id:'Manager_chart'
+				})
+			})
+			
+//			点击说明
+			mui('#table').on('tap','#Description',function() {
+				layer.open({
+					title:'说明',
+					btn:'关闭',
+					className: 'popuo',
+					content:'<p>1.产权分界点设置：</p><p>电源1：以客户用电区域红线范围内110kV南宝线新建公用环网柜（或电缆分接箱）开关出线电缆终端头为产权分界点；</p><p>2.实施业扩工程配套项目：是</p><p>3.其它：</p>	'
+				})
+			})
+			
+//			点击勘查意见
+			mui('#table').on('tap','#SurveyOpinion',function() {
+				layer.open({
+					type:1,
+					title:'勘查意见',
+					btn:'关闭',
+					className: 'popuo2',
+					content:'<div class="wrap"><p>现场为工厂用电。</p></div><p>业扩勘察人：张全蛋</p><p>日期：2017年0620日</p>	'
+				})
+			})
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+	</head>
+<style type="text/css">
+	table tr td {
+			font-size: 12px;
+			color: #000;
+			vertical-align: middle;
+			height: 44px;
+			border-bottom: 1px solid #E5E5E5;
+		}
+		
+		table tr td:nth-of-type(1) {
+			width: 40%;
+			padding-left: 12px;
+		}
+		
+		table tr td:nth-of-type(2) {
+			width: 60%;
+		}
+		
+		table {
+			background-color: #fff;
+			width: 100%;
+		}
+</style>
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>用电设备容量清单</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="detai">
+			<table border="0" cellspacing="" cellpadding="">
+				<tr>
+					<td>设备名称</td>
+					<td>XXXXXX</td>
+				</tr>
+				<tr>
+					<td>型号</td>
+					<td>1234567890</td>
+				</tr>
+				<tr>
+					<td>额定电压</td>
+					<td>123456</td>
+				</tr>
+				<tr>
+					<td>单台容量</td>
+					<td>123456789</td>
+				</tr>
+				<tr>
+					<td>数量</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>容量小计</td>
+					<td>23456</td>
+				</tr>
+				<tr>
+					<td>负荷类型</td>
+					<td>中亚</td>
+				</tr>
+			</table>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+				var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap',function() {
+				mui.openWindow({
+					url:'index2.html',
+					id:'index2'
+				})
+			})
+		</script>
+	</body>
+
+</html>

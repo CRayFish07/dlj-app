@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/mui.picker.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/mui.poppicker.css"/>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.picker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.poppicker.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.confirm {
+			width:80%;
+			margin-left: 10%;
+			border-radius: 20px;
+			background-color: #0096E7;
+			color:#fff;
+			height:50px;
+			margin-top:15px;
+		}
+		.mui-btn {
+			height:40px;
+			font-size: 14px;
+			line-height: 34px;
+			padding: 0px;
+		}
+	</style>
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>项目人员组建</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="mui-content">
+		    <div class="workOrder">
+				<div class="workOrder-form">
+					<p>工单号：2940478341212</p>
+					<p>客户名称：广州科腾信息技术有限公司</p>
+					<p>客户地址：广州市黄埔大道西平云路163号</p>
+					<p class="progress">业务进度：<span class="SiteSurveyColor">现场勘查</span></p>
+				</div>
+			</div>
+			<div class="select">
+				<button id='showUserPicker' class="mui-btn mui-btn-block" type='button'>请选择分局<span class="mui-icon mui-icon-arrowdown"></span></button>
+				
+			</div>
+			<div class="select">
+				<button id='showUserPicker2' class="mui-btn mui-btn-block" type='button'>请选择岗位<span class="mui-icon mui-icon-arrowdown"></span></button>
+			</div>
+			<div class="select">
+				<button id='showUserPicker3' class="mui-btn mui-btn-block" type='button'>请选择人员<span class="mui-icon mui-icon-arrowdown"></span></button>
+			</div>
+			<button class="mui-btn confirm">确定</button>
+		</div>
+	</body>
+	<script type="text/javascript">
+		mui.init();
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index4.html',
+					id: 'index4'
+				})
+			});
+			mui.ready(function() {
+				var userPicker = new mui.PopPicker();
+					userPicker.setData([{
+						value: '1',
+						text: '莞城区'
+					}, {
+						value: '2',
+						text: '东城区'
+					}, {
+						value: '3',
+						text: '南城区'
+					}, {
+						value: '4',
+						text: '万江区'
+					}, {
+						value: '5',
+						text: '长安镇'
+					}, {
+						value: '6',
+						text: '厚街镇'
+					}, {
+						value: '7',
+						text: '虎门镇'
+					}, {
+						value: '8',
+						text: '石门镇'
+					}, {
+						value: '9',
+						text: '石碣镇'
+					}, {
+						value: '10', 
+						text: '沙田镇'
+					}]);
+					var showUserPickerButton = document.getElementById('showUserPicker');
+					showUserPickerButton.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							showUserPickerButton.innerText = JSON.stringify(items[0].text).replace("\"","").replace("\"","");
+						});
+					}, false);
+					var userPicker2 = new mui.PopPicker();
+					userPicker2.setData([{
+						value: '1',
+						text: '现场勘查'
+					}, {
+						value: '2',
+						text: '中间检查'
+					}, {
+						value: '3',
+						text: '竣工检验'
+					}, {
+						value: '4',
+						text: '装表'
+					}]);
+					var showUserPickerButton2 = document.getElementById('showUserPicker2');
+					showUserPickerButton2.addEventListener('tap', function(event) {
+						userPicker2.show(function(items) {
+							showUserPickerButton2.innerText = JSON.stringify(items[0].text).replace("\"","").replace("\"","");
+						});
+					}, false);
+					var userPicker3 = new mui.PopPicker();
+					userPicker3.setData([{
+						value: '1',
+						text: '张三'
+					}, {
+						value: '2',
+						text: '李四'
+					}, {
+						value: '3',
+						text: '王五'
+					}, {
+						value: '4',
+						text: '彭宇'
+					}]);
+					var showUserPickerButton3 = document.getElementById('showUserPicker3');
+					showUserPickerButton3.addEventListener('tap', function(event) {
+						userPicker3.show(function(items) {
+							showUserPickerButton3.innerText = JSON.stringify(items[0].text).replace("\"","").replace("\"","");
+						});
+					}, false);
+			})
+					
+	</script>
+</html>

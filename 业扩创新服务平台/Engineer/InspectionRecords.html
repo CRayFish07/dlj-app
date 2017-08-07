@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.mui-content>.mui-table-view:first-child {
+			margin-top: 0px;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>检查记录</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">JGJC-001架空配电线路</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">JGJC-002架空配电线路</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">JGJC-003变压器</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">JGJC-004高压开关柜</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">JGJC-005户外电缆分解箱</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">JGJC-006低压配电柜</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">JGJC-007户外装置</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">JGJC-008母线</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">JGJC-009电能计量装置</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">JGJC-010继电保护装置</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">JGJC-011直流电源系统</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">JGJC-012箱式变电站(箱变)</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">JGJC-013重要客户电源配置</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var home = document.getElementsByClassName('mui-icon-home')[0];
+		home.addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'index.html',
+				id: 'index'
+			})
+		});
+		mui('.mui-table-view').on('tap','.mui-table-view-cell',function() {
+			mui.openWindow({
+				url:'InspectionRecords1.html',
+				id:'InspectionRecords1'
+			})
+		})
+	</script>
+
+</html>

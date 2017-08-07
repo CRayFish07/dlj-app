@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/hui.css" />
+	</head>
+	<style type="text/css">
+		.workOrder {
+			display: block;
+		}
+		
+		.btns {
+			padding-left: 14px;
+			margin-bottom: 8px;
+		}
+		
+		.btns button {
+			width: 60px;
+			height: 25px;
+			border-radius: 13px;
+			font-size: 13px;
+			padding: 0px;
+		}
+		
+		button.active {
+			background-color: #0094E8;
+			color: #fff;
+		}
+		
+		.workOrder-form {
+			margin-bottom: 8px;
+		}
+		
+		.person_detail {
+			display: flex;
+			border-bottom: 4px solid #EBEBEB;
+		}
+		
+		.person_detail div:nth-of-type(2),
+		.person_detail div:nth-of-type(3) {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+		
+		.person_detail div {
+			margin: 13px 0px;
+		}
+		
+		.person_detail div:nth-of-type(1) {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		
+		.star_rating {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		
+		.rating>textarea {
+			height: 100px;
+			width: 90%;
+			margin-left: 5%;
+			background-color: #EBEBEB;
+			text-align: left;
+			font-size: 12px;
+			color: #7d7d7d;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>人员评价</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="workOrder">
+			<div class="workOrder-form">
+				<p>工单号：<span class="taskCode">2940478341212</span></p>
+				<p>客户名称：<span class="userName">广州科腾信息技术有限公司</span></p>
+				<p>客户地址：<span class="electricityAddress">广州市黄埔大道西平云路163号</span></p>
+				<p class="progress">业务进度：<span class="progressSpan">竣工检验</span></p>
+			</div>
+			<div class="btns">
+				<span style="font-size: 12px;">项目组成员：</span>
+				<button>郭龙</button>
+				<button>冉星光</button>
+				<button>彭宇</button>
+			</div>
+		</div>
+		<div class="person_detail">
+			<div style="flex-grow: 2;border-right:2px solid #E9E9E9;">
+				<img src="../images/avator.png" width="67" height="67" />
+				<span style="font-size: 16px;color:#3f3f3f" class="name">张三</span>
+			</div>
+			<div style="flex-grow: 1;border-right:2px solid #E9E9E9;">
+				<span style="font-size: 34px;color:#00a0e9" class="nums">65</span> 本月工单量
+			</div>
+			<div style="flex-grow: 1;">
+				<span style="font-size: 34px;color:#f39800" class="grades">4.6</span> 综合平均分
+			</div>
+		</div>
+		<div>
+			<div class="star_rating">
+				<span>工作质量</span>
+				<div id="star1" style="padding:22px 0px;"></div>
+			</div>
+			<div class="star_rating">
+				<span>工作效率</span>
+				<div id="star2" style="padding:22px 0px;"></div>
+			</div>
+			<div class="star_rating">
+				<span>工作态度</span>
+				<div id="star3" style="padding:22px 0px;"></div>
+			</div>
+		</div>
+		<div class="rating">
+			<textarea name="EntityName">请输入评价内容</textarea>
+		</div>
+		<div class="next-btn">
+			<button class="confirm">确 认</button>
+		</div>
+
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/hui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-star.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+
+			//		前台输入数据
+			var localtaskCode = localStorage.getItem('taskCodePJ');
+			var progress = localStorage.getItem('progress');
+			var data = {
+				userId: "aaa",
+				userPwd: "aaa",
+				taskCode: localtaskCode
+			};
+
+			var datastr = JSON.stringify(data);
+
+			//			获取工单信息
+			$.ajax({
+				type: "post",
+				url: "http://39.108.104.129/BusExt/Service.ashx?Func=QueryBEWorkOrder",
+				data: datastr,
+				success: function(data) {
+					$('span.taskCode').html(data.taskList[0].taskCode);
+					$('span.userName').html(data.taskList[0].userName);
+					$('span.electricityAddress').html(data.taskList[0].electricityAddress);
+					$('span.progressSpan').html(progress);
+				}
+			});
+
+			//			星级评分
+			var star1 = new huiStar('#star1');
+			var star2 = new huiStar('#star2');
+			var star3 = new huiStar('#star3');
+			star1.draw();
+			star2.draw();
+			star3.draw();
+			
+
+			//			返回首页
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index2.html',
+					id: 'index2'
+				})
+			});
+			
+//			查看评价信息
+			$('.btns').on('tap', 'button', function() {
+				$('.btns button').removeClass('active');
+				$(this).addClass('active');
+				var name = $(this).text();
+				var grades;
+				$('.name').html(name);
+				var tagUserId;
+				var index = $(this).index();
+				switch(index) {
+					case 1:
+					tagUserId = 'aaa';
+					break;
+					case 2:
+					tagUserId = 'bbb';
+					break;
+					case 3:
+					tagUserId = 'ccc';
+					break;
+				}
+				var data2 = {
+					userId: "bbb",
+					userPwd: "bbb",
+					tagUserId: tagUserId
+				};
+				var datastr2 = JSON.stringify(data2);
+			
+				//			获取工单信息
+				$.ajax({
+					type: "post",
+					url: "http://39.108.104.129/BusExt/Service.ashx?Func=QueryUserEvaluate",
+					data: datastr2,
+					success: function(data) {
+						hui('#star1').find('.hui-icons-star').eq(data.gzzl -1).trigger('click');
+						hui('#star2').find('.hui-icons-star').eq(data.gzxl -1).trigger('click');
+						hui('#star3').find('.hui-icons-star').eq(data.gztd - 1).trigger('click');
+						grades = Number(data.gzzl) +Number(data.gzxl) + Number(data.gztd);
+						$('.grades').html(grades - 3);
+						$('.nums').html(grades);
+						$('textarea[name="EntityName"]').html(data.EntityName);
+					}
+				});
+			});
+			
+			$(function() {
+				$('.btns').find('button').eq(0).trigger('tap');
+			})
+			
+			//		评价操作
+			var confirmBtn = document.getElementsByClassName('confirm')[0];
+			confirmBtn.addEventListener('tap', function() {
+				mui.alert('评价成功！');
+			})
+		</script>
+	</body>
+
+</html>

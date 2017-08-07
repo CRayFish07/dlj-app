@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.css" />
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js"></script>
+		<style type="text/css">
+			section {
+				width: 100%;
+				height: 100%;
+			}
+			
+			section>div {
+				width: 100%;
+			}
+			
+			.box1,
+			.box3 {
+				height: 20%;
+				background-color: #fff;
+			}
+			.box1 {
+				padding-top:20px;
+			}
+			
+			.box2 {
+				height: 60%;
+				background: url('../images/guiji.png') 0 0 no-repeat;
+				background-size: 100%;
+			}
+			.box1 p {
+				padding-left:4%;
+				padding-top:20px;
+			}
+			#demo1 {
+				position: relative;
+				width:90%;
+				height: 5px;
+				margin:0 auto;
+				margin-bottom: 20px;
+			}
+			#imgWrap{
+				position: absolute;
+				display: flex;
+				justify-content: space-around;
+				width: 100%;
+				top:80px;
+			}
+			.box3 p {
+				line-height: 1.1;
+				padding-left:4%;
+			}
+			.span {
+				color:#000;
+				font-weight: 200;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>业务进度</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<section>
+			<div class="box1">
+				<div id="demo1" class="mui-progressbar">
+					<span></span>
+				</div>
+				<div id="imgWrap" >
+					<img src="../images/noselect@2x.png" width="15" height="15" style="left: 12.5%;"/>
+					<img src="../images/noselect@2x.png" width="15" height="15" style="left: 37.5%;"/>
+					<img src="../images/noselect@2x.png" width="15" height="15" style="left: 62.5%;"/>
+					<img src="../images/noselect@2x.png" width="15" height="15" style="left: 87.5%;"/>
+				</div>
+				<div style="display: flex;justify-content: space-around;width: 100%;">
+					<span>现场勘查</span>
+					<span>中间检查</span>
+					<span>竣工检查</span>
+					<span>装表</span>
+				</div>
+				<p>工单情况：<span class="span">离警告情况还有4天</span></p>
+			</div>
+			<div class="box2"></div>
+			<div class="box3">
+				<p style="padding-top:10px">中间检查签到：<span class="span">孙某某</span></p>
+				<p>ID号码：<span class="span">4174171975</span></p>
+				<p>签到时间：<span class="span">2017-04-20 14：30</span></p>
+				<p>签出时间：<span class="span">2017-04-30 14：30</span></p>
+			</div>
+		</section>
+		<script type="text/javascript">
+			mui.init();
+			var h = $(document).height()-64;
+			$('section').css('height',h);
+			
+			mui("#demo1").progressbar({progress:40}).show();
+			
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index3.html',
+					id: 'index3'
+				})
+			});
+			
+			var num = 1;
+			for(var i=0;i<num;i++) {
+				$('#imgWrap').find('img').eq(i).attr('src','../images/completed@2.png');
+				$('#imgWrap').find('img').eq(num).attr('src','../images/selected@2x.png');
+			}
+		</script>
+	</body>
+
+</html>

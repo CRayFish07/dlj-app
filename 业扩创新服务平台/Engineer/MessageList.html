@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js"></script>
+	</head>
+	<style type="text/css">
+		.main-body {
+			background-color: #fff;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>消息推送列表</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<section class="main-body" >
+			<div class="workOrder">
+				<div class="workOrder-form">
+					<p>工单号：2940478341212</p>
+					<p>客户名称：广州科腾信息技术有限公司</p>
+					<p>客户地址：广州市黄埔大道西平云路163号</p>
+					<p class="progress">业务进度：<span class="SiteSurveyColor">现场勘查</span></p>
+				</div>
+			</div>
+			<div class="workOrder">
+				<div class="workOrder-form">
+					<p>工单号：2940478341212</p>
+					<p>客户名称：广州科腾信息技术有限公司</p>
+					<p>客户地址：广州市黄埔大道西平云路163号</p>
+					<p class="progress">业务进度：<span class="SiteSurveyColor">现场勘查</span></p>
+				</div>
+			</div>
+			<div class="workOrder">
+				<div class="workOrder-form">
+					<p>工单号：2940478341212</p>
+					<p>客户名称：广州科腾信息技术有限公司</p>
+					<p>客户地址：广州市黄埔大道西平云路163号</p>
+					<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+				</div>
+			</div>
+			<div class="workOrder">
+				<div class="workOrder-form">
+					<p>工单号：2940478341212</p>
+					<p>客户名称：广州科腾信息技术有限公司</p>
+					<p>客户地址：广州市黄埔大道西平云路163号</p>
+					<p class="progress">业务进度：<span class="CompletionInspectionColor">竣工检验</span></p>
+				</div>
+			</div>
+			<div class="workOrder">
+				<div class="workOrder-form">
+					<p>工单号：2940478341212</p>
+					<p>客户名称：广州科腾信息技术有限公司</p>
+					<p>客户地址：广州市黄埔大道西平云路163号</p>
+					<p class="progress">业务进度：<span class="CompletionInspectionColor">竣工检验</span></p>
+				</div>
+			</div>
+			<div class="workOrder">
+				<div class="workOrder-form">
+					<p>工单号：2940478341212</p>
+					<p>客户名称：广州科腾信息技术有限公司</p>
+					<p>客户地址：广州市黄埔大道西平云路163号</p>
+					<p class="progress">业务进度：<span class="CompletionInspectionColor">竣工检验</span></p>
+				</div>
+			</div>
+
+			</div>
+		</section>
+		
+		<script type="text/javascript">
+			mui.init();
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap',function() {
+				mui.openWindow({
+					url:'index.html',
+					id:'index'
+				})
+			})
+			
+			mui('.main-body').on('tap','.workOrder',function(){ 
+			var html = $(this).find('span').html();
+			console.log(html)
+			var num;
+	
+			if(html === '现场勘查') {
+				num = 0;
+			}else if(html === '中间检查' ) {
+				num = 4;
+			}else if(html === '竣工检验' ) {
+				num = 6;
+			}
+			localStorage.setItem('num',num);
+			mui.openWindow({
+				url: 'BusinessProgressShrink.html',
+				id: 'BusinessProgressShrink'
+			})
+		});
+			
+		</script>
+	</body>
+
+</html>

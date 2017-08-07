@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+	</head>
+	<style type="text/css">
+		textarea{
+			font-size: 12px;
+			text-align: left;
+		}
+		.workOrder{
+			background-color: #fff;
+		}
+	</style>
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>提级处理</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="workOrder">
+				<div class="workOrder-form">
+					<p>工单号：2940478341212</p>
+					<p>客户名称：广州科腾信息技术有限公司</p>
+					<p>客户地址：广州市黄埔大道西平云路163号</p>
+					<p class="progress">业务进度：现场勘查</p>
+				</div>
+			</div>
+			<div>
+				<textarea style="height:170px;margin-top:15px">提及处理问题详细内容文字提及处理问题详细内容文字提及处理问题详细内容文字提及处理问题详细内容文字提及处理问题详细内容文字提及处理问题详细内容文字提及处理问题详细内容文字提及处理问题详细内容文字提及处理问题详细内容文字提及处理问题详细内容文字提及处理问题详细内容文字提及处理问题详细内容文字提及处理问题详细内容文字</textarea>
+			</div>
+			<div>
+				<textarea style="height:100px;color:#ccc">请输入提及问题的回复内容</textarea>
+			</div>
+			<div class="next-btn">
+				<button class="btn1">同意确认</button>
+				<button class="btn1" style="background-color: #A0A0A0;margin-top:10px">不同意</button>
+			</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index3.html',
+					id: 'index3'
+				})
+			});
+			mui('.next-btn').on('tap','.btn1:nth-of-type(1)',function() {
+				mui.alert('已发送！')
+			})
+			mui('.next-btn').on('tap','.btn1:nth-of-type(2)',function() {
+				mui.alert('已处理！')
+			})
+		</script>
+	</body>
+
+</html>

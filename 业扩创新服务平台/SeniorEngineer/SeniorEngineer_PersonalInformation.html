@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.css" />
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/echarts.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.person_detail {
+			display: flex;
+			border-bottom: 4px solid #EBEBEB;
+			background-color: #fff;
+		}
+		
+		.person_detail div:nth-of-type(2),
+		.person_detail div:nth-of-type(3) {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+		
+		.person_detail div {
+			margin: 13px 0px;
+		}
+		
+		.person_detail div:nth-of-type(1) {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>综合功能</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="mui-content">
+			<div class="person_detail" style="width:100%">
+				<div style="flex-grow: 2;border-right:2px solid #E9E9E9;">
+					<img src="../images/avator.png" width="67" height="67" />
+					<span style="font-size: 16px;color:#3f3f3f;padding-top: 10px;">李四</span>
+				</div>
+				<div style="flex-grow: 1;border-right:2px solid #E9E9E9;">
+					<span style="font-size: 34px;color:#00a0e9">65</span> 处理单数
+				</div>
+				<div style="flex-grow: 1;">
+					<span style="font-size: 34px;color:#f39800">0</span> 参与环节超时单数
+				</div>
+			</div>
+			<div>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						受理数
+						<span class="mui-badge mui-badge-primary mui-badge-inverted">10</span>
+					</li>
+					<li class="mui-table-view-cell">
+						在途超时单数
+						<span class="mui-badge mui-badge-primary mui-badge-inverted">-</span>
+					</li>
+					<li class="mui-table-view-cell">
+						现场勘查数
+						<span class="mui-badge mui-badge-primary mui-badge-inverted">5</span>
+					</li>
+					<li class="mui-table-view-cell">
+						装表数
+						<span class="mui-badge mui-badge-primary mui-badge-inverted">4</span>
+					</li>
+					<li class="mui-table-view-cell">
+						中间检查数
+						<span class="mui-badge mui-badge-primary mui-badge-inverted">3</span>
+					</li>
+					<li class="mui-table-view-cell">
+						竣工检查数
+						<span class="mui-badge mui-badge-primary mui-badge-inverted">2</span>
+					</li>
+					<li class="mui-table-view-cell">
+						工单作废率
+						<span class="mui-badge mui-badge-primary mui-badge-inverted">-</span>
+					</li>
+					<li class="mui-table-view-cell">
+						超时率
+						<span class="mui-badge mui-badge-primary mui-badge-inverted">-</span>
+					</li>
+					<li class="mui-table-view-cell">
+						<div id="main" style="width: 100%;height:200px;"></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			mui.init();
+
+			// 初始化echarts实例
+			var myChart = echarts.init(document.getElementById('main'));
+			option = {
+				color: ['#3398DB'],
+				tooltip: {
+					trigger: 'axis',
+					axisPointer: { // 坐标轴指示器，坐标轴触发有效
+						type: 'line' // 默认为直线，可选为：'line' | 'shadow'
+					}
+				},
+				grid: {
+					left: '0%',
+					right: '0%',
+					bottom: '20%',
+					top: '3%',
+					containLabel: true
+				},
+				xAxis: [{
+					type: 'category',
+					data: ['受理', '在途超时', '现场勘查', '装表', '中间检查', '竣工检查'],
+					axisLabel: {
+						rotate: 45,
+						interval: 0
+					},
+					axisTick: {
+						alignWithLabel: true
+					}
+				}],
+				yAxis: [{
+					type: 'value'
+				}],
+				series: [{
+					name: '数量',
+					type: 'bar',
+					barWidth: '50%',
+					data: [10, 3, 5, 2, 3, 4]
+				}]
+			};
+			myChart.setOption(option);
+
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index3.html',
+					id: 'index3'
+				})
+			})
+		</script>
+	</body>
+
+</html>

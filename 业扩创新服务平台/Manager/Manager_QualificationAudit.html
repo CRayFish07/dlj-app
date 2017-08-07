@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+	</head>
+	<style type="text/css">
+		table tr td {
+			font-size: 12px;
+			color: #000;
+			vertical-align: middle;
+			height: 44px;
+			border-bottom: 1px solid #E5E5E5;
+		}
+		
+		table tr td:nth-of-type(1) {
+			width: 40%;
+			padding-left: 12px;
+		}
+		
+		table tr td:nth-of-type(2) {
+			width: 60%;
+		}
+		
+		table {
+			background-color: #fff;
+			width: 100%;
+		}
+		
+		.info-head {
+			width: 100%;
+			height: 43px;
+			background-color: #fff;
+		}
+		
+		.info-head p {
+			font-size: 15px;
+			color: #000;
+			line-height: 43px;
+			margin-left: 12px;
+		}
+		
+		table tr td {
+			font-size: 12px;
+			color: #000;
+			vertical-align: middle;
+			height: 44px;
+			border-bottom: 1px solid #E5E5E5;
+		}
+		
+		table tr td:nth-of-type(1) {
+			width: 40%;
+			padding-left: 12px;
+		}
+		
+		table tr td:nth-of-type(2) {
+			width: 60%;
+		}
+		
+		input[type='text'] {
+			height: 25px;
+			margin-bottom: 0px;
+			font-size: 12px;
+		}
+		
+		.content {
+			background-color: #fff;
+			border-top: 1px solid #E5E5E5;
+		}
+		
+		.next-btn {
+			margin-top: 27px;
+			text-align: center;
+		}
+		
+		.next-btn button {
+			width: 90%;
+			height: 42px;
+			background-color: #1AA1E6;
+			color: #fff;
+		}
+		
+		select {
+			font-size: 12px;
+			height: 26px;
+			border: 1px solid #EEEEEE;
+			padding: 0px;
+			padding-left: 6px;
+			margin-bottom: 0px;
+		}
+		
+		textarea {
+			font-size: 12px;
+			padding: 2px;
+			border: none;
+			color: #B5B5B5;
+			margin-bottom: 0px;
+		}
+		
+		.dliver {
+			width: 100%;
+			height: 12px;
+			background-color: #E5E5E5;
+		}
+		
+		.writing-board {
+			background-color: #fff;
+		}
+		
+		.writing-board button {
+			width: 127px;
+			height: 39px;
+			border: 1px solid #E5E5E5;
+			color: #535353;
+			font-size: 13px;
+			margin-top: 25px;
+		}
+		
+		.mui-bar {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+		
+		label {
+			font-size: 12px;
+		}
+		
+		.mui-input-row {
+			border-bottom: 1px solid #E5E5E5;
+		}
+		
+		.checkInpage {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background: url(../images/map.png) 0 0 no-repeat;
+			background-size: 100%;
+			text-align: center;
+		}
+		
+		.checkInpage>button {
+			width: 90%;
+			height: 42px;
+			background-color: #1AA1E6;
+			color: #fff;
+			position: absolute;
+			bottom: 72px;
+			left: 5%;
+			font-size: 18px;
+		}
+		
+		section {
+			margin-top: 15px;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>资质审核</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="detai">
+			<table border="0" cellspacing="" cellpadding="">
+				<tr>
+					<td>用电地址</td>
+					<td>XXX区供电局</td>
+				</tr>
+				<tr>
+					<td>客户编号</td>
+					<td>1234567890</td>
+				</tr>
+				<tr>
+					<td>资质单位</td>
+					<td>广州科腾信息技术有限公司</td>
+				</tr>
+				<tr>
+					<td>资质证号</td>
+					<td>123456789</td>
+				</tr>
+				<tr>
+					<td>资质等级</td>
+					<td>一级</td>
+				</tr>
+				<tr>
+					<td>有效期限</td>
+					<td>2020年12月31日</td>
+				</tr>
+			</table>
+		</div>
+		<section>
+			<div class="info-head">
+				<p>设计单位核验内容</p>
+			</div>
+			<div class="content">
+				<div class="mui-input-row mui-checkbox">
+					<label>具体政府建设管理部门颁发的《建设工程勘察设计资质》</label>
+					<input name="checkbox1" value="Item 1" type="checkbox" checked>
+				</div>
+				<div class="mui-input-row mui-checkbox">
+					<label>资质等级与承接的工程相一致</label>
+					<input name="checkbox1" value="Item 1" type="checkbox">
+				</div>
+				<div class="mui-input-row mui-checkbox">
+					<label>复印件与原件相符</label>
+					<input name="checkbox1" value="Item 1" type="checkbox" checked>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="info-head">
+				<p>施工单位核验内容</p>
+			</div>
+			<div class="content">
+				<div class="mui-input-row mui-checkbox">
+					<label>国家电监会许可的资质证明</label>
+					<input name="checkbox1" value="Item 1" type="checkbox" checked>
+				</div>
+				<div class="mui-input-row mui-checkbox">
+					<label>资质等级与承接的工程相一致</label>
+					<input name="checkbox1" value="Item 1" type="checkbox">
+				</div>
+				<div class="mui-input-row mui-checkbox">
+					<label>复印件与原件相符</label>
+					<input name="checkbox1" value="Item 1" type="checkbox" checked>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="info-head">
+				<p>施工单位核验内容</p>
+			</div>
+			<div class="content">
+				<div class="mui-input-row mui-checkbox">
+					<label>国家电监会许可的资质证明</label>
+					<input name="checkbox1" value="Item 1" type="checkbox" checked>
+				</div>
+				<div class="mui-input-row mui-checkbox">
+					<label>资质等级与承接的工程相一致</label>
+					<input name="checkbox1" value="Item 1" type="checkbox">
+				</div>
+				<div class="mui-input-row mui-checkbox">
+					<label>复印件与原件相符</label>
+					<input name="checkbox1" value="Item 1" type="checkbox" checked>
+				</div>
+			</div>
+		</section>
+		<div class="next-btn">
+			<button>确 认 通 过</button>
+		</div>
+		<div class="next-btn" >
+			<button style="background-color: #B7B7B7;">不 通 过</button>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index2.html',
+					id: 'index2'
+				})
+			});
+		var passBtn = document.getElementsByClassName('next-btn')[0];
+		var noPassBtn = document.getElementsByClassName('next-btn')[1];
+		passBtn.addEventListener('tap',function(){
+			mui.openWindow({
+				url:'Manager_workOrdersAccepted.html',
+				id:'Manager_workOrdersAccepted'
+			})
+		})
+		noPassBtn.addEventListener('tap',function(){
+			mui.alert('已归档，请在已办列表里查看！');
+		})
+		</script>
+	</body>
+
+</html>

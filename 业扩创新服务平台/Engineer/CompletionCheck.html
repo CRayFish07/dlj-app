@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.css">
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			
+			.mui-views,
+			.mui-view,
+			.mui-pages,
+			.mui-page,
+			.mui-page-content {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #efeff4;
+			}
+			
+			.mui-pages {
+				top: 64px;
+				height: auto;
+			}
+			
+			.mui-scroll-wrapper,
+			.mui-scroll {
+				background-color: #efeff4;
+			}
+			
+			.mui-page.mui-transitioning {
+				-webkit-transition: -webkit-transform 300ms ease;
+				transition: transform 300ms ease;
+			}
+			
+			.mui-page-left {
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			
+			.mui-ios .mui-page-left {
+				-webkit-transform: translate3d(-20%, 0, 0);
+				transform: translate3d(-20%, 0, 0);
+			}
+			
+			.mui-navbar {
+				position: fixed;
+				right: 0;
+				left: 0;
+				z-index: 10;
+				height: 44px;
+				background-color: #f7f7f8;
+			}
+			
+			.mui-navbar .mui-bar {
+				position: absolute;
+				background: transparent;
+				text-align: center;
+			}
+			
+			.mui-android .mui-navbar-inner.mui-navbar-left {
+				opacity: 0;
+			}
+			
+			.mui-ios .mui-navbar-left .mui-left,
+			.mui-ios .mui-navbar-left .mui-center,
+			.mui-ios .mui-navbar-left .mui-right {
+				opacity: 0;
+			}
+			
+			.mui-navbar .mui-btn-nav {
+				-webkit-transition: none;
+				transition: none;
+				-webkit-transition-duration: .0s;
+				transition-duration: .0s;
+			}
+			
+			.mui-navbar .mui-bar .mui-title {
+				display: inline-block;
+				width: auto;
+			}
+			
+			.mui-page-shadow {
+				position: absolute;
+				right: 100%;
+				top: 0;
+				width: 16px;
+				height: 100%;
+				z-index: -1;
+				content: '';
+			}
+			
+			.mui-page-shadow {
+				background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, .01) 50%, rgba(0, 0, 0, .2) 100%);
+				background: linear-gradient(to right, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, .01) 50%, rgba(0, 0, 0, .2) 100%);
+			}
+			
+			.mui-navbar-inner.mui-transitioning,
+			.mui-navbar-inner .mui-transitioning {
+				-webkit-transition: opacity 300ms ease, -webkit-transform 300ms ease;
+				transition: opacity 300ms ease, transform 300ms ease;
+			}
+			
+			.mui-page {
+				display: none;
+			}
+			
+			.mui-pages .mui-page {
+				display: block;
+			}
+			
+			.mui-page .mui-table-view:first-child {
+				margin-top: 15px;
+			}
+			
+			.mui-page .mui-table-view:last-child {
+				margin-bottom: 30px;
+			}
+			
+			.mui-table-view {
+				margin-top: 20px;
+			}
+			
+			.mui-table-view span.mui-pull-right {
+				color: #999;
+			}
+			
+			.mui-table-view-divider {
+				background-color: #efeff4;
+				font-size: 14px;
+			}
+			
+			.mui-table-view-divider:before,
+			.mui-table-view-divider:after {
+				height: 0;
+			}
+			
+			.mui-fullscreen {
+				position: fixed;
+				z-index: 20;
+				background-color: #000;
+			}
+			
+			.mui-ios .mui-navbar .mui-bar .mui-title {
+				position: static;
+			}
+			
+			.workOrder {
+				background-color: #fff;
+			}
+			
+			.state-icon {
+				margin-right: 14px;
+			}
+			
+			.state-icon button {
+				border: 1px solid #009944;
+				color: #009944;
+			}
+			
+			.progress {
+				position: relative;
+				width: 100%;
+				height: 60px;
+				background-color: #e5e5e5;
+			}
+			
+			.progress img {
+				position: absolute;
+				left: 50%;
+				margin-left: -175px;
+				bottom: 0px;
+				width: 350px;
+				height: 32px;
+			}
+			
+			.info-head {
+				width: 100%;
+				height: 43px;
+				background-color: #fff;
+			}
+			
+			.info-head p {
+				font-size: 15px;
+				color: #000;
+				line-height: 43px;
+				margin-left: 12px;
+			}
+			
+			table tr td {
+				font-size: 12px;
+				color: #000;
+				vertical-align: middle;
+				height: 44px;
+				border-bottom: 1px solid #E5E5E5;
+			}
+			
+			table tr td:nth-of-type(1) {
+				width: 40%;
+				padding-left: 12px;
+			}
+			
+			table tr td:nth-of-type(2) {
+				width: 60%;
+			}
+			
+			input[type='text'] {
+				height: 25px;
+				margin-bottom: 0px;
+				font-size: 12px;
+			}
+			
+			.content {
+				background-color: #fff;
+				border-top: 5px solid #E5E5E5;
+			}
+			
+			.next-btn {
+				margin-top: 27px;
+				text-align: center;
+			}
+			
+			.next-btn button {
+				width: 90%;
+				height: 42px;
+				background-color: #1AA1E6;
+				color: #fff;
+			}
+			
+			select {
+				font-size: 12px;
+				height: 26px;
+				border: 1px solid #EEEEEE;
+				padding: 0px;
+				padding-left: 6px;
+				margin-bottom: 0px;
+			}
+			
+			textarea {
+				font-size: 12px;
+				padding: 2px;
+				border: none;
+				color: #B5B5B5;
+				margin-bottom: 0px;
+			}
+			
+			.dliver {
+				width: 100%;
+				height: 12px;
+				background-color: #E5E5E5;
+			}
+			
+			.writing-board {
+				background-color: #fff;
+			}
+			
+			.writing-board button {
+				width: 127px;
+				height: 39px;
+				border: 1px solid #E5E5E5;
+				color: #535353;
+				font-size: 13px;
+				margin-top: 25px;
+			}
+			
+			.mui-bar {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+			
+			label {
+				font-size: 12px;
+			}
+			
+			.mui-input-row {
+				border-bottom: 1px solid #E5E5E5;
+			}
+			
+			.checkInpage {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				background: url(../images/map.png) 0 0 no-repeat;
+				background-size: 100%;
+				text-align: center;
+			}
+			
+			.checkInpage>button {
+				width: 90%;
+				height: 42px;
+				background-color: #1AA1E6;
+				color: #fff;
+				position: absolute;
+				bottom: 72px;
+				left: 5%;
+				font-size: 18px;
+			}
+			
+			.photo-icon {
+				position: absolute;
+				top: 4px;
+				right: 20px;
+				display: inline-block;
+			}
+		</style>
+	</head>
+
+	<body class="mui-fullscreen">
+		<!--页面主结构开始-->
+		<div id="app" class="mui-views">
+			<div class="mui-view">
+				<div class="mui-navbar">
+				</div>
+				<div class="mui-pages">
+				</div>
+			</div>
+		</div>
+		<!--页面主结构结束-->
+		<!--单页面开始-->
+		<div id="setting" class="mui-page">
+			<!--页面标题栏开始-->
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<header>
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+					<h1>竣工检验</h1>
+					<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+				</header>
+			</div>
+			<!--页面标题栏结束-->
+			<!--页面主内容区开始-->
+			<div class="mui-page-content">
+				<!--<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">-->
+				<div class="workOrder">
+					<div class="workOrder-form">
+						<p style="font-size: 14px;">工单号：2940478341212</p>
+						<p>客户名称：广州科腾信息技术有限公司</p>
+						<p>客户地址：广州市黄埔大道西平云路163号</p>
+						<p>联系人：张三</p>
+						<p>受理日期：2017年3月20日</p>
+					</div>
+					<div class="state-icon">
+						<a href="#CheckIn">
+							<button id="check">现场签到</button>
+						</a>
+					</div>
+				</div>
+				<!--</div>
+				</div>-->
+
+				<section>
+					<div class="progress">
+						<img src="../images/progressBar.png" />
+					</div>
+					<div class="info-head">
+						<p>竣工检查项目（一）</p>
+					</div>
+					<div class="content">
+						<div class="mui-input-row mui-checkbox">
+							<label>断路器、负荷开关、户外隔离开关</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>跌落式开关</label>
+							<input name="checkbox1" value="Item 1" type="checkbox">
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>高压避雷器</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>相线对地、相间安全距离</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>高压电缆及其安装</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox photo">
+							<label>图片上传</label>
+							<img src="../images/photo.png" width="26" height="23" class="photo-icon" />
+						</div>
+					</div>
+					<div class="next-btn">
+						<a href="#two">
+							<button>下 一 步</button>
+						</a>
+					</div>
+				</section>
+			</div>
+			<!--页面主内容区结束-->
+		</div>
+		<!--单页面结束-->
+		<div id="two" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<header>
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+					<h1>竣工检验</h1>
+					<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+				</header>
+			</div>
+			<div class="mui-page-content">
+				<div class="workOrder">
+					<div class="workOrder-form">
+						<p style="font-size: 14px;">工单号：2940478341212</p>
+						<p>客户名称：广州科腾信息技术有限公司</p>
+						<p>客户地址：广州市黄埔大道西平云路163号</p>
+						<p>联系人：张三</p>
+						<p>受理日期：2017年3月20日</p>
+					</div>
+				</div>
+				<section>
+					<div class="progress">
+						<img src="../images/progressBar2.png" />
+					</div>
+					<div class="info-head">
+						<p>竣工检查项目（二）</p>
+					</div>
+					<div class="content">
+						<div class="mui-input-row mui-checkbox">
+							<label>高压柜安装布置</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>高压母线及其安装</label>
+							<input name="checkbox1" value="Item 1" type="checkbox">
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>继电保护</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>变压器、台架、安装布置</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>低压线路及其安装</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox photo">
+							<label>图片上传</label>
+							<img src="../images/photo.png" width="26" height="23" class="photo-icon" />
+						</div>
+					</div>
+					<div class="next-btn">
+						<a href="#three">
+							<button>下 一 步</button>
+						</a>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div id="three" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<header>
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+					<h1>竣工检验</h1>
+					<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+				</header>
+			</div>
+			<div class="mui-page-content">
+				<div class="workOrder">
+					<div class="workOrder-form">
+						<p style="font-size: 14px;">工单号：2940478341212</p>
+						<p>客户名称：广州科腾信息技术有限公司</p>
+						<p>客户地址：广州市黄埔大道西平云路163号</p>
+						<p>联系人：张三</p>
+						<p>受理日期：2017年3月20日</p>
+					</div>
+				</div>
+				<section>
+					<div class="progress">
+						<img src="../images/progressBar3.png" />
+					</div>
+					<div class="info-head">
+						<p>竣工检查项目（三）</p>
+					</div>
+					<div class="content">
+						<div class="mui-input-row mui-checkbox">
+							<label>低压柜（计量箱）安装布置</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>低压柜（箱）母线及其安装</label>
+							<input name="checkbox1" value="Item 1" type="checkbox">
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>进网电工证情况</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>电容补偿装置</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>低压避雷器</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox photo">
+							<label>图片上传</label>
+							<img src="../images/photo.png" width="26" height="23" class="photo-icon" />
+						</div>
+					</div>
+					<div class="next-btn">
+						<a href="#four">
+							<button>下 一 步</button>
+						</a>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div id="four" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<header>
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+					<h1>竣工检验</h1>
+					<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+				</header>
+			</div>
+			<div class="mui-page-content">
+				<div class="workOrder">
+					<div class="workOrder-form">
+						<p style="font-size: 14px;">工单号：2940478341212</p>
+						<p>客户名称：广州科腾信息技术有限公司</p>
+						<p>客户地址：广州市黄埔大道西平云路163号</p>
+						<p>联系人：张三</p>
+						<p>受理日期：2017年3月20日</p>
+					</div>
+				</div>
+				<section>
+					<div class="progress">
+						<img src="../images/progressBar4.png" />
+					</div>
+					<div class="info-head">
+						<p>竣工检查项目（四）</p>
+					</div>
+					<div class="content">
+						<div class="mui-input-row mui-checkbox">
+							<label>低压出线开关</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>接地电阻</label>
+							<input name="checkbox1" value="Item 1" type="checkbox">
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>标示牌齐全</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>电房等配电场地土建</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>安全工具</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox photo">
+							<label>图片上传</label>
+							<img src="../images/photo.png" width="26" height="23" class="photo-icon" />
+						</div>
+					</div>
+					<div class="next-btn">
+						<a href="#five">
+							<button>下 一 步</button>
+						</a>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<div id="five" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<header>
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+					<h1>竣工检验</h1>
+					<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+				</header>
+			</div>
+			<div class="mui-page-content">
+				<div class="workOrder">
+					<div class="workOrder-form">
+						<p style="font-size: 14px;">工单号：2940478341212</p>
+						<p>客户名称：广州科腾信息技术有限公司</p>
+						<p>客户地址：广州市黄埔大道西平云路163号</p>
+						<p>联系人：张三</p>
+						<p>受理日期：2017年3月20日</p>
+					</div>
+				</div>
+				<section>
+					<div class="progress">
+						<img src="../images/progressBar5.png" />
+					</div>
+					<div class="info-head">
+						<p>竣工检查项目（五）</p>
+					</div>
+					<div class="content">
+						<div class="mui-input-row mui-checkbox">
+							<label>消防设施</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>业扩相关文档资料</label>
+							<input name="checkbox1" value="Item 1" type="checkbox">
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>操作规程及制度</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>高压配电一次模拟图</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>低压配电一次模拟图</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox photo">
+							<label>图片上传</label>
+							<img src="../images/photo.png" width="26" height="23" class="photo-icon" />
+						</div>
+					</div>
+					<div class="next-btn">
+						<a href="#six">
+							<button>下 一 步</button>
+						</a>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div id="six" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<header>
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+					<h1>竣工检验</h1>
+					<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+				</header>
+			</div>
+			<div class="mui-page-content">
+				<div class="workOrder">
+					<div class="workOrder-form">
+						<p style="font-size: 14px;">工单号：2940478341212</p>
+						<p>客户名称：广州科腾信息技术有限公司</p>
+						<p>客户地址：广州市黄埔大道西平云路163号</p>
+						<p>联系人：张三</p>
+						<p>受理日期：2017年3月20日</p>
+					</div>
+				</div>
+				<section>
+					<div class="progress">
+						<img src="../images/progressBar6.png" />
+					</div>
+					<div class="info-head">
+						<p>竣工检查项目（六）</p>
+					</div>
+					<div class="content">
+						<div class="mui-input-row mui-checkbox">
+							<label>
+						  	<img src="../images/plus.png" width="15" height="15"/>
+						  </label>
+						</div>
+						<div class="mui-input-row mui-checkbox photo">
+							<label>图片上传</label>
+							<img src="../images/photo.png" width="26" height="23" class="photo-icon" />
+						</div>
+					</div>
+					<div class="next-btn">
+						<a href="#seven">
+							<button>下 一 步</button>
+						</a>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div id="seven" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<header>
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+					<h1>竣工检验</h1>
+					<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+				</header>
+			</div>
+			<div class="mui-page-content">
+				<div class="workOrder">
+					<div class="workOrder-form">
+						<p style="font-size: 14px;">工单号：2940478341212</p>
+						<p>客户名称：广州科腾信息技术有限公司</p>
+						<p>客户地址：广州市黄埔大道西平云路163号</p>
+						<p>联系人：张三</p>
+						<p>受理日期：2017年3月20日</p>
+					</div>
+				</div>
+				<section>
+					<div class="dliver"></div>
+					<div class="info-head">
+						<p>供电企业中间检查意见</p>
+					</div>
+					<textarea id="surveyOpinion" rows="" cols="" style="height: 140px;border-top:1px solid #E5E5E5"></textarea>
+				</section>
+				<div class="next-btn">
+					<a href="#eight">
+						<button>下 一 步</button>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div id="eight" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<header>
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+					<h1>竣工检验</h1>
+					<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+				</header>
+			</div>
+			<div class="mui-page-content">
+				<div class="workOrder">
+					<div class="workOrder-form">
+						<p style="font-size: 14px;">工单号：2940478341212</p>
+						<p>客户名称：广州科腾信息技术有限公司</p>
+						<p>客户地址：广州市黄埔大道西平云路163号</p>
+						<p>联系人：张三</p>
+						<p>受理日期：2017年3月20日</p>
+					</div>
+				</div>
+				<section>
+					<div class="dliver"></div>
+					<div class="info-head">
+						<p>客户确认检查意见</p>
+					</div>
+					<textarea id="surveyOpinion" rows="" cols="" style="height: 140px;border-top:1px solid #E5E5E5"></textarea>
+				</section>
+				<section style="margin-top: -4px;">
+					<div class="dliver"></div>
+					<div class="info-head" style="border-bottom: 1px solid #E5E5E5;">
+						<p>客户签名</p>
+					</div>
+					<div class="writing-board">
+						<div style="background-color: #EEEEEE;width: 204px;height: 65px;display: inline-block;margin:10px"></div>
+						<button>点击打开手写板</button>
+					</div>
+					<div class="next-btn">
+						<button>确 定</button>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<div id="CheckIn" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<header>
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+					<h1>现场签到</h1>
+					<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+				</header>
+			</div>
+			<div class="mui-page-content checkInpage">
+				<button id="checkRight">确 认 签 到</button>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/mui.view.js"></script>
+	<script>
+		mui.init();
+		var checkBtn = document.getElementById('check');
+		var checkRightBtn = document.getElementById('checkRight');
+		checkRightBtn.addEventListener('tap', function() {
+			checkBtn.style.backgroundColor = '#ccc';
+			checkBtn.style.color = '#fff';
+			checkBtn.parentNode.setAttribute('href', 'javascript:;');
+			mui.back();
+			mui.alert('已签到');
+		})
+		document.getElementById('surveyOpinion').value = '请输入勘查意见';
+		//初始化单页view
+		var viewApi = mui('#app').view({
+			defaultPage: '#setting'
+		});
+		//初始化单页的区域滚动
+		mui('.mui-scroll-wrapper').scroll();
+		
+			mui('header').on('tap','.mui-icon-home',function() {
+			console.log('111')
+			mui.openWindow({
+				url:'index.html',
+				id:'index'
+			})
+		})
+		
+		
+		var view = viewApi.view;
+		(function($) {
+			//处理view的后退与webview后退
+			var oldBack = $.back;
+			$.back = function() {
+				if(viewApi.canBack()) { //如果view可以后退，则执行view的后退
+					viewApi.back();
+				} else { //执行webview后退
+					oldBack();
+				}
+			};
+		})(mui);
+		
+		mui('.mui-pages').on('tap', '.photo', function() {
+			getImage();
+		})
+		// 拍照
+		function getImage() {
+			var cmr = plus.camera.getCamera();
+			var res = cmr.supportedImageResolutions[0];
+			var fmt = cmr.supportedImageFormats[0];
+			cmr.captureImage(function(path) {
+					alert("图片上传成功： " + path);
+				},
+				function(error) {
+					alert("图片上传失败： " + error.message);
+				}, {
+					resolution: res,
+					format: fmt
+				}
+			);
+		}
+	</script>
+
+</html>

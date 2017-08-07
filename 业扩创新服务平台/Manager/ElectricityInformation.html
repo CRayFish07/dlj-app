@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+	</head>
+<style type="text/css">
+	table tr td {
+			font-size: 12px;
+			color: #000;
+			vertical-align: middle;
+			height: 44px;
+			border-bottom: 1px solid #E5E5E5;
+		}
+		
+		table tr td:nth-of-type(1) {
+			width: 40%;
+			padding-left: 12px;
+		}
+		
+		table tr td:nth-of-type(2) {
+			width: 60%;
+		}
+		
+		table {
+			background-color: #fff;
+			width: 100%;
+		}
+</style>
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>用电方信息</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="detai">
+			<table border="0" cellspacing="" cellpadding="">
+				<tr>
+					<td>通邮地址</td>
+					<td>XXX区XXX</td>
+				</tr>
+				<tr>
+					<td>邮政编码</td>
+					<td>1234567890</td>
+				</tr>
+				<tr>
+					<td>客户身份</td>
+					<td>租赁户</td>
+				</tr>
+				<tr>
+					<td>营业执照</td>
+					<td>123456789</td>
+				</tr>
+				<tr>
+					<td>业务经办人</td>
+					<td>张三</td>
+				</tr>
+				<tr>
+					<td>电费联系人</td>
+					<td>李四</td>
+				</tr>
+				<tr>
+					<td>预计送电日期</td>
+					<td>2017年1月2日</td>
+				</tr>
+				<tr>
+					<td>开通电子账单</td>
+					<td>lisi@163.com</td>
+				</tr>
+				<tr>
+					<td>电费担保方式</td>
+					<td>单位担保</td>
+				</tr>
+			</table>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			
+				var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap',function() {
+				mui.openWindow({
+					url:'index2.html',
+					id:'index2'
+				})
+			})
+		</script>
+	</body>
+
+</html>

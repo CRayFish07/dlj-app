@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/hui.css" />
+	</head>
+	<style type="text/css">
+		.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {
+			border: none;
+		}
+		
+		.table-show {
+			display: flex;
+			text-align: center;
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		.item {
+			display: flex;
+		}
+		
+		.item div {
+			padding-top: 20px;
+		}
+		
+		section:nth-of-type(2) {
+			background-color: #fff;
+		}
+		
+		.table-show p {
+			padding-top: 12px;
+		}
+		
+		select,
+		.time button {
+			width: 192px;
+			margin-bottom: 0px;
+			padding: 2px 5px;
+		}
+		
+		.select-option {
+			background-color: #fff;
+			font-size: 12px;
+			border-bottom: 5px solid #E5E5E5;
+		}
+		
+		.select-option div {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 47px;
+		}
+		
+		.hui-tab-title {
+			overflow: hidden;
+		}
+		
+		.hui-tab-active {
+			color: #1496FF;
+		}
+		
+		.hui-list {
+			padding: 0px;
+		}
+		
+		.hui-list>p {
+			margin-bottom: 0px;
+			background-color: #E1E1E1;
+			padding: 5px 12px;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>工单考核环节情况</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="hui-tab">
+			<div class="hui-tab-title">
+				<div>个人统计</div>
+				<div>全局统计</div>
+			</div>
+			<div class="hui-tab-body">
+				<div class="hui-tab-item hui-list">
+					<div class="select-option">
+						<div class="time">
+							开始时间
+							<button type="button" class="hui-button hui-button-large" id="btn1">选择时间</button>
+						</div>
+						<div class="time">
+							结束时间
+							<button type="button" class="hui-button hui-button-large" id="btn2">选择时间</button>
+						</div>
+					</div>
+					<div>
+						<div class="table-show">
+							<div class="item" style="border-bottom: 1px solid #EEEEEE;">
+								<div style="border-right:1px solid #eeeeee;">
+									<img src="../images/VisualizeTheChart.png" width="166" height="132" />
+									<p>工单回退率</p>
+								</div>
+								<div>
+									<img src="../images/VisualizeTheChart.png" width="166" height="132" />
+									<p>工单跳转率</p>
+								</div>
+							</div>
+							<div class="item">
+								<div style="border-right:1px solid #eeeeee;">
+									<img src="../images/VisualizeTheChart.png" width="166" height="132" />
+									<p>工单作废率</p>
+								</div>
+								<div>
+									<img src="../images/VisualizeTheChart.png" width="166" height="132" />
+									<p>工单超时率</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hui-tab-item hui-list">
+					<section class="select-option">
+						<div class="time">
+							开始时间
+							<button type="button" class="hui-button hui-button-large" id="btn3">选择时间</button>
+						</div>
+						<div class="time">
+							结束时间
+							<button type="button" class="hui-button hui-button-large" id="btn4">选择时间</button>
+						</div>
+					</section>
+					<section>
+						<div class="table-show">
+							<div class="item">
+								<div style="border-right:1px solid #eeeeee;border-bottom: 1px solid #EEEEEE;">
+									<img src="../images/VisualizeTheChart.png" width="166" height="132" />
+									<p>工单回退率</p>
+								</div>
+								<div>
+									<img src="../images/VisualizeTheChart.png" width="166" height="132" />
+									<p>工单跳转率</p>
+								</div>
+							</div>
+							<div class="item">
+								<div style="border-right:1px solid #eeeeee;">
+									<img src="../images/VisualizeTheChart.png" width="166" height="132" />
+									<p>工单作废率</p>
+								</div>
+								<div>
+									<img src="../images/VisualizeTheChart.png" width="166" height="132" />
+									<p>工单超时率</p>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/hui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-tab.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-picker.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+			hui.tab('.hui-tab');
+			mui('.mui-scroll-wrapper').scroll({
+				indicators: true //是否显示滚动条
+			});
+			
+			var btn1 = document.getElementById('btn1');
+			var btn2 = document.getElementById('btn2');
+			var btn3 = document.getElementById('btn3');
+			var btn4 = document.getElementById('btn4');
+			btn1.addEventListener('tap',function(){
+				picker('#btn1');
+			});
+			btn2.addEventListener('tap',function(){
+				picker('#btn2');
+			})
+			btn3.addEventListener('tap',function(){
+				picker('#btn3');
+			})
+			btn4.addEventListener('tap',function(){
+				picker('#btn4');
+			})
+			/* 时间选择器 非关联型绑定 */
+			function picker(select) {
+				var picker1 = new huiPicker(select, function() {
+					var year = picker1.getVal(0);
+					var month = picker1.getVal(1);
+					var days = picker1.getVal(2);
+					hui(select).html(year + ' - ' + month + ' - ' + days);
+				});
+				picker1.level = 3;
+				//年份
+				var years = new Array();
+				for(var i = 2010; i <= 2030; i++) {
+					years.push({
+						value: i,
+						text: i
+					});
+				}
+				picker1.bindData(0, years);
+				//月份
+				var months = new Array();
+				for(var i = 1; i <= 12; i++) {
+					if(i < 10) {
+						i = '0' + i;
+					}
+					months.push({
+						value: i,
+						text: i
+					});
+				}
+				picker1.bindData(1, months);
+				//天
+				var days = new Array();
+				for(var i = 1; i <= 31; i++) {
+					if(i < 10) {
+						i = '0' + i;
+					}
+					days.push({
+						value: i,
+						text: i
+					});
+				}
+				picker1.bindData(2, days);
+			}
+
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index2.html',
+					id: 'index2'
+				})
+			})
+
+			mui('.table-show').on('tap', 'div', function() {
+				mui.openWindow({
+					url: 'ManagerWorkOrder_assessment_link.html',
+					id: 'ManagerWorkOrder_assessment_link'
+				})
+			})
+		</script>
+	</body>
+
+</html>

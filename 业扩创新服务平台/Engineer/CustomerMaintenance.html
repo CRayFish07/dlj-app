@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/mui.css" />
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../layer_mobile/layer.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.mui-content>.mui-table-view:first-child {
+			margin-top: 0px;
+		}
+		
+		.mui-table-view-cell {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: 14px;
+			padding: 0px 15px;
+		}
+		
+		.mui-table-view-cell input {
+			width: 80%;
+			border: 0;
+			font-size: 14px;
+			text-align: right;
+			white-space: normal;
+			margin-bottom: 0px;
+			padding: 0px;
+		}
+		
+		.photo {
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+		}
+		
+		.photo img {
+			height: 100%;
+			width: 100%;
+		}
+		
+		.mui-icon-arrowright {
+			font-size: 30px;
+			color: #ccc;
+			height: 40px;
+			padding-top: 5px;
+		}
+		
+		.btns {
+			display: flex;
+			justify-content: space-around;
+			margin: 15px;
+		}
+		
+		.btns button {
+			width: 45%;
+			height: 40px;
+			background-color: #1BA1E8;
+			border-radius: 20px;
+			color: #fff;
+		}
+		
+		.layers {
+			width: 100%;
+		}
+		
+		.layers img {
+			width: 100%;
+		}
+		
+		.photo:nth-of-type(1) {
+			background: url(../images/photo1.png) 0 0 no-repeat;
+			background-size: 100%;
+		}
+		
+		.photo:nth-of-type(2) {
+			background: url(../images/photo2.png) 0 0 no-repeat;
+			background-size: 100%;
+		}
+		
+		.photo:nth-of-type(3) {
+			background: url(../images/photo3.png) 0 0 no-repeat;
+			background-size: 100%;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>客户资料维护</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					工单号
+					<input type="number" name="" value="94537628943" />
+				</li>
+				<li class="mui-table-view-cell">
+					客户名称
+					<input type="text" name="" value="东莞红日蒸笼公司" />
+				</li>
+				<li class="mui-table-view-cell">
+					客户地址
+					<input type="text" name="" value="东莞市生态园中心生态园大道与瑞禾路交汇处" />
+				</li>
+				<li class="mui-table-view-cell">
+					客户编号
+					<input type="number" name="" value="613782943" />
+				</li>
+				<li class="mui-table-view-cell">
+					受理日期
+					<input type="text" name="" value="2017年5月10日" />
+				</li>
+				<li class="mui-table-view-cell">
+					报装容量
+					<input type="text" name="" value="2000kVA" />
+				</li>
+				<li class="mui-table-view-cell">
+					供电线路
+					<input type="text" name="" value="F7-10kVA" />
+				</li>
+				<li class="mui-table-view-cell" id="handlePhoto">
+					<div class="photo"></div>
+					<div class="photo"></div>
+					<div class="photo"></div>
+				</li>
+				<li class="mui-table-view-cell" id="signed">
+					客户电子签名
+					<span class="mui-icon mui-icon-arrowright"></span>
+				</li>
+			</ul>
+			<div class="btns">
+				<button>检查前准备</button>
+				<button>检查记录</button>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		mui.init({
+			gestureConfig: {
+				tap: true, //默认为true
+				doubletap: true, //默认为false
+				longtap: true, //默认为false
+				swipe: true, //默认为true
+				drag: true, //默认为true
+				hold: true, //默认为false，不监听
+				release: true //默认为false，不监听
+			}
+		});
+		var home = document.getElementsByClassName('mui-icon-home')[0];
+		home.addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'index.html',
+				id: 'index'
+			})
+		});
+
+		$('.mui-content').on('tap','#signed',function() {
+			mui.openWindow({
+				url:'signed.html',
+				id:'digned'
+			})
+		})
+
+		//		点击检查前准备按钮
+		$('.btns').on('tap', 'button:nth-of-type(1)', function() {
+			mui.openWindow({
+				url: 'CheckBeforePreparation.html',
+				id: 'CheckBeforePreparation'
+			})
+		})
+		//		点击检查记录按钮
+		$('.btns').on('tap', 'button:nth-of-type(2)', function() {
+			mui.openWindow({
+				url: 'InspectionRecords.html',
+				id: 'InspectionRecords'
+			})
+		})
+
+		mui.plusReady(function() {
+			//		点击添加照片
+			$('.mui-content').on('tap', '.photo', function() {
+				var Dom = $(this);
+				if(mui.os.plus) {
+					var a = [{
+						title: "拍照"
+					}, {
+						title: "从手机相册选择"
+					}, {
+						title: "预览"
+					}];
+					plus.nativeUI.actionSheet({
+						cancel: "取消",
+						buttons: a
+					}, function(b) {
+						switch(b.index) {
+							case 1:
+								getImage(Dom);
+								break;
+							case 2:
+								galleryImg(Dom);
+								break;
+							case 3:
+								var q = Dom.find('img').attr('src');
+								if(q == undefined) {
+									mui.toast('您还没有上传图片！')
+								} else {
+									layer.open({
+										type: 1,
+										content: '<div class="layers"><img src=" ' + q + ' "/></div>',
+										btn: '关闭'
+									})
+								}
+								break;
+							default:
+								break
+						}
+					})
+				}
+			})
+
+			$('.mui-table-view').on('longtap', '.photo', function() {
+				var d = $(this);
+				var btnArray = ['否', '是'];
+				var img5 = $(this).find('img').attr('src');
+				if(img5 == undefined) {
+					mui.toast('您还没有选择图片！')
+				} else {
+					mui.confirm('是否删除此照片？', '', btnArray, function(e) {
+						if(e.index == 1) {
+							d.find('img').remove();
+						}
+					})
+				}
+
+			})
+
+			function getImage(Dom) {
+				var c = plus.camera.getCamera();
+				c.captureImage(function(e) {
+					plus.io.resolveLocalFileSystemURL(e, function(entry) {
+						var s = entry.toLocalURL();
+						var html = '<img src=" ' + s + ' "/>';
+						Dom.append(html);
+					}, function(e) {
+						console.log("读取拍照文件错误：" + e.message);
+					});
+				}, function(s) {
+					console.log("error" + s);
+				})
+			}
+
+			function galleryImg(Dom) {
+				plus.gallery.pick(function(path) {
+					var html2 = '<img src=" ' + path + ' "/>';
+					Dom.append(html2);
+				}, function(e) {
+					mui.toast('已取消！')
+				}, {
+					filter: "image"
+				})
+			};
+		})
+	</script>
+
+</html>

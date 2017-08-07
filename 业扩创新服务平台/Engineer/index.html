@@ -1,0 +1,310 @@
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="../css/mui.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js"></script>
+	</head>
+	<style type="text/css">
+		header {
+			width: 100%;
+			height: 190px;
+			background: url(../images/banner.png) 0 0 no-repeat;
+			background-size: 100%;
+		}
+		
+		.slogan {
+			display: flex;
+			flex-basis: 100%;
+			justify-content: center;
+		}
+		
+		.slogan h1 {
+			font-size: 18px;
+			color: #fff;
+			font-weight: bold;
+			font-family: 华文仿宋;
+			padding-top: 3px;
+		}
+		
+		.mail img {
+			width: 32px;
+			height: 27px;
+			float: right;
+			margin-top: -35px;
+			margin-right: 10px;
+		}
+		
+		.head-main img {
+			width: 110px;
+			height: 106px;
+		}
+		
+		.head-main {
+			display: flex;
+			justify-content: space-around;
+			padding-top: 12px;
+		}
+		
+		.head-main>.info>p {
+			font-size: 14px;
+			color: #fff;
+		}
+		
+		.head-main>.info>span {
+			font-size: 11px;
+			color: #fff;
+		}
+		
+		.head-main>.info {
+			width: 50%;
+			padding-top: 5px;
+		}
+		
+		.operation-area {
+			width: 100%;
+			height: 130px;
+			background-color: #fff;
+		}
+		
+		.operation-buttons {
+			width: 90%;
+			display: flex;
+			height: 100%;
+			margin: 0 auto;
+			align-items: center;
+		}
+		
+		.operation-buttons div {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		.operation-buttons img {
+			width: 59px;
+			height: 59px;
+			flex: 1;
+		}
+		
+		.operation-buttons>div>p {
+			font-size: 12px;
+			color: #202020;
+			padding-top: 10px;
+		}
+		
+		.main {
+			border-top: 11px solid #E5E5E5;
+			background-color: #fff;
+			margin-bottom: 50px;
+		}
+		.main-head {
+			height: 35px;
+			border-bottom: 2px solid #E5E5E5;
+			display: flex;
+			align-items: center;
+		}
+		.main-head img {
+			margin-left: 12px;
+			margin-right: 6px;
+		}
+		footer {
+			position: fixed;
+			bottom: 0px;
+			width:100%;
+			height: 50px;
+			background-color: #fff;
+			display: flex;
+			justify-content: space-around;
+			border-top:1px solid #E5E5E5;
+		}
+		
+		footer>div:nth-of-type(2)>img {
+			width: 48px;
+			height: 55px;
+			margin-top: -19px;
+		}
+		
+		footer>div>img {
+			width: 23px;
+			height: 24px;
+		}
+		footer>div>p{
+			margin-bottom: 0px;
+		}
+		footer div {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+	</style>
+
+	<body class="Site">
+		<header>
+			<div class="slogan">
+				<h1>业扩创新服务平台</h1>
+			</div>
+			<div class="mail"><img src="../images/mail.png" /></div>
+			<div class="head-main">
+				<img src="../images/weather.png" />
+				<div class="info">
+					<p>公告</p>
+					<span id="">
+					东莞业扩创新服务平台APP端即将上线，近期请注意查看！
+				</span>
+				</div>
+			</div>
+		</header>
+		<section class="operation-area">
+			<div class="operation-buttons">
+				<div id="business_progress">
+					<img src="../images/workOrdersAccepted.png" />
+					<p>任务管理</p>
+				</div>
+				<div id="moveJob">
+					<img src="../images/moveJob.png" />
+					<p>移动作业</p>
+				</div>
+				<div id="statistics_show">
+					<img src="../images/StatisticsShow.png" />
+					<p>统计展示</p>
+				</div>
+			</div>
+		</section>
+		<section class="main two">
+			<div class="main-head">
+				<img src="../images/SetIcon.png" width="22" height="22"/>
+				<span>现场作业</span>
+			</div>
+			<!--<div class="workOrder">
+				<div class="workOrder-form">
+					<p>工单号：2940478341212</p>
+					<p>客户名称：广州科腾信息技术有限公司</p>
+					<p>客户地址：广州市黄埔大道西平云路163号</p>
+					<p class="progress">业务进度：<span class="SiteSurveyColor">现场勘查</span></p>
+				</div>
+				<div class="state-icon">
+					<img src="../images/overtime.png" />
+					<span class="overtime">已超时9日</span>
+				</div>
+
+			</div>
+			<div class="workOrder">
+				<div class="workOrder-form">
+					<p>工单号：2940478341212</p>
+					<p>客户名称：广州科腾信息技术有限公司</p>
+					<p>客户地址：广州市黄埔大道西平云路163号</p>
+					<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+				</div>
+				<div class="state-icon">
+					<img src="../images/willtimeout.png" />
+					<span class="not-overtime">还剩9日</span>
+				</div>
+
+			</div>
+			<div class="workOrder">
+				<div class="workOrder-form">
+					<p>工单号：2940478341212</p>
+					<p>客户名称：广州科腾信息技术有限公司</p>
+					<p>客户地址：广州市黄埔大道西平云路163号</p>
+					<p class="progress">业务进度：<span class="CompletionInspectionColor">竣工检验</span></p>
+				</div>
+			</div>-->
+		</section>
+		<footer>
+			<div id="chart">
+				<img src="../images/information.png" />
+				<p>实时沟通</p>
+			</div>
+			<div>
+				<img src="../images/BottomNavigationCenterButton.png" />
+			</div>
+			<div id="personal_center">
+				<img src="../images/Personalcenter.png" />
+				<p>个人中心</p>
+			</div>
+		</footer>
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		var businessProgressBtn = document.getElementById('business_progress');
+		var moveJobBtn = document.getElementById('moveJob');
+		var statisticsShowBtn = document.getElementById('statistics_show');
+		var personalCenterBtn = document.getElementById('personal_center');
+		var workOrderList = document.getElementsByClassName('workOrder');
+
+		businessProgressBtn.addEventListener('tap',function(){
+			mui.openWindow({
+				url: 'workersList.html',
+				id: 'workersList'
+			})
+		});
+		moveJobBtn.addEventListener('tap', function(){
+			mui.openWindow({
+				url: 'MoveJob.html',
+				id: 'MoveJob'
+			})
+		});
+		statisticsShowBtn.addEventListener('tap', function(){
+			mui.openWindow({
+				url: 'assessment_link.html',
+				id: 'assessment_link'
+			})
+		}); 
+		personalCenterBtn.addEventListener('tap', function(){
+			mui.openWindow({
+				url: 'personalCenter.html',
+				id: 'personalCenter'
+			})
+		});
+		var chartBtn = document.getElementById('chart');
+		chartBtn.addEventListener('tap',function(){
+			mui.openWindow({
+				url:'ConversList.html',
+				id:'ConversList'
+			})
+		})
+		
+		//			获取工单列表
+			var data = {
+				userId: "aaa",
+				userPwd: "aaa"
+			};
+			var datastr = JSON.stringify(data);
+			$.ajax({
+				type: "post",
+				url: "http://39.108.104.129/BusExt/Service.ashx?Func=QueryBEWorkOrder",
+				data: datastr,
+				success: function(data) {
+					for(var i = 0; i < data.taskList.length; i++) {
+						if(data.taskList[i].partNumberName == '现场勘查' || data.taskList[i].partNumberName == '中间检查' || data.taskList[i].partNumberName == '竣工检验') {
+							var html2 = '<div class="workOrder"><div class="workOrder-form"><p>工单号：' + data.taskList[i].taskCode + '</p><p>客户名称：' + data.taskList[i].userName + '</p><p>客户地址：' + data.taskList[i].electricityAddress + '</p><p class="progress">业务进度：<span class="SiteSurveyColor">' + data.taskList[i].partNumberName + '</span></p></div></div>';
+							$('.two').append(html2);
+						}
+					}
+
+				}
+			});
+		
+		mui('.main').on('tap','.workOrder',function(){ 
+			var html = $(this).find('span').html();
+			var num;
+	
+			if(html === '现场勘查') {
+				num = 0;
+			}else if(html === '中间检查' ) {
+				num = 4;
+			}else if(html === '竣工检验' ) {
+				num = 6;
+			}
+			localStorage.setItem('num',num);
+			mui.openWindow({
+				url: 'BusinessProgressShrink.html',
+				id: 'BusinessProgressShrink'
+			})
+		});
+	</script>
+
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+	</head>
+	<style type="text/css">
+		table tr td {
+			font-size: 12px;
+			color: #000;
+			vertical-align: middle;
+			height: 44px;
+			border-bottom: 1px solid #E5E5E5;
+		}
+		
+		table tr td:nth-of-type(1) {
+			width: 40%;
+			padding-left: 12px;
+		}
+		
+		table tr td:nth-of-type(2) {
+			width: 60%;
+			text-align: right;
+			padding-right: 12px;
+		}
+		
+		table {
+			background-color: #fff;
+			width: 100%;
+		}
+		
+		.workOrder {
+			display: block;
+			background-color: #fff;
+			padding-top: 1px;
+		}
+		
+		.workOrder-form {
+			margin-bottom: 12px;
+		}
+		
+		.detai {
+			margin-top: 15px;
+		}
+		
+		.btn {
+			border-radius: 20px;
+			margin: 10px;
+			width: 40%;
+			background-color: #1BA3E5;
+			color: #fff;
+			font-weight: 200;
+		}
+		
+		.btns {
+			display: flex;
+			justify-content: space-around;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>竣工检验环节</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="mui-content">
+			<div class="detai">
+				<table border="0" cellspacing="" cellpadding="">
+					<tr>
+						<td>客户名称</td>
+						<td class="userName">东莞空间科技城实业有限公司</td>
+					</tr>
+					<tr>
+						<td>用电地址</td>
+						<td class="electricityAddress">广东省东莞市生态园中心区生态园大道与瑞和路交汇处</td>
+					</tr>
+					<tr>
+						<td>工作单号</td>
+						<td class="taskCode">031900100000024398989</td>
+					</tr>
+					<tr>
+						<td>报装容量</td>
+						<td class="contractCapacity">250kVA</td>
+					</tr>
+					<tr>
+						<td>客户联系人</td>
+						<td class="slyy">肖铁</td>
+					</tr>
+					<tr>
+						<td>联系电话</td>
+						<td class="">15815522592</td>
+					</tr>
+					<tr>
+						<td>施工单位</td>
+						<td class="powerSupplyUnitName"></td>
+					</tr>
+					<tr>
+						<td>联系电话</td>
+						<td class=""></td>
+					</tr>
+					<tr>
+						<td>受理日期</td>
+						<td class="slrq">2017年04月20日</td>
+					</tr>
+					<tr>
+						<td>检查日期</td>
+						<td class="slrq">2017年04月22日</td>
+					</tr>
+					<tr>
+						<td>供电线路</td>
+						<td class="">F7--10kV XX线</td>
+					</tr>
+					<tr>
+						<td>报装容量</td>
+						<td class="contractCapacity">2000kVA</td>
+					</tr>
+				</table>
+			</div>
+			<div class="btns">
+				<button class="btn" id="CheckBeforePreparationBtn">检查前准备</button>
+				<button class="btn" id="InspectionRecordsBtn">检查记录</button>
+			</div>
+		</div>
+
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index.html',
+					id: 'index'
+				})
+			});
+
+			//				全局获取taskCode
+			var localtaskCode3 = localStorage.getItem('taskCode3');
+			var owc = {
+				userId: "aaa", //用户Id
+				userPwd: "aaa", //用户密码
+				taskCode: localtaskCode3 //业扩工作单号
+			};
+
+			var owcStr = JSON.stringify(owc);
+			//				获取工单详情
+			var url1 = "http://39.108.104.129/BusExt/Service.ashx?Func=QueryBEWorkOrder";
+			$.post(
+				url1,
+				owcStr,
+				function(data, status) {
+					var formdata = data.taskList[0];
+					$('.userName').html(formdata.userName);
+					$('.electricityAddress').html(formdata.electricityAddress);
+					$('.taskCode').html(formdata.taskCode);
+					$('.contractCapacity').html(formdata.contractCapacity);
+					$('.slyy').html(formdata.slyy);
+					$('.slrq').html(formdata.slrq);
+					$('.slyy').html(formdata.slyy);
+					$('.powerSupplyUnitName').html(formdata.powerSupplyUnitName);
+				}
+			);
+
+			var CheckBeforePreparationBtn = document.getElementById('CheckBeforePreparationBtn');
+			var InspectionRecordsBtn = document.getElementById('InspectionRecordsBtn');
+
+			CheckBeforePreparationBtn.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'CheckBeforePreparation.html',
+					id: 'CheckBeforePreparation'
+				})
+			});
+			InspectionRecordsBtn.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'InspectionRecords.html',
+					id: 'InspectionRecords'
+				})
+			})
+		</script>
+	</body>
+
+</html>

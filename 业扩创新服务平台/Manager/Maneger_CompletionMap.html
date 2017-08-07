@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.wrap {
+			background-color: #fff;
+			margin-bottom: 10px;
+			clear: both;
+			overflow: hidden;
+			padding:10px;
+		}
+		.wrap h4 {
+			margin-bottom: 10px;
+		}
+		.wrap p {
+			color:#000;
+		}
+	</style>
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>竣工图</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="mui-content">
+		    <div class="wrap">
+		    	<h4>检验标准</h4>
+		    	<p>竣工图(含系统接线图及线路沿布图，并需三方盖章确认)。</p>
+		    </div>
+		    <div class="wrap">
+		    		<h4 style="float: left;line-height: 20px;">检验是否合格</h4>
+		    		<img src="../images/hook.png" alt="" width="40" height="35" style="float: right;" />
+		    </div>
+		    <div class="wrap">
+		    		<h4>整改建议</h4>
+		    		<textarea name=""></textarea>
+		    </div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index2.html',
+					id: 'index2'
+				})
+			});
+	</script>
+</html>

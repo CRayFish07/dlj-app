@@ -1,0 +1,965 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/hui.css"/>
+	</head>
+	<style type="text/css">
+		.form {
+			float: right;
+			margin-top: 32px;
+			padding-right: 15px;
+			color: #fff;
+			font-weight: 200;
+			font-size: 14px;
+		}
+		
+		table {
+			width: 100%;
+			margin-top: 15px;
+		}
+		
+		table tr td {
+			font-size: 12px;
+			text-align: center;
+			padding: 2px;
+			width: auto;
+			border: 1px solid #ccc;
+		}
+		
+		table tr th {
+			background-color: #F3F3F3;
+			height: 40px;
+			font-size: 14px;
+			border: 1px solid #ccc;
+			color: #999999;
+		}
+		
+		table tr td:nth-of-type(2) {
+			width: auto;
+			text-align: center;
+			padding: 0px;
+		}
+		
+		table tr td:nth-of-type(1) {
+			width: auto;
+			text-align: center;
+			padding: 0px;
+		}
+		
+		section {
+			display: flex;
+			justify-content: center;
+		}
+		
+		section div {
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background-color: #f5f5f5;
+			float: left;
+			margin: 10px;
+		}
+		
+		section div:nth-of-type(1) {
+			background-color: #ccc;
+		}
+		h2{
+			margin-top:15px;
+			font-weight: 200;
+		}
+	</style>
+
+	<body style="background-color: #fff;">
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>工作量统计</h1>
+			<span id="Ranking" style="color:#fff;float: right;margin-right:12px;margin-top: 35px;">排名</span>
+		</header>
+		<div class="mui-content">
+			<div class="hui-tab-title">
+				<div>区局</div>
+				<div>班所</div>
+				<div>个人</div>
+			</div>
+			<div class="hui-tab-body">
+				<div class="hui-tab-item hui-list">
+					<h2 style="text-align: center;">区局工作量统计</h2>
+					<div class="mui-slider">
+						<div class="mui-slider-group">
+							<div class="mui-slider-item">
+								<table border="" cellspacing="" cellpadding="">
+									<tr>
+										<th>区局</th>
+										<th>受理数</th>
+										<th>归档数</th>
+										<th>受理容量</th>
+										<th>归档数</th>
+										<th>平均时长</th>
+									</tr>
+									<tr>
+										<td>莞城区</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>东城区</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>南城区</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>万江区</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>长安镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>厚街镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>虎门镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>石龙镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>石碣镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>沙田镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>黄江镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>谢岗镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>凤岗镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>常平镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>横沥镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+								</table>
+
+							</div>
+							<!--第二个内容区-->
+							<div class="mui-slider-item">
+								<table border="" cellspacing="" cellpadding="">
+									<tr>
+										<th>区局</th>
+										<th>平均时长</th>
+										<th>中止单数</th>
+										<th>超时单数</th>
+										<th>超时率</th>
+									</tr>
+									<tr>
+										<td>莞城区</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>东城区</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>南城区</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>万江区</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>长安镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>厚街镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>虎门镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>石龙镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>石碣镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>沙田镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>黄江镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>谢岗镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>凤岗镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>常平镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>横沥镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+								</table>
+
+							</div>
+						</div>
+					</div>
+					<section class="section1">
+						<div></div>
+						<div></div>
+					</section>
+				</div>
+				<div class="hui-tab-item hui-list">
+					<h2 style="text-align: center;">班所工作量统计</h2>
+					<div class="mui-slider mui_slider2">
+						<div class="mui-slider-group">
+							<div class="mui-slider-item">
+								<table border="" cellspacing="" cellpadding="">
+									<tr>
+										<th>区局</th>
+										<th>受理数</th>
+										<th>归档数</th>
+										<th>受理容量</th>
+										<th>归档数</th>
+										<th>平均时长</th>
+									</tr>
+									<tr>
+										<td>莞城区</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>东城区</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>南城区</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>万江区</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>长安镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>厚街镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>虎门镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>石龙镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>石碣镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>沙田镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>黄江镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>谢岗镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>凤岗镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>常平镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+									<tr>
+										<td>横沥镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">40</td>
+										<td class="show">80</td>
+									</tr>
+								</table>
+
+							</div>
+							<!--第二个内容区-->
+							<div class="mui-slider-item">
+								<table border="" cellspacing="" cellpadding="">
+									<tr>
+										<th>区局</th>
+										<th>平均时长</th>
+										<th>中止单数</th>
+										<th>超时单数</th>
+										<th>超时率</th>
+									</tr>
+									<tr>
+										<td>莞城区</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>东城区</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>南城区</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>万江区</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>长安镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>厚街镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>虎门镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>石龙镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>石碣镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>沙田镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>黄江镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>谢岗镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>凤岗镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>常平镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>横沥镇</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+								</table>
+
+							</div>
+						</div>
+					</div>
+					<section class="section2">
+						<div></div>
+						<div></div>
+					</section>
+				</div>
+				<div class="hui-tab-item hui-list">
+					<div class="mui-slider mui_slider3">
+						<div class="mui-slider-group">
+							<div class="mui-slider-item">
+								<h2 style="text-align: center;">供电方案人员工作量统计</h2>
+								<table border="" cellspacing="" cellpadding="">
+									<tr>
+										<th>所属班所</th>
+										<th>姓名</th>
+										<th>完成单数</th>
+										<th>超时单数</th>
+										<th>平均时长</th>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+								</table>
+
+							
+							</div>
+							<div class="mui-slider-item">
+								<h2 style="text-align: center;">中间检查人员工作量统计</h2>
+								<table border="" cellspacing="" cellpadding="">
+									<tr>
+										<th>所属班所</th>
+										<th>姓名</th>
+										<th>完成单数</th>
+										<th>超时单数</th>
+										<th>平均时长</th>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+								</table>
+
+							
+							</div>
+							<div class="mui-slider-item">
+								<h2 style="text-align: center;">竣工查验人员工作量统计</h2>
+								<table border="" cellspacing="" cellpadding="">
+									<tr>
+										<th>所属班所</th>
+										<th>姓名</th>
+										<th>完成单数</th>
+										<th>超时单数</th>
+										<th>平均时长</th>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+								</table>
+
+							
+							</div>
+							<div class="mui-slider-item">
+								<h2 style="text-align: center;">装表人员工作量统计</h2>
+								<table border="" cellspacing="" cellpadding="">
+									<tr>
+										<th>所属班所</th>
+										<th>姓名</th>
+										<th>完成单数</th>
+										<th>超时单数</th>
+										<th>平均时长</th>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+									<tr>
+										<td>班所1</td>
+										<td class="listBtn">陈一</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">3.3</td>
+									</tr>
+								</table>
+
+							
+							</div>
+							<div class="mui-slider-item">
+								<h2 style="text-align: center;">施工单位工作量统计</h2>
+								<table border="" cellspacing="" cellpadding="">
+									<tr>
+										<th>施工单位</th>
+										<th>勘查完成数</th>
+										<th>勘查及时率</th>
+										<th>施工完成数</th>
+										<th>施工及时率</th>
+									</tr>
+									<tr>
+										<td>XX公司</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">99</td>
+									</tr>
+									<tr>
+										<td>XX公司</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">99</td>
+									</tr>
+									<tr>
+										<td>XX公司</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">99</td>
+									</tr>
+									<tr>
+										<td>XX公司</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">99</td>
+									</tr>
+									<tr>
+										<td>XX公司</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">99</td>
+									</tr>
+									<tr>
+										<td>XX公司</td>
+										<td class="listBtn">6</td>
+										<td>34</td>
+										<td>4000</td>
+										<td class="show">99</td>
+									</tr>
+								</table>
+
+							</div>
+						</div>
+					</div>
+					<section class="section3">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/hui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-tab.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+			hui.tab('.mui-content');
+			
+			$('#Ranking').click(function(){
+				mui.openWindow({
+					url:'SeniorEngineer_Ranking.html',
+					id:'SeniorEngineer_Ranking'
+				})
+			})
+			
+//			-------------------------轮播滑动------------------------------------------------
+			document.querySelector('.mui-slider').addEventListener('slide', function(event) {
+				if(event.detail.slideNumber === 0) {
+					$('.section1 div:nth-of-type(1)').css('backgroundColor', '#ccc');
+					$('.section1 div:nth-of-type(2)').css('backgroundColor', '#f5f5f5');
+				} else if(event.detail.slideNumber === 1) {
+					$('.section1 div:nth-of-type(1)').css('backgroundColor', '#f5f5f5');
+					$('.section1 div:nth-of-type(2)').css('backgroundColor', '#ccc');
+				}
+			})
+			document.querySelector('.mui_slider2').addEventListener('slide', function(event) {
+				if(event.detail.slideNumber === 0) {
+					$('.section2 div:nth-of-type(1)').css('backgroundColor', '#ccc');
+					$('.section2 div:nth-of-type(2)').css('backgroundColor', '#f5f5f5');
+				} else if(event.detail.slideNumber === 1) {
+					$('.section2 div:nth-of-type(1)').css('backgroundColor', '#f5f5f5');
+					$('.section2 div:nth-of-type(2)').css('backgroundColor', '#ccc');
+				}
+			})
+			document.querySelector('.mui_slider3').addEventListener('slide', function(event) {
+				if(event.detail.slideNumber === 0) {
+					$('.section3 div:nth-of-type(1)').siblings().css('backgroundColor', '#f5f5f5');
+					$('.section3 div:nth-of-type(1)').css('backgroundColor', '#ccc');
+				} else if(event.detail.slideNumber === 1) {
+					$('.section3 div:nth-of-type(2)').siblings().css('backgroundColor', '#f5f5f5');
+					$('.section3 div:nth-of-type(2)').css('backgroundColor', '#ccc');
+				}else if(event.detail.slideNumber === 2) {
+					$('.section3 div:nth-of-type(3)').siblings().css('backgroundColor', '#f5f5f5');
+					$('.section3 div:nth-of-type(3)').css('backgroundColor', '#ccc');
+				}else if(event.detail.slideNumber === 3) {
+					$('.section3 div:nth-of-type(4)').siblings().css('backgroundColor', '#f5f5f5');
+					$('.section3 div:nth-of-type(4)').css('backgroundColor', '#ccc');
+				}else if(event.detail.slideNumber === 4) {
+					$('.section3 div:nth-of-type(5)').siblings().css('backgroundColor', '#f5f5f5');
+					$('.section3 div:nth-of-type(5)').css('backgroundColor', '#ccc');
+				}
+			})
+		//----------------------------------------------------------------------------------	
+		</script>
+	</body>
+
+</html>

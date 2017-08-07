@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/hui.css" />
+	</head>
+	<style type="text/css">
+		.mui-slider .mui-segmented-control.mui-segmented-control-inverted ~ .mui-slider-group .mui-slider-item{
+			border:none;
+		}
+		.table-show {
+			display: flex;
+			text-align: center;
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		.item {
+			display: flex;
+		}
+		
+		.item div {
+			padding-top: 20px;
+		}
+		
+		section:nth-of-type(2) {
+			background-color: #fff;
+		}
+		
+		.table-show p {
+			padding-top: 12px;
+		}
+		
+		select {
+			margin-bottom: 0px;
+		}
+		
+		.select-option {
+			background-color: #fff;
+			font-size: 12px;
+			border-bottom: 5px solid #E5E5E5;
+		}
+		
+		.select-option div {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 47px;
+			border-bottom: 1px solid #E5E5E5;
+		}
+		
+		.hui-tab-title {
+			overflow: hidden;
+		}
+		
+		.hui-tab-active {
+			color: #1496FF;
+		}
+		
+		.hui-list {
+			padding: 0px;
+		}
+		
+		.hui-list>p {
+			margin-bottom: 0px;
+			background-color: #E1E1E1;
+			padding: 5px 12px;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>可视化展示</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="hui-tab">
+	    <div class="hui-tab-title">
+	        <div>全局统计</div>
+	        <div>统计分析</div>
+	        <div>业扩分布</div>
+	        <div>轨迹监控</div>
+	    </div>
+	    <div class="hui-tab-body">
+	        <div class="hui-tab-item hui-list">
+	            <section class="select-option">
+						<div>
+							<select id="select1">
+								<option value="">分局统计</option>
+								<option value="">分局1</option>
+								<option value="">分局2</option>
+							</select>
+						</div>
+						<div>
+							<button type="button" class="hui-button hui-button-large" id="btn1" style="background-color: #fff;">选择时间</button>
+						</div>
+					</section>
+					<section>
+						<div class="table-show">
+							<div class="item" style="border-bottom: 1px solid #EEEEEE;">
+								<div style="border-right:1px solid #eeeeee;">
+									<img src="../images/VisualizeTheChart.png" width="166" height="132" />
+									<p>工单回退率</p>
+								</div>
+								<div>
+									<img src="../images/VisualizeTheChart.png" width="166" height="132" />
+									<p>工单跳转率</p>
+								</div>
+							</div>
+							<div class="item">
+								<div style="border-right:1px solid #eeeeee;">
+									<img src="../images/VisualizeTheChart.png" width="166" height="132" />
+									<p>工单作废率</p>
+								</div>
+								<div>
+									<img src="../images/VisualizeTheChart.png" width="166" height="132" />
+									<p>工单超时率</p>
+								</div>
+							</div>
+						</div>
+					</section>
+	        </div>
+	        <div class="hui-tab-item hui-list">
+	            <section class="select-option">
+						<div>
+							<select id="select2">
+								<option value="">分局统计</option>
+								<option value="">分局1</option>
+								<option value="">分局2</option>
+							</select>
+						</div>
+						<div>
+							<button type="button" class="hui-button hui-button-large" id="btn2" style="background-color: #fff;">选择时间</button>
+						</div>
+					</section>
+					<section>
+						<div class="table-show">
+							<div class="item" style="border-bottom: 1px solid #EEEEEE;">
+								<div style="border-right:1px solid #eeeeee;">
+									<img src="../images/VisualizeTheChart.png" width="166" height="132" />
+									<p>工单回退率</p>
+								</div>
+								<div>
+									<img src="../images/VisualizeTheChart.png" width="166" height="132" />
+									<p>工单跳转率</p>
+								</div>
+							</div>
+							<div class="item">
+								<div style="border-right:1px solid #eeeeee;">
+									<img src="../images/VisualizeTheChart.png" width="166" height="132" />
+									<p>工单作废率</p>
+								</div>
+								<div>
+									<img src="../images/VisualizeTheChart.png" width="166" height="132" />
+									<p>工单超时率</p>
+								</div>
+							</div>
+						</div>
+					</section>
+	        </div>
+	        <div class="hui-tab-item hui-list">
+	            <div id="map" style="width:100%;height:100%">
+						<img src="../images/map-n.png" width="115%" height="115%" />
+					</div>
+	        </div>
+	        <div class="hui-tab-item hui-list">
+	            <div id="map" style="width:100%;height:100%">
+					<img src="../images/map2.png" width="100%" height="100%" />
+				</div>
+	        </div>
+	    </div>
+	</div>
+
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/hui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-tab.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-select-beautify.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-picker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/echarts.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+			hui.tab('.hui-tab');
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index3.html',
+					id: 'index3'
+				})
+			})
+
+			mui('.table-show').on('tap', 'div', function() {
+				mui.openWindow({
+					url: 'ManagerWorkOrder_assessment_link.html',
+					id: "ManagerWorkOrder_assessment_link"
+				})
+			});
+			hui('#select1').selectBeautify(showVal);
+			hui('#select2').selectBeautify(showVal);
+			
+			function showVal(val) {
+				hui.toast('您现在选择的是 : ' + val);
+			}
+			
+			var btn1 = document.getElementById('btn1');
+			var btn2 = document.getElementById('btn2');
+			btn1.addEventListener('tap',function(){
+				picker('#btn1');
+			});
+			btn2.addEventListener('tap',function(){
+				picker('#btn2');
+			})
+			/* 时间选择器 非关联型绑定 */
+			function picker(select) {
+				var picker1 = new huiPicker(select, function() {
+					var year = picker1.getVal(0);
+					var month = picker1.getVal(1);
+					var days = picker1.getVal(2);
+					hui(select).html(year + ' - ' + month + ' - ' + days);
+				});
+				picker1.level = 3;
+				//年份
+				var years = new Array();
+				for(var i = 2010; i <= 2030; i++) {
+					years.push({
+						value: i,
+						text: i
+					});
+				}
+				picker1.bindData(0, years);
+				//月份
+				var months = new Array();
+				for(var i = 1; i <= 12; i++) {
+					if(i < 10) {
+						i = '0' + i;
+					}
+					months.push({
+						value: i,
+						text: i
+					});
+				}
+				picker1.bindData(1, months);
+				//天
+				var days = new Array();
+				for(var i = 1; i <= 31; i++) {
+					if(i < 10) {
+						i = '0' + i;
+					}
+					days.push({
+						value: i,
+						text: i
+					});
+				}
+				picker1.bindData(2, days);
+			}
+		</script>
+	</body>
+
+</html>

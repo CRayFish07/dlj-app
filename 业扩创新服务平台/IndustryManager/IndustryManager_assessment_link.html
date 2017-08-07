@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js"></script>
+	</head>
+	<style type="text/css">
+		.form {
+			float: right;
+			margin-top: 32px;
+			padding-right: 15px;
+			color: #fff;
+			font-weight: 200;
+			font-size: 14px;
+		}
+		
+		table {
+			width: 100%;
+			margin-top: 15px;
+		}
+		
+		table tr td {
+			font-size: 12px;
+			text-align: center;
+			padding: 2px;
+			width: auto;
+			border: 1px solid #ccc;
+		}
+		
+		table tr th {
+			background-color: #F3F3F3;
+			height: 40px;
+			font-size: 14px;
+			border: 1px solid #ccc;
+		}
+		
+		table tr td:nth-of-type(2) {
+			width: auto;
+			text-align: center;
+			padding: 0px;
+		}
+		
+		table tr td:nth-of-type(1) {
+			width: auto;
+			text-align: center;
+			padding: 0px;
+		}
+		section {
+			display: flex;
+			justify-content: center;
+		}
+		
+		section div {
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background-color: #f5f5f5;
+			float: left;
+			margin: 10px;
+		}
+		
+		section div:nth-of-type(1) {
+			background-color: #ccc;
+		}
+	</style>
+
+	<body style="background-color: #fff;">
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>工单考核环节情况</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div class="mui-slider">
+			<div class="mui-slider-group">
+				<div class="mui-slider-item">
+					<table class="table">
+				<tr>
+					<th>考核环节</th>
+					<th>及时率</th>
+					<th>签收工单总数</th>
+					<th>超时工单数</th>
+					<th>正常工单数</th>
+				</tr>
+				<tr>
+					<td>方案审批</td>
+					<td>98.12%</td>
+					<td>105</td>
+					<td>2</td>
+					<td>103</td>
+				</tr>
+				<tr>
+					<td>中间检查</td>
+					<td>98.12%</td>
+					<td>105</td>
+					<td>2</td>
+					<td>103</td>
+				</tr>
+				<tr>
+					<td>竣工检验</td>
+					<td>98.12%</td>
+					<td>105</td>
+					<td>2</td>
+					<td>103</td>
+				</tr>
+				<tr>
+					<td>现场勘查</td>
+					<td>98.12%</td>
+					<td>105</td>
+					<td>2</td>
+					<td>103</td>
+				</tr>
+			</table>
+		
+				</div>
+				<div class="mui-slider-item">
+					<table class="table">
+				<tr>
+					<th>考核环节</th>
+					<th>及时率</th>
+					<th>平均耗时(工作日)</th>
+					<th>超时数量(宗)</th>
+					<th>签收工单总数</th>
+				</tr>
+				<tr>
+					<td>方案审批</td>
+					<td>98.12%</td>
+					<td>29.13</td>
+					<td>2</td>
+					<td>103</td>
+				</tr>
+				<tr>
+					<td>中间检查</td>
+					<td>98.12%</td>
+					<td>105</td>
+					<td>2</td>
+					<td>103</td>
+				</tr>
+				<tr>
+					<td>竣工检验</td>
+					<td>98.12%</td>
+					<td>105</td>
+					<td>2</td>
+					<td>103</td>
+				</tr>
+				<tr>
+					<td>现场勘查</td>
+					<td>98.12%</td>
+					<td>105</td>
+					<td>2</td>
+					<td>103</td>
+				</tr>
+			</table>
+		
+				</div>
+			</div>
+		</div>
+		<section class="section1">
+						<div></div>
+						<div></div>
+					</section>
+		
+		<script type="text/javascript">
+			mui.init();
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index.html',
+					id: 'index'
+				})
+			});
+
+			mui('.table').on('tap', 'tr', function() {
+				mui.openWindow({
+					url: 'IndustryManager_WorkList.html',
+					id: 'IndustryManager_WorkList'
+				})
+			})
+			
+			document.querySelector('.mui-slider').addEventListener('slide', function(event) {
+				if(event.detail.slideNumber === 0) {
+					$('.section1 div:nth-of-type(1)').css('backgroundColor', '#ccc');
+					$('.section1 div:nth-of-type(2)').css('backgroundColor', '#f5f5f5');
+				} else if(event.detail.slideNumber === 1) {
+					$('.section1 div:nth-of-type(1)').css('backgroundColor', '#f5f5f5');
+					$('.section1 div:nth-of-type(2)').css('backgroundColor', '#ccc');
+				}
+			})
+		</script>
+	</body>
+
+</html>

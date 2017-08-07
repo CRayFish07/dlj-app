@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+	</head>
+	<style type="text/css">
+					
+		.verify-btn {
+			text-align: center;
+			position: fixed;
+			bottom: 20%;
+			left: 5%;
+			right: 5%;
+		}
+		
+		.verify-btn button {
+			width: 90%;
+			background-color: #1AA1E6;
+			height: 43px;
+			font-size: 18px;
+			color: #fff;
+			margin-bottom: 15px;
+		}
+		
+		.select-option {
+			background-color: #fff;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+		}
+		
+		.mainContent {
+			background-color: #fff;
+		}
+		
+		.mui-media-body {
+			position: relative;
+			font-size: 14px;
+		}
+		
+		.media-time {
+			position: absolute;
+			right: 10px;
+			top: 0px;
+			font-size: 14px;
+			color: #a9a9a9;
+		}
+		
+		.dialogueBox {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			display: flex;
+			flex-flow: row;
+			background: #ccc;
+		}
+		
+		#dialogue,
+		#submit {
+			height: 40px;
+			margin: 5px;
+		}
+		
+		#submit {
+			margin-left: 0;
+		}
+		
+		.mui-table-view {
+			margin-bottom: 50px;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>消息推送</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<section class="select-option">
+			<div class="workOrder">
+				<div class="workOrder-form">
+					<p>工单号：2940478341212</p>
+					<p>客户名称：广州科腾信息技术有限公司</p>
+					<p>客户地址：广州市黄埔大道西平云路163号</p>
+					<p class="progress">业务进度：中间检查</p>
+					<p>项目组成员：张三、李四、赵五</p>
+				</div>
+			</div>
+			<ul id="dialogueBox" class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							王五
+							<p class='mui-ellipsis'>客户明天约几点去现场？有谁一起去?</p>
+							<span class="media-time">11:53 AM</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							张三
+							<p class='mui-ellipsis'>明天中午11点集中勘查.</p>
+							<span class="media-time">11:21 AM</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							李四
+							<p class='mui-ellipsis'>现场勘查已完成.</p>
+							<span class="media-time">11:02 AM</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							李四
+							<p class='mui-ellipsis'>业务表单有一个位置填错了，正在修改.</p>
+							<span class="media-time">10:44 AM</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							张三
+							<p class='mui-ellipsis'>今天的工作任务已经完成.</p>
+							<span class="media-time">10:02 AM</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							李四
+							<p class='mui-ellipsis'>现场勘查已完成.</p>
+							<span class="media-time">11:02 AM</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							李四
+							<p class='mui-ellipsis'>业务表单有一个位置填错了，正在修改.</p>
+							<span class="media-time">10:44 AM</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							张三
+							<p class='mui-ellipsis'>今天的工作任务已经完成.</p>
+							<span class="media-time">10:02 AM</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							李四
+							<p class='mui-ellipsis'>现场勘查已完成.</p>
+							<span class="media-time">11:02 AM</span>
+						</div>
+					</a>
+				</li>
+
+			</ul>
+			<div class="dialogueBox">
+				<input id="dialogue" type="text" name="dialogue"/>
+				<input id="submit" type="submit" value="发送" />
+			</div>
+		</section>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var home = document.getElementsByClassName('mui-icon-home')[0];			
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index2.html',
+					id: 'index2'
+				})
+			
+			})
+			
+			//---------append container--------
+			var submit = document.getElementById('submit');
+			var diglogueBox = document.getElementById('dialogueBox');
+			submit.addEventListener('tap',function(){
+				var diglogueInfo = document.getElementById('dialogue').value;
+				var str = '<li class="mui-table-view-cell mui-media"><a href="javascript:;"><img class="mui-media-object mui-pull-left" src="../images/avator.png"><div class="mui-media-body">李四<p class="mui-ellipsis">'+ diglogueInfo +'</p><span class="media-time">11:02 AM</span></div></a></li>'
+				diglogueBox.innerHTML+=str;
+				document.getElementById('dialogue').value = '';
+				mui.alert('发送成功！')
+			})
+			//			var text = document.getElementsByClassName('mui-text-left')[0];
+			//			mui('.verify-btn').on('tap','button',function(){
+			//				mui.alert('消息已推送！');
+			//			})
+			//			text.innerText = "请在此处输入您要发布的信息";
+		</script>
+	</body>
+
+</html>

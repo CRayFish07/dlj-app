@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/hui.css" />
+	</head>
+	<style type="text/css">
+		.main-body {
+			background-color: #EBEBEB;
+			margin-top: 50px;
+		}
+		.wrap {
+			clear: both;
+			background-color: #fff;
+			overflow: hidden;
+			margin-bottom: 15px;
+		}
+		
+		.back-icon {
+			align-self: center;
+			margin-right: 15px;
+		}
+		
+		.pop-content textarea {
+			width: 90%;
+			margin-left: 5%;
+			color: #CCCCCD;
+			font-size: 14px;
+			height: 150px;
+		}
+		input[type='search'] {
+			background: #fff;
+			border-radius: 20px;
+			border:1px solid #CCCCCC;
+			color:#ccc;
+			padding-left:5px;
+		}
+		.mui-search {
+			height: 34px;
+		}
+		.mui-placeholder span {
+			color:#ccc;
+		}
+	</style>
+
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>工单列表</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+		</header>
+		<div style="width:100%;position:absolute; left:0px; top:64px; z-index:21;border-bottom: 1px solid #CCCCCC;height:50px;">
+			<div class="check" style="padding-top: 8px;">
+				<div class="mui-input-row mui-search" style="width: 80%;float: left;">
+					<input type="search" class="mui-input-clear" placeholder="工单号搜索">
+				</div>
+				<div style="width:20%; height:34px; line-height:34px; text-align:center; float:right;">
+					<select id="select1" >
+					<option selected="selected">环节</option>
+					<option value="现场勘查">现场勘查</option>
+					<option value="中间检查">中间检查</option>
+					<option value="竣工检验	">竣工检验</option>
+				</select>
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<section class="main-body two">
+		</section>
+
+
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/hui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hui-select-beautify.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+			hui('#select1').selectBeautify();
+			var home = document.getElementsByClassName('mui-icon-home')[0];
+			home.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index.html',
+					id: 'index'
+				})
+			});
+			
+			//			获取工单列表
+			var data = {
+				userId: "aaa",
+				userPwd: "aaa"
+			};
+			var datastr = JSON.stringify(data);
+			$.ajax({
+				type: "post",
+				url: "http://39.108.104.129/BusExt/Service.ashx?Func=QueryBEWorkOrder",
+				data: datastr,
+				success: function(data) {
+					for(var i = 0; i < data.taskList.length; i++) {
+						 if(data.taskList[i].partNumberName == '现场勘查' || data.taskList[i].partNumberName == '中间检查' || data.taskList[i].partNumberName == '竣工检验') {
+							var html2 = '<div class="wrap"><div class="workOrder"><div class="workOrder-form"><p>工单号：' + data.taskList[i].taskCode + '</p><p>客户名称：' + data.taskList[i].userName + '</p><p>客户地址：' + data.taskList[i].electricityAddress + '</p><p class="progress">业务进度：<span class="SiteSurveyColor">' + data.taskList[i].partNumberName + '</span></p></div></div></div>';
+							$('.two').append(html2);
+						}
+					}
+				}
+			});
+
+			mui('.main-body').on('tap','.workOrder',function(){ 
+			var html = $(this).find('span').html();
+			console.log(html)
+			var num;
+	
+			if(html === '现场勘查') {
+				num = 0;
+			}else if(html === '中间检查' ) {
+				num = 4;
+			}else if(html === '竣工检验' ) {
+				num = 6;
+			}
+			localStorage.setItem('num',num);
+			mui.openWindow({
+				url: 'BusinessProgressShrink.html',
+				id: 'BusinessProgressShrink'
+			})
+		});
+		</script>
+	</body>
+
+</html>

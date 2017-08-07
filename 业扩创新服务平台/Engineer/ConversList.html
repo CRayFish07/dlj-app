@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<style type="text/css">
+			footer {
+			position: fixed;
+			bottom: 0px;
+			width: 100%;
+			height: 50px;
+			background-color: #fff;
+			display: flex;
+			justify-content: space-around;
+			border-top: 1px solid #E5E5E5;
+		}
+		
+		footer>div:nth-of-type(2)>img {
+			width: 48px;
+			height: 55px;
+			margin-top: -19px;
+		}
+		
+		footer>div>img {
+			width: 23px;
+			height: 24px;
+		}
+		
+		footer>div>p {
+			margin-bottom: 0px;
+		}
+		
+		footer div {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.mui-media-body {
+			position: relative;
+			font-size: 14px;
+		}
+		
+		.media-time {
+			position: absolute;
+			right: 10px;
+			top: 0px;
+			font-size: 14px;
+			color: #a9a9a9;
+		}
+		
+		.dialogueBox {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			display: flex;
+			flex-flow: row;
+			background: #ccc;
+		}
+		
+		#dialogue,
+		#submit {
+			height: 40px;
+			margin: 5px;
+		}
+		
+		#submit {
+			margin-left: 0;
+		}
+		
+		.mui-table-view {
+			margin-bottom: 50px;
+		}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>实时沟通</h1>
+		</header>		
+		<main>
+			<ul id="dialogueBox" class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							王五
+							<p class='mui-ellipsis'>客户明天约几点去现场？有谁一起去?</p>
+							<span class="media-time">11:53 AM</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							张三
+							<p class='mui-ellipsis'>明天中午11点集中勘查.</p>
+							<span class="media-time">11:21 AM</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							李四
+							<p class='mui-ellipsis'>现场勘查已完成.</p>
+							<span class="media-time">11:02 AM</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							李四
+							<p class='mui-ellipsis'>业务表单有一个位置填错了，正在修改.</p>
+							<span class="media-time">10:44 AM</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							张三
+							<p class='mui-ellipsis'>今天的工作任务已经完成.</p>
+							<span class="media-time">10:02 AM</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							李四
+							<p class='mui-ellipsis'>现场勘查已完成.</p>
+							<span class="media-time">11:02 AM</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							李四
+							<p class='mui-ellipsis'>业务表单有一个位置填错了，正在修改.</p>
+							<span class="media-time">10:44 AM</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							张三
+							<p class='mui-ellipsis'>今天的工作任务已经完成.</p>
+							<span class="media-time">10:02 AM</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/avator.png">
+						<div class="mui-media-body">
+							李四
+							<p class='mui-ellipsis'>现场勘查已完成.</p>
+							<span class="media-time">11:02 AM</span>
+						</div>
+					</a>
+				</li>
+
+			</ul>
+		</main>
+		<footer>
+			<div>
+				<img src="../images/information.png" />
+				<p>实时沟通</p>
+			</div>
+			
+			<div id="index_btn">
+				<img src="../images/BottomNavigationCenterButton.png" />
+			</div>
+			<div id="personal_center">
+				<img src="../images/Personalcenter.png" />
+				<p>个人中心</p>
+			</div>
+		</footer>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var personalCenterBtn = document.getElementById('personal_center');
+			personalCenterBtn.addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'personalCenter.html',
+				id: 'personalCenter'
+			})
+		});
+		//			页面跳转
+			var indexBth = document.getElementById('index_btn');
+			indexBth.addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'index.html',
+					id: 'index'
+				})
+			});
+			mui('#dialogueBox').on('tap','.mui-table-view-cell',function(){
+				mui.openWindow({
+					url:'chart.html',
+				id:'chart'
+				})
+			})
+		</script>
+	</body>
+
+</html>
