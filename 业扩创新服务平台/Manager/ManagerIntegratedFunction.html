@@ -29,91 +29,355 @@
 		.hui-tab-body {
 			overflow: auto;
 		}
+		
+		.hui-list .mui-table-view-cell li{
+		    border: none;
+		    height: 72px;
+		    line-height:initial;
+		}
+		.mui-table-view-cell>div {
+			float: left;
+		}
+		
+		.right {
+			width: 10%;
+			height: 50px;
+			display: flex;
+			align-items: center;
+		}
+		
+		.midlle {
+			width: 60%;
+		}
+		
+		.left {
+			width: 30%;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.midlle span {
+			font-size: 14px;
+			color: #4A98BA;
+		}
+		
+		h5 {
+			color: #000;
+		}
+		
+		.num {
+			padding-right: 5px;
+		}
+		
+		.mui-content>.mui-table-view:first-child {
+			margin-top: 0px;
+		}
+		.hui-list .mui-table-view li{
+			height: 72px;
+			line-height: none;
+			border: none;
+		}
+		#segmentedControl{
+			border:none;
+		}
+		.mui-segmented-control .mui-control-item{
+			color: #000;
+			border: none;
+		}
+		#segmentedControl .mui-active{
+			background-color:#0096E7;	
+		
+		}
+		table td .mui-btn-block{
+			font-size: 1rem;
+			padding: 5px;
+			margin-bottom: 0;
+		}
 	</style>
 
 	<body>
 		<header>
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1>综合功能</h1>
+			<h1>团队管理</h1>
 			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
 		</header>
-		<div class="hui-tab">
-			<div class="hui-tab-title">
-				<div>未评价</div>
-				<div>已评价</div>
-			</div>
-			<div class="hui-tab-body">
-				<div class="hui-tab-item hui-list content1">
-					<!--<div class="workOrder">
-						<div class="workOrder-form">
-							<p>工单号：2940478341212</p>
-							<p>客户名称：广州科腾信息技术有限公司</p>
-							<p>客户地址：广州市黄埔大道西平云路163号</p>
-							<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
-						</div>
-					</div>
-					<div class="workOrder">
-						<div class="workOrder-form">
-							<p>工单号：2940478341212</p>
-							<p>客户名称：广州科腾信息技术有限公司</p>
-							<p>客户地址：广州市黄埔大道西平云路163号</p>
-							<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
-						</div>
-					</div>
-					<div class="workOrder">
-						<div class="workOrder-form">
-							<p>工单号：2940478341212</p>
-							<p>客户名称：广州科腾信息技术有限公司</p>
-							<p>客户地址：广州市黄埔大道西平云路163号</p>
-							<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
-						</div>
-					</div>
-					<div class="workOrder">
-						<div class="workOrder-form">
-							<p>工单号：2940478341212</p>
-							<p>客户名称：广州科腾信息技术有限公司</p>
-							<p>客户地址：广州市黄埔大道西平云路163号</p>
-							<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
-						</div>
-					</div>-->
-				</div>
-				<div class="hui-tab-item hui-list content2">
-					<!--<div class="workOrder">
-						<div class="workOrder-form">
-							<p>工单号：2940478341212</p>
-							<p>客户名称：广州科腾信息技术有限公司</p>
-							<p>客户地址：广州市黄埔大道西平云路163号</p>
-							<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
-						</div>
-					</div>
-					<div class="workOrder">
-						<div class="workOrder-form">
-							<p>工单号：2940478341212</p>
-							<p>客户名称：广州科腾信息技术有限公司</p>
-							<p>客户地址：广州市黄埔大道西平云路163号</p>
-							<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
-						</div>
-					</div>
-					<div class="workOrder">
-						<div class="workOrder-form">
-							<p>工单号：2940478341212</p>
-							<p>客户名称：广州科腾信息技术有限公司</p>
-							<p>客户地址：广州市黄埔大道西平云路163号</p>
-							<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
-						</div>
-					</div>
-					<div class="workOrder">
-						<div class="workOrder-form">
-							<p>工单号：2940478341212</p>
-							<p>客户名称：广州科腾信息技术有限公司</p>
-							<p>客户地址：广州市黄埔大道西平云路163号</p>
-							<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
-						</div>
-					</div>-->
+		<div class="mui-content" style="background: #fff;">
+			<div>
+				<div id="segmentedControl" class="mui-segmented-control">
+					<a class="mui-control-item mui-active" href="#item1">人员评价</a>
+					<a class="mui-control-item" href="#item2">绩效指标</a>
 				</div>
 			</div>
-		</div>
-		
+			<div>
+				<div id="item1" class="mui-control-content mui-active">
+					<div class="hui-tab">
+						<div class="hui-tab-title">
+							<div>未评价</div>
+							<div>已评价</div>
+							<div>排名</div>
+						</div>
+						<div class="hui-tab-body">
+							<div class="hui-tab-item hui-list content1">
+								<div class="workOrder">
+									<div class="workOrder-form">
+										<p>工单号：2940478341212</p>
+										<p>客户名称：广州科腾信息技术有限公司</p>
+										<p>客户地址：广州市黄埔大道西平云路163号</p>
+										<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+									</div>
+								</div>
+								<div class="workOrder">
+									<div class="workOrder-form">
+										<p>工单号：2940478341212</p>
+										<p>客户名称：广州科腾信息技术有限公司</p>
+										<p>客户地址：广州市黄埔大道西平云路163号</p>
+										<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+									</div>
+								</div>
+								<div class="workOrder">
+									<div class="workOrder-form">
+										<p>工单号：2940478341212</p>
+										<p>客户名称：广州科腾信息技术有限公司</p>
+										<p>客户地址：广州市黄埔大道西平云路163号</p>
+										<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+									</div>
+								</div>
+								<div class="workOrder">
+									<div class="workOrder-form">
+										<p>工单号：2940478341212</p>
+										<p>客户名称：广州科腾信息技术有限公司</p>
+										<p>客户地址：广州市黄埔大道西平云路163号</p>
+										<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="hui-tab-item hui-list content2">
+								<div class="workOrder">
+									<div class="workOrder-form">
+										<p>工单号：2940478341212</p>
+										<p>客户名称：广州科腾信息技术有限公司</p>
+										<p>客户地址：广州市黄埔大道西平云路163号</p>
+										<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+									</div>
+								</div>
+								<div class="workOrder">
+									<div class="workOrder-form">
+										<p>工单号：2940478341212</p>
+										<p>客户名称：广州科腾信息技术有限公司</p>
+										<p>客户地址：广州市黄埔大道西平云路163号</p>
+										<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+									</div>
+								</div>
+								<div class="workOrder">
+									<div class="workOrder-form">
+										<p>工单号：2940478341212</p>
+										<p>客户名称：广州科腾信息技术有限公司</p>
+										<p>客户地址：广州市黄埔大道西平云路163号</p>
+										<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+									</div>
+								</div>
+								<div class="workOrder">
+									<div class="workOrder-form">
+										<p>工单号：2940478341212</p>
+										<p>客户名称：广州科腾信息技术有限公司</p>
+										<p>客户地址：广州市黄埔大道西平云路163号</p>
+										<p class="progress">业务进度：<span class="IntermediateCheckColor">中间检查</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="hui-tab-item hui-list content3">
+								<div class="mui-content">
+									<ul class="mui-table-view">
+										<li class="mui-table-view-cell">
+											<div class="left">
+												<img src="../images/no1.png" width="45" height="30" />
+												<img src="../images/avator.png" width="50" height="50" />
+											</div>
+											<div class="midlle">
+												<h5>张三丰</h5>
+												<span>得分</span>
+												<span>98分</span>
+											</div>
+											<div class="right">
+												<img src="../images/henggang.png" />
+											</div>
+										</li>
+										<li class="mui-table-view-cell">
+											<div class="left">
+												<img src="../images/no2.png" width="45" height="30" />
+												<img src="../images/avator.png" width="50" height="50" />
+											</div>
+											<div class="midlle">
+												<h5>段誉</h5>
+												<span>得分</span>
+												<span>97分</span>
+											</div>
+											<div class="right">
+												<img src="../images/henggang.png" />
+											</div>
+										</li>
+										<li class="mui-table-view-cell">
+											<div class="left">
+												<img src="../images/no3.png" width="45" height="30" />
+												<img src="../images/avator.png" width="50" height="50" />
+											</div>
+											<div class="midlle">
+												<h5>赵五儿</h5>
+												<span>得分</span>
+												<span>95分</span>
+											</div>
+											<div class="right">
+												<img src="../images/henggang.png" />
+											</div>
+										</li>
+										<li class="mui-table-view-cell">
+											<div class="left">
+												<div class="num">
+													No.4
+												</div>
+												<img src="../images/avator.png" width="50" height="50" />
+											</div>
+											<div class="midlle">
+												<h5>赵五儿</h5>
+												<span>得分</span>
+												<span>94分</span>
+											</div>
+											<div class="right">
+												<img src="../images/upArrow.png" />
+											</div>
+										</li>
+										<li class="mui-table-view-cell">
+											<div class="left">
+												<div class="num">
+													No.5
+												</div>
+												<img src="../images/avator.png" width="50" height="50" />
+											</div>
+											<div class="midlle">
+												<h5>赵五儿</h5>
+												<span>得分</span>
+												<span>93分</span>
+											</div>
+											<div class="right">
+												<img src="../images/downArrow.png" />
+											</div>
+										</li>
+										<li class="mui-table-view-cell">
+											<div class="left">
+												<div class="num">
+													No.6
+												</div>
+												<img src="../images/avator.png" width="50" height="50" />
+											</div>
+											<div class="midlle">
+												<h5>赵五儿</h5>
+												<span>得分</span>
+												<span>93分</span>
+											</div>
+											<div class="right">
+												<img src="../images/henggang.png" />
+											</div>
+										</li>
+										<li class="mui-table-view-cell">
+											<div class="left">
+												<div class="num">
+													No.7
+												</div>
+												<img src="../images/avator.png" width="50" height="50" />
+											</div>
+											<div class="midlle">
+												<h5>赵五儿</h5>
+												<span>得分</span>
+												<span>93分</span>
+											</div>
+											<div class="right">
+												<img src="../images/henggang.png" />
+											</div>
+										</li>
+										<li class="mui-table-view-cell">
+											<div class="left">
+												<div class="num">
+													No.8
+												</div>
+												<img src="../images/avator.png" width="50" height="50" />
+											</div>
+											<div class="midlle">
+												<h5>赵五儿</h5>
+												<span>得分</span>
+												<span>93分</span>
+											</div>
+											<div class="right">
+												<img src="../images/henggang.png" />
+											</div>
+										</li>
+										<li class="mui-table-view-cell">
+											<div class="left">
+												<div class="num">
+													No.9
+												</div>
+												<img src="../images/avator.png" width="50" height="50" />
+											</div>
+											<div class="midlle">
+												<h5>赵五儿</h5>
+												<span>得分</span>
+												<span>93分</span>
+											</div>
+											<div class="right">
+												<img src="../images/henggang.png" />
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="item2" class="mui-control-content">
+					<div class="hui-tab">
+						<div class="hui-tab-title">
+							<div>个人统计</div>
+							<div>全局统计</div>
+						</div>
+						<div class="hui-tab-body">
+							<div class="hui-tab-item">
+								<table border="0" style="margin-top: 2px;">
+									<tr>
+										<td>开始时间</td>
+										<td><button id='startTime-per' type="button" class="mui-btn mui-btn-block">请选择日期</button></td>
+									</tr>
+									<tr>
+										<td>结束时间</td>
+										<td><button id='endTime-per' type="button" class="mui-btn mui-btn-block">请选择日期</button></td>
+									</tr>									
+								</table>
+								<div style="width: 100%;">
+									<img src="../img/shuju.png" style="width: 100%;"/>
+									
+								</div>
+							</div>
+							<div class="hui-tab-item">
+								<table border="0" style="margin-top: 2px;">
+									<tr>
+										<td>开始时间</td>
+										<td><button id='startTime-all' type="button" class="mui-btn mui-btn-block">请选择日期</button></td>
+									</tr>
+									<tr>
+										<td>结束时间</td>
+										<td><button id='endTime-all' type="button" class="mui-btn mui-btn-block">请选择日期</button></td>
+									</tr>									
+								</table>
+								<div style="width: 100%;">
+									<img src="../img/shuju.png" style="width: 100%;"/>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>		
 		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/mui.min.js"></script>
 		<script src="../js/hui.js" type="text/javascript" charset="utf-8"></script>
@@ -122,7 +386,6 @@
 		<script type="text/javascript">
 			mui.init();
 			hui.accordion(true, true);
-			
 			var home = document.getElementsByClassName('mui-icon-home')[0];
 			home.addEventListener('tap', function() {
 				mui.openWindow({
@@ -130,6 +393,36 @@
 					id: 'index2'
 				})
 			})
+			
+			mui.plusReady(function(){				
+				function datePicker(obj){
+					obj.addEventListener('tap', function() {
+						var that = this
+						var dDate = new Date();
+						var minDate = new Date();
+						minDate.setFullYear(2010, 0, 1);
+						var maxDate = new Date();
+						maxDate.setFullYear(2030, 11, 31);
+						plus.nativeUI.pickDate(function(e) {
+							var d = e.date;
+							that.innerText =d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+						}, function(e) {
+							that.innerText = "请选择日期";
+						}, {
+							title: "请选择日期",
+							date: dDate,
+							minDate: minDate,
+							maxDate: maxDate
+						});
+					})					
+				}
+				datePicker(document.getElementById("startTime-per"))
+				datePicker(document.getElementById("startTime-all"))
+				datePicker(document.getElementById("endTime-per"))
+				datePicker(document.getElementById("endTime-all"))				
+			})
+			
+			
 			$(function() {
 				var h = $(document).height() - 106;
 				$('.hui-tab-body').height(h);

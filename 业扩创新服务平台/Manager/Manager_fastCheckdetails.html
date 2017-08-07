@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--<link rel="stylesheet" href="../css/layer.css" />-->
+		<link rel="stylesheet" type="text/css" href="../css/mui.css" />
+		<script type="text/javascript" src="../js/mui.js" ></script>
+	</head>
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>客户工单进度</h1>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>			
+		</header>
+		<div class="mui-content" >
+			<div style="background: #fff;padding-top: 1px;">
+				<div class="workOrder-form" style="border-bottom: 1px solid #ccc;">
+					<p>客户名称：广州科腾信息技术有限公司</p>
+					<p>客户地址：广州市黄埔大道西平云路163号</p>
+					<p>客户电话：13800138000</p>
+				</div>
+				<div style="width: 100%;">
+					<img src="../images/kfgdjdt.jpg" width="100%" />
+				</div>				
+			</div>
+		</div>
+	</body>
+	<script>
+		mui.init()
+		var home = document.getElementsByClassName('mui-icon-home')[0];
+		home.addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'index2.html',
+				id: 'index2'
+			})
+		})
+	</script>
+</html>

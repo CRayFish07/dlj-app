@@ -36,8 +36,8 @@
 		}
 		
 		.head-main img {
-			width: 110px;
-			height: 106px;
+			width: 60px;
+			height: 46px;
 		}
 		
 		.head-main {
@@ -59,6 +59,12 @@
 		.head-main>.info {
 			width: 50%;
 			padding-top: 5px;
+		}
+		.head-main-left{
+			text-align: left;
+		}
+		.head-main-left h4,.head-main-left h5{
+			color: #fff;
 		}
 		
 		.operation-area {
@@ -148,7 +154,12 @@
 			</div>
 			<div class="mail"><img src="../images/mail.png" /></div>
 			<div class="head-main">
-				<img src="../images/weather.png" />
+				<div class="head-main-left">
+					<img src="../img/tq.png" />
+					<h4>东莞市</h4>
+					<h5>8月10日 星期四</h5>
+					<h5>岗位：<span>兼职工程师</span></h5>
+				</div>
 				<div class="info">
 					<p>公告</p>
 					<span id="">
@@ -159,10 +170,10 @@
 		</header>
 		<section class="operation-area">
 			<div class="operation-buttons">
-				<div id="business_progress">
+				<!--<div id="business_progress">
 					<img src="../images/workOrdersAccepted.png" />
 					<p>任务管理</p>
-				</div>
+				</div>-->
 				<div id="moveJob">
 					<img src="../images/moveJob.png" />
 					<p>移动作业</p>
@@ -229,18 +240,18 @@
 	</body>
 	<script type="text/javascript" charset="utf-8">
 		mui.init();
-		var businessProgressBtn = document.getElementById('business_progress');
+//		var businessProgressBtn = document.getElementById('business_progress');
 		var moveJobBtn = document.getElementById('moveJob');
 		var statisticsShowBtn = document.getElementById('statistics_show');
 		var personalCenterBtn = document.getElementById('personal_center');
 		var workOrderList = document.getElementsByClassName('workOrder');
 
-		businessProgressBtn.addEventListener('tap',function(){
-			mui.openWindow({
-				url: 'workersList.html',
-				id: 'workersList'
-			})
-		});
+//		businessProgressBtn.addEventListener('tap',function(){
+//			mui.openWindow({
+//				url: 'workersList.html',
+//				id: 'workersList'
+//			})
+//		});
 		moveJobBtn.addEventListener('tap', function(){
 			mui.openWindow({
 				url: 'MoveJob.html',

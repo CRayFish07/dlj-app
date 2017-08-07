@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--<link rel="stylesheet" href="../css/layer.css" />-->
+		<link rel="stylesheet" type="text/css" href="../css/mui.css" />
+		<script type="text/javascript" src="../js/mui.js" ></script>
+		<style>
+			.mui-input-group{
+				padding: 10px;
+				text-align: center;
+			}
+			.mui-input-group input{
+				border: 1px solid #ccc;
+				margin-bottom:10px ;
+				font-size: 0.8rem;
+			}
+			.btn {
+				border-radius: 20px;
+				height: 40px;
+				margin: 10px 0;
+				width: 100%;
+				background-color: #1BA3E5;
+				color: #fff;
+				font-weight: 200;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>快速查询</h1>
+		</header>
+		<div class="mui-content">
+			<form class="mui-input-group">
+			    <div class="mui-input">
+			        <input type="text" class="mui-input-clear" placeholder="客户名称">
+			    </div>
+			    <div class="mui-input">
+			        <input type="text" class="mui-input-clear" placeholder="报装地址">
+			    </div>
+			    <div class="mui-input">
+			        <input type="text" class="mui-input-clear" placeholder="客户电话">
+			    </div>
+			</form>
+			<div style="background: #fff;">
+				<button class="btn" id="questionBtn">确定</button>			
+			</div>
+		</div>
+	</body>
+	<script>
+		mui.init()
+		document.getElementById("questionBtn").addEventListener('tap',function(){
+			mui.openWindow({
+				url: 'Manager_fastCheckdetails.html',
+				id: 'Manager_fastCheckdetails'
+			})			
+		})
+	</script>
+</html>

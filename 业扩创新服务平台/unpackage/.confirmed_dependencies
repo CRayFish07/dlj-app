@@ -1,1022 +1,1184 @@
 {
-  "index.html": {
-    "resources": [
-      "images/ýo.png",
-      "images/ýný\u0007.png",
-      "images/ýU:.png",
-      "images/ýý.png",
-      "images/s\u0006ýý.png",
-      "images/4ýýo.png",
-      "images/\u001aýý.png",
-      "js/mui.min.js",
-      "images/*ý-ý.png",
-      "images/ýoý\u0001.png",
-      "images/ýýý*-ý\tý.png",
-      "css/mui.min.css",
-      "images/ýý.png",
-      "images/)\u0014.png",
-      "css/mui.css",
-      "images/ýo.png",
-      "images/ýný\u0007.png",
-      "images/ýU:.png",
-      "images/ýý.png",
-      "images/s\u0006ýý.png",
-      "images/4ýýo.png",
-      "images/\u001aýý.png",
-      "images/*ý-ý.png",
-      "images/ýoý\u0001.png",
-      "images/ýýý*-ý\tý.png",
-      "images/)\u0014.png",
-      "images/ýU:.png",
-      "images/\u001aýý.png",
-      "images/willtimeout.png",
-      "images/overtime.png",
-      "images/weather.png",
-      "images/mail.png",
-      "images/BusinessProgress.png",
-      "images/BottomNavigationCenterButton.png",
-      "images/Personalcenter.png",
-      "images/SetIcon.png",
-      "images/MessagePush.png",
-      "images/banner.png",
-      "images/information.png",
-      "images/StatisticsShow.png"
-    ],
-    "refer": [
-      "workersList.html",
-      "notification.html",
-      "statisticsShow.html",
-      "personalCenter.html",
-      "siteSurvey.html",
-      "MessageList.html",
-      "IntermediateCheck.html",
-      "CompletionCheck.html"
-    ]
-  },
-  "workersList.html": {
-    "resources": [
-      "fonts/mui.ttf",
-      "css/mui.css",
-      "js/mui.min.js",
-      "images/s\u0006ýý.png",
-      "images/ýý.png",
-      "images/s\u0006ýý.png",
-      "images/ýý.png"
-    ],
-    "refer": [
-      "businessProgress.html"
-    ]
-  },
-  "businessProgress.html": {
-    "resources": [
-      "images/-ýýý.png",
-      "images/\u001aýýa.png",
-      "images/\u0027\tý.png",
-      "css/mui.css",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "images/ýý.png",
-      "images/-ýýý.png",
-      "images/\u001aýýa.png",
-      "images/\u0027\tý.png",
-      "images/ýý.png",
-      "images/\u001aýýa.png",
-      "images/\u0027\tý.png",
-      "images/overtime.png",
-      "images/IntermediateCheck.png",
-      "images/BusinessProgressBar.png"
-    ],
-    "refer": []
-  },
-  "notification.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.css"
-    ],
-    "refer": []
-  },
-  "statisticsShow.html": {
-    "resources": [
-      "images/ýý\u0016ýh.png",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.css",
-      "images/ýý\u0016ýh.png",
-      "images/VisualizeTheChart.png"
-    ],
-    "refer": []
-  },
-  "personalCenter.html": {
-    "resources": [
-      "images/H,ýý.png",
-      "images/ýo\u001aý.png",
-      "images/ýo.png",
-      "images/|Lý\u000b\b-*ý-ý.jpg",
-      "images/ý\u0001ý\u0006.png",
-      "js/mui.min.js",
-      "images/\u0000ý.png",
-      "images/\u00267ýo.png",
-      "images/*ý-ý.png",
-      "css/mui.min.css",
-      "images/4ý.png",
-      "images/Mný\u0006.png",
-      "images/ýý-ý\tý.png",
-      "images/H,ýý.png",
-      "images/ýo\u001aý.png",
-      "images/ýo.png",
-      "images/|Lý\u000b\b-*ý-ý.jpg",
-      "images/ý\u0001ý\u0006.png",
-      "images/\u0000ý.png",
-      "images/\u00267ýo.png",
-      "images/*ý-ý.png",
-      "images/4ý.png",
-      "images/Mný\u0006.png",
-      "images/ýý-ý\tý.png",
-      "images/Avatar.png",
-      "images/BottomCenterButton.png",
-      "images/notification.png",
-      "images/PasswordManagement.png",
-      "images/accountInformation.png",
-      "images/versionUpdate.png",
-      "images/quit.png",
-      "images/PersonalCenterBG.jpg",
-      "images/Personalcenter.png",
-      "images/information.png",
-      "images/Configurationmanagement.png",
-      "js/mui.view.js",
-      "fonts/mui.ttf",
-      "images/RightArrow.png",
-      "css/mui.css",
-      "images/plus.png"
-    ],
-    "refer": [
-      "index.html"
-    ]
-  },
-  "siteSurvey.html": {
-    "resources": [
-      "images/ýý\u0001ý\u0007.png",
-      "images/ý\u0011.ý\u0007.png",
-      "images/0ýýMý\u0007.png",
-      "images/ýý.png",
-      "fonts/mui.ttf",
-      "images/ýa.png",
-      "images/ýa6.png",
-      "images/ýa4.png",
-      "images/ýa3.png",
-      "images/ýa2.png",
-      "images/ýa5.png",
-      "js/mui.view.js",
-      "css/mui.css",
-      "images/ýý\u0001ý\u0007.png",
-      "images/ý\u0011.ý\u0007.png",
-      "images/0ýýMý\u0007.png",
-      "images/ýý.png",
-      "images/ýa.png",
-      "images/ýa6.png",
-      "images/ýa4.png",
-      "images/ýa3.png",
-      "images/ýa2.png",
-      "images/ýa5.png",
-      "js/mui.min.js",
-      "images/ýa.png",
-      "images/ýa6.png",
-      "images/ýa4.png",
-      "images/ýa3.png",
-      "images/ýa2.png",
-      "images/ýa5.png",
-      "images/RightArrow.png",
-      "images/progressBar5.png",
-      "images/progressBar6.png",
-      "images/progressBar.png",
-      "images/progressBar2.png",
-      "images/map.png",
-      "images/positioningIcon.png",
-      "images/progressBar4.png",
-      "images/photo.png",
-      "images/progressBar3.png",
-      "images/plus.png",
-      "images/QRcode.png"
-    ],
-    "refer": []
-  },
-  "login.html": {
-    "resources": [
-      "js/mui.min.js",
-      "images/{U_10.jpg",
-      "css/mui.min.css",
-      "images/{U_07.jpg",
-      "images/{U_10.jpg",
-      "images/{U_07.jpg",
-      "images/{U_03.png",
-      "images/{U_03.png",
-      "images/logo.png",
-      "images/password.jpg",
-      "images/user.jpg"
-    ],
-    "refer": [
-      "index.html",
-      "Engineer/index.html",
-      "Manager/index2.html",
-      "SeniorEngineer/index3.html"
-    ]
-  },
-  "MessageList.html": {
-    "resources": [
-      "fonts/mui.ttf",
-      "css/mui.css",
-      "js/mui.min.js"
-    ],
-    "refer": [
-      "notification.html"
-    ]
-  },
-  "IntermediateCheck.html": {
-    "resources": [
-      "js/mui.min.js",
-      "images/progressBar6.png",
-      "fonts/mui.ttf",
-      "images/progressBar4.png",
-      "images/progressBar.png",
-      "images/photo.png",
-      "css/mui.css",
-      "images/progressBar2.png",
-      "images/plus.png",
-      "js/mui.view.js"
-    ],
-    "refer": []
-  },
-  "CompletionCheck.html": {
-    "resources": [
-      "images/map.png",
-      "images/progressBar5.png",
-      "js/mui.min.js",
-      "images/progressBar6.png",
-      "fonts/mui.ttf",
-      "images/progressBar4.png",
-      "images/progressBar.png",
-      "images/photo.png",
-      "css/mui.css",
-      "images/progressBar3.png",
-      "images/progressBar2.png",
-      "images/plus.png",
-      "js/mui.view.js"
-    ],
-    "refer": []
-  },
-  "Engineer/index.html": {
-    "resources": [
-      "css/mui.css",
-      "images/willtimeout.png",
-      "images/overtime.png",
-      "images/BottomNavigationCenterButton.png",
-      "images/Personalcenter.png",
-      "images/SetIcon.png",
-      "images/banner.png",
-      "images/information.png",
-      "images/weather.png",
-      "images/mail.png",
-      "images/BusinessProgress.png",
-      "images/MessagePush.png",
-      "images/StatisticsShow.png",
-      "js/mui.min.js",
-      "js/jquery-2.1.1.min.js",
-      "images/moveJob.png",
-      "images/workOrdersAccepted.png"
-    ],
-    "refer": [
-      "Engineer/workersList.html",
-      "Engineer/siteSurvey.html",
-      "Engineer/IntermediateCheck.html",
-      "Engineer/CompletionCheck.html",
-      "Engineer/MessageList.html",
-      "Engineer/statisticsShow.html",
-      "personalCenter.html",
-      "Engineer/personalCenter.html",
-      "Engineer/ConversList.html",
-      "Engineer/MoveJob.html",
-      "Engineer/assessment_link.html",
-      "Engineer/BusinessProgressShrink.html"
-    ]
-  },
-  "Engineer/workersList.html": {
-    "resources": [
-      "fonts/mui.ttf",
-      "js/mui.min.js",
-      "css/mui.css",
-      "images/willtimeout.png",
-      "images/overtime.png",
-      "js/hui-tab.js",
-      "css/hui.css",
-      "js/hui.js",
-      "js/hui-select-beautify.js",
-      "fonts/iconfont.woff"
-    ],
-    "refer": [
-      "Engineer/businessProgress.html",
-      "Engineer/BusinessProgressShrink.html"
-    ]
-  },
-  "Engineer/siteSurvey.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.css",
-      "js/mui.view.js",
-      "images/RightArrow.png",
-      "images/progressBar5.png",
-      "images/progressBar6.png",
-      "images/progressBar.png",
-      "images/progressBar2.png",
-      "images/map.png",
-      "images/positioningIcon.png",
-      "images/progressBar4.png",
-      "images/photo.png",
-      "images/progressBar3.png",
-      "images/plus.png",
-      "images/QRcode.png"
-    ],
-    "refer": []
-  },
-  "Engineer/businessProgress.html": {
-    "resources": [
-      "images/overtime.png",
-      "images/IntermediateCheck.png",
-      "css/mui.css",
-      "images/BusinessProgressBar.png",
-      "layer_mobile/need/layer.css",
-      "layer_mobile/layer.js"
-    ],
-    "refer": [
-      "Engineer/chart.html"
-    ]
-  },
-  "Engineer/IntermediateCheck.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.css",
-      "js/mui.view.js",
-      "images/progressBar6.png",
-      "images/progressBar4.png",
-      "images/progressBar.png",
-      "images/photo.png",
-      "images/progressBar2.png",
-      "images/plus.png"
-    ],
-    "refer": []
-  },
-  "Engineer/CompletionCheck.html": {
-    "resources": [
-      "images/progressBar5.png",
-      "js/mui.min.js",
-      "images/progressBar6.png",
-      "fonts/mui.ttf",
-      "images/progressBar4.png",
-      "images/progressBar.png",
-      "images/photo.png",
-      "css/mui.css",
-      "images/progressBar3.png",
-      "images/progressBar2.png",
-      "images/plus.png",
-      "js/mui.view.js"
-    ],
-    "refer": []
-  },
-  "Engineer/MessageList.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.css"
-    ],
-    "refer": [
-      "Engineer/notification.html"
-    ]
-  },
-  "Engineer/statisticsShow.html": {
-    "resources": [
-      "images/VisualizeTheChart.png",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.css",
-      "css/animate.min.css"
-    ],
-    "refer": []
-  },
-  "Manager/index2.html": {
-    "resources": [
-      "images/overtime.png",
-      "images/weather.png",
-      "images/moveJob.png",
-      "images/BottomNavigationCenterButton.png",
-      "images/workOrdersAccepted.png",
-      "images/banner.png",
-      "images/taskProgress.png",
-      "css/mui.css",
-      "images/StatisticsShow.png",
-      "images/willtimeout.png",
-      "images/mail.png",
-      "js/mui.min.js",
-      "images/Personalcenter.png",
-      "images/MessagePush.png",
-      "images/information.png",
-      "images/rask_icon.png",
-      "images/StatisticsShow_icon.png",
-      "images/CustomerDemands_icon.png",
-      "images/IntegratedFunction_icon.png",
-      "js/jquery-2.1.1.min.js"
-    ],
-    "refer": [
-      "Manager/Manager_workList.html",
-      "Manager/Manager_personalCenter.html",
-      "Manager/ManagerStatisticsShow.html",
-      "Manager/Manager_businessProgress.html",
-      "Manager/ManagerMoveJob.html",
-      "Manager/ManagerIntegratedFunction.html",
-      "Manager/Manager_TaskManagement.html",
-      "Manager/Manager_work_list.html"
-    ]
-  },
-  "Manager/Manager_workList.html": {
-    "resources": [
-      "images/back.png",
-      "fonts/mui.ttf",
-      "css/mui.css",
-      "js/mui.min.js",
-      "js/hui-tab.js",
-      "css/hui.css",
-      "images/ti.png",
-      "js/hui.js"
-    ],
-    "refer": [
-      "Manager/Manager_workOrdersAccepted.html",
-      "Manager/Manager_businessProgress.html"
-    ]
-  },
-  "Manager/Manager_workOrdersAccepted.html": {
-    "resources": [
-      "css/mui.min.css",
-      "css/mui.css",
-      "images/RightArrow.png"
-    ],
-    "refer": [
-      "Manager/ElectricityInformation.html",
-      "Manager/CapacityList.html",
-      "Manager/PersonnelSetUp.html"
-    ]
-  },
-  "Manager/ElectricityInformation.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.css"
-    ],
-    "refer": []
-  },
-  "Manager/CapacityList.html": {
-    "resources": [
-      "css/mui.css",
-      "js/mui.min.js",
-      "fonts/mui.ttf"
-    ],
-    "refer": []
-  },
-  "Manager/Manager_personalCenter.html": {
-    "resources": [
-      "images/RightArrow.png",
-      "images/BottomCenterButton.png",
-      "images/Avatar.png",
-      "images/notification.png",
-      "images/versionUpdate.png",
-      "images/quit.png",
-      "images/PasswordManagement.png",
-      "fonts/mui.ttf",
-      "images/PersonalCenterBG.jpg",
-      "images/accountInformation.png",
-      "css/mui.css",
-      "images/plus.png",
-      "js/mui.view.js",
-      "images/Configurationmanagement.png",
-      "js/mui.min.js",
-      "images/Personalcenter.png",
-      "images/information.png"
-    ],
-    "refer": [
-      "Manager/Manager_ConversList.html"
-    ]
-  },
-  "Manager/ManagerStatisticsShow.html": {
-    "resources": [
-      "js/hui-tab.js",
-      "images/VisualizeTheChart.png",
-      "css/hui.css",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "js/hui.js",
-      "css/mui.css",
-      "js/hui-picker.js"
-    ],
-    "refer": [
-      "Manager/ManagerWorkOrder_assessment_link.html"
-    ]
-  },
-  "Manager/ManagerWorkOrder_assessment_link.html": {
-    "refer": [
-      "Manager/Manager_work_list.html"
-    ],
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.css"
-    ]
-  },
-  "Manager/Manager_work_list.html": {
-    "resources": [
-      "css/mui.css",
-      "fonts/mui.ttf"
-    ],
-    "refer": [
-      "Manager/Manager_chart.html"
-    ]
-  },
-  "Manager/Manager_businessProgress.html": {
-    "resources": [
-      "images/overtime.png",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "images/IntermediateCheck.png",
-      "css/mui.css",
-      "images/BusinessProgressBar.png",
-      "images/back_Btn.png"
-    ],
-    "refer": [
-      "Manager/ManagePersonnelEvaluation.html"
-    ]
-  },
-  "Manager/ManagePersonnelEvaluation.html": {
-    "resources": [
-      "images/avator.png",
-      "css/hui.css",
-      "js/hui-star.js",
-      "js/hui.js",
-      "css/mui.css",
-      "fonts/iconfont.woff"
-    ],
-    "refer": []
-  },
-  "Manager/PersonnelSetUp.html": {
-    "resources": [
-      "js/hui-select-beautify.js",
-      "css/hui.css",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "js/hui.js",
-      "css/mui.css",
-      "fonts/iconfont.woff"
-    ],
-    "refer": []
-  },
-  "Manager/ManagerMoveJob.html": {
-    "resources": [
-      "images/willtimeout.png",
-      "images/overtime.png",
-      "css/hui.css",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.css",
-      "fonts/iconfont.woff",
-      "js/hui-select-beautify.js"
-    ],
-    "refer": [
-      "Manager/ManagerIntermediateCheck.html",
-      "Manager/Manager_SiteSurvey.html"
-    ]
-  },
-  "Manager/ManagerIntermediateCheck.html": {
-    "resources": [
-      "css/hui.css",
-      "css/mui.css"
-    ],
-    "refer": []
-  },
-  "Manager/ManagerIntegratedFunction.html": {
-    "resources": [
-      "js/hui-tab.js",
-      "css/hui.css",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "js/hui.js",
-      "css/mui.css",
-      "fonts/iconfont.woff"
-    ],
-    "refer": [
-      "Manager/ManagePersonnelEvaluation.html",
-      "Manager/ManagerNotification.html"
-    ]
-  },
-  "Manager/ManagerNotification.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.css"
-    ],
-    "refer": []
-  },
-  "SeniorEngineer/index3.html": {
-    "resources": [
-      "images/weather.png",
-      "images/mail.png",
-      "js/echarts.js",
-      "images/BusinessProgress.png",
-      "images/Mention_level.png",
-      "images/BottomNavigationCenterButton.png",
-      "images/Personalcenter.png",
-      "images/MessagePush.png",
-      "images/banner.png",
-      "images/information.png",
-      "images/taskProgress.png",
-      "images/StatisticsShow.png",
-      "css/mui.css"
-    ],
-    "refer": [
-      "SeniorEngineer/SeniorEngineer_ToRaiseWorkOrders.html",
-      "SeniorEngineer/SeniorEngineer_WorkList.html",
-      "SeniorEngineer/SeniorEngineer_IntegratedFunction.html",
-      "SeniorEngineer/SeniorEngineer_NumberOfDistribution.html",
-      "SeniorEngineer/SeniorEngineer_Onthewaybill.html",
-      "SeniorEngineer/SeniorEngineer_Timeouts.html",
-      "SeniorEngineer/SeniorEnginner_Early_warning.html",
-      "SeniorEngineer/SeniorEngineer_personalCenter.html"
-    ]
-  },
-  "SeniorEngineer/SeniorEngineer_ToRaiseWorkOrders.html": {
-    "resources": [
-      "images/willtimeout.png",
-      "images/overtime.png",
-      "css/hui.css",
-      "fonts/mui.ttf",
-      "css/mui.css",
-      "fonts/iconfont.woff",
-      "js/hui-select-beautify.js",
-      "js/hui-tab.js",
-      "js/hui.js"
-    ],
-    "refer": [
-      "SeniorEngineer/SeniorEngineer_MentionProcessing.html"
-    ]
-  },
-  "SeniorEngineer/SeniorEngineer_WorkList.html": {
-    "resources": [
-      "images/willtimeout.png",
-      "images/overtime.png",
-      "css/hui.css",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.css",
-      "fonts/iconfont.woff"
-    ],
-    "refer": [
-      "SeniorEngineer/SeniorEngineer_BusinessProgress.html",
-      "SeniorEngineer/SeniorEngineer_MentionProcessing.html"
-    ]
-  },
-  "SeniorEngineer/SeniorEngineer_MentionProcessing.html": {
-    "resources": [
-      "css/mui.css"
-    ],
-    "refer": []
-  },
-  "SeniorEngineer/SeniorEngineer_BusinessProgress.html": {
-    "resources": [
-      "images/IntermediateCheck.png",
-      "css/mui.css",
-      "images/BusinessProgressBar.png"
-    ],
-    "refer": []
-  },
-  "SeniorEngineer/SeniorEngineer_IntegratedFunction.html": {
-    "resources": [
-      "js/hui-select-beautify.js",
-      "js/hui-tab.js",
-      "images/avator.png",
-      "css/hui.css",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "js/hui-star.js",
-      "js/hui.js",
-      "css/mui.css",
-      "fonts/iconfont.woff"
-    ],
-    "refer": []
-  },
-  "SeniorEngineer/SeniorEngineer_NumberOfDistribution.html": {
-    "resources": [
-      "css/mui.css",
-      "fonts/mui.ttf"
-    ],
-    "refer": [
-      "SeniorEngineer/SeniorEngineer_VisualDisplay.html",
-      "SeniorEngineer/Manager_work_list.html"
-    ]
-  },
-  "SeniorEngineer/SeniorEngineer_VisualDisplay.html": {
-    "resources": [
-      "images/VisualizeTheChart.png",
-      "SeniorEngineer/dongguan.json",
-      "css/hui.css",
-      "js/echarts.js",
-      "js/hui-tab.js",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "js/hui.js",
-      "css/mui.css",
-      "images/map.png",
-      "images/map2.png",
-      "js/hui-picker.js",
-      "images/map-n.png"
-    ],
-    "refer": [
-      "SeniorEngineer/ManagerWorkOrder_assessment_link.html"
-    ]
-  },
-  "SeniorEngineer/Manager_work_list.html": {
-    "resources": [
-      "css/mui.css"
-    ],
-    "refer": []
-  },
-  "SeniorEngineer/ManagerWorkOrder_assessment_link.html": {
-    "refer": [
-      "SeniorEngineer/Manager_work_list.html"
-    ],
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.css"
-    ]
-  },
-  "SeniorEngineer/SeniorEngineer_Onthewaybill.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.css"
-    ],
-    "refer": []
-  },
-  "SeniorEngineer/SeniorEngineer_Timeouts.html": {
-    "resources": [
-      "images/overtime.png",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.css"
-    ],
-    "refer": []
-  },
-  "SeniorEngineer/SeniorEnginner_Early_warning.html": {
-    "resources": [
-      "images/willtimeout.png",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.css"
-    ],
-    "refer": []
-  },
-  "SeniorEngineer/SeniorEngineer_personalCenter.html": {
-    "resources": [
-      "images/Avatar.png",
-      "images/BottomCenterButton.png",
-      "images/RightArrow.png",
-      "images/notification.png",
-      "images/PasswordManagement.png",
-      "fonts/mui.ttf",
-      "css/mui.css",
-      "images/accountInformation.png",
-      "images/versionUpdate.png",
-      "js/mui.min.js",
-      "images/quit.png",
-      "images/PersonalCenterBG.jpg",
-      "images/Personalcenter.png",
-      "images/information.png",
-      "images/plus.png",
-      "js/mui.view.js",
-      "images/Configurationmanagement.png"
-    ],
-    "refer": [
-      "SeniorEngineer/SeniorEngineer_ConversList.html"
-    ]
-  },
-  "Engineer/personalCenter.html": {
-    "resources": [
-      "images/BottomCenterButton.png",
-      "images/Avatar.png",
-      "images/notification.png",
-      "images/versionUpdate.png",
-      "images/quit.png",
-      "images/PasswordManagement.png",
-      "images/PersonalCenterBG.jpg",
-      "images/accountInformation.png",
-      "css/mui.css",
-      "images/Configurationmanagement.png",
-      "images/RightArrow.png",
-      "images/plus.png",
-      "js/mui.view.js",
-      "js/mui.min.js"
-    ],
-    "refer": [
-      "Engineer/ConversList.html"
-    ]
-  },
-  "Engineer/notification.html": {
-    "resources": [
-      "css/mui.css"
-    ],
-    "refer": []
-  },
-  "Manager/Manager_SiteSurvey.html": {
-    "resources": [
-      "css/hui.css",
-      "js/hui-accordion.js",
-      "css/mui.css",
-      "layer_mobile/need/layer.css"
-    ],
-    "refer": [
-      "Manager/Maneger_contactClients.html",
-      "Manager/Manager_chart.html"
-    ]
-  },
-  "Engineer/ConversList.html": {
-    "resources": [
-      "images/avator.png",
-      "css/mui.css"
-    ],
-    "refer": [
-      "Engineer/chart.html",
-      "Engineer/personalCenter.html"
-    ]
-  },
-  "Engineer/chart.html": {
-    "resources": [
-      "images/customer-dialogue.png",
-      "fonts/mui.ttf",
-      "css/mui.css",
-      "js/mui.imageViewer.js",
-      "css/app.css",
-      "css/mui.imageviewer.css",
-      "js/arttmpl.js"
-    ],
-    "refer": []
-  },
-  "Manager/Manager_ConversList.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.css"
-    ],
-    "refer": []
-  },
-  "Engineer/BusinessProgressShrink.html": {
-    "resources": [
-      "images/noscluel.png",
-      "images/noselect@2x.png",
-      "images/selected@2x.png",
-      "images/schedule2x.png",
-      "css/mui.css",
-      "images/select@2x.png"
-    ],
-    "refer": [
-      "Engineer/businessProgress.html",
-      "Engineer/chart.html"
-    ]
-  },
-  "Engineer/MoveJob.html": {
-    "resources": [
-      "js/hui-tab.js",
-      "css/hui.css",
-      "layer_mobile/need/layer.css",
-      "css/mui.css",
-      "js/hui-select-beautify.js",
-      "fonts/mui.ttf",
-      "js/hui.js",
-      "layer_mobile/layer.js",
-      "fonts/iconfont.woff",
-      "js/jquery-2.1.1.min.js",
-      "js/mui.min.js"
-    ],
-    "refer": [
-      "Engineer/siteSurvey2.html"
-    ]
-  },
-  "Engineer/assessment_link.html": {
-    "resources": [
-      "css/mui.css"
-    ],
-    "refer": [
-      "Engineer/Timeouts.html"
-    ]
-  },
-  "Manager/Manager_TaskManagement.html": {
-    "resources": [
-      "css/hui.css",
-      "layer_mobile/need/layer.css",
-      "js/hui-select-beautify.js",
-      "js/hui-tab.js",
-      "fonts/mui.ttf",
-      "js/hui.js",
-      "css/mui.css",
-      "layer_mobile/layer.js",
-      "fonts/iconfont.woff"
-    ],
-    "refer": [
-      "Manager/Maneger_TaskDetails.html",
-      "Manager/Manager_SiteSurvey.html"
-    ]
-  },
-  "Manager/Maneger_contactClients.html": {
-    "resources": [
-      "css/mui.css"
-    ],
-    "refer": []
-  },
-  "Engineer/siteSurvey2.html": {
-    "resources": [
-      "css/mui.css",
-      "layer_mobile/need/layer.css",
-      "css/hui.css",
-      "layer/layer.js",
-      "layer/skin/default/layer.css",
-      "js/jquery-2.1.1.min.js",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "layer_mobile/layer.js"
-    ],
-    "refer": [
-      "Engineer/CustomerMaintenance.html"
-    ]
-  },
-  "Engineer/CustomerMaintenance.html": {
-    "resources": [
-      "images/photo3.png",
-      "images/photo1.png",
-      "images/photo2.png",
-      "js/mui.js",
-      "css/mui.css",
-      "layer_mobile/need/layer.css"
-    ],
-    "refer": [
-      "Engineer/CheckBeforePreparation.html",
-      "Engineer/IntermediateCheck.html",
-      "Engineer/InspectionRecords.html",
-      "Engineer/signed.html"
-    ]
-  },
-  "Engineer/CheckBeforePreparation.html": {
-    "resources": [
-      "css/mui.css"
-    ],
-    "refer": []
-  },
-  "Engineer/CompletionMap.html": {
-    "resources": [
-      "images/hook.png"
-    ],
-    "refer": []
-  },
-  "Engineer/InspectionRecords1.html": {
-    "resources": [
-      "css/mui.css"
-    ],
-    "refer": [
-      "Engineer/CompletionMap.html"
-    ]
-  },
-  "Engineer/InspectionRecords.html": {
-    "refer": [
-      "Engineer/InspectionRecords1.html"
-    ],
-    "resources": []
-  },
-  "Engineer/signed.html": {
-    "resources": [
-      "js/jSignature.min.noconflict.js",
-      "css/mui.css",
-      "js/jsSignature.js"
-    ],
-    "refer": []
-  },
-  "Manager/Manager_chart.html": {
-    "resources": [
-      "images/customer-dialogue.png",
-      "css/mui.css",
-      "js/mui.imageViewer.js",
-      "css/app.css",
-      "css/mui.imageviewer.css",
-      "js/arttmpl.js"
-    ],
-    "refer": []
-  },
-  "Engineer/Timeouts.html": {
-    "resources": [
-      "css/mui.css"
-    ],
-    "refer": []
-  }
+	"index.html": {
+		"resources": [
+			"images/ï¿½o.png",
+			"images/ï¿½nï¿½\u0007.png",
+			"images/ï¿½U:.png",
+			"images/ï¿½ï¿½.png",
+			"images/s\u0006ï¿½ï¿½.png",
+			"images/4ï¿½ï¿½o.png",
+			"images/\u001aï¿½ï¿½.png",
+			"js/mui.min.js",
+			"images/*ï¿½-ï¿½.png",
+			"images/ï¿½oï¿½\u0001.png",
+			"images/ï¿½ï¿½ï¿½*-ï¿½\tï¿½.png",
+			"css/mui.min.css",
+			"images/ï¿½ï¿½.png",
+			"images/)\u0014.png",
+			"css/mui.css",
+			"images/ï¿½o.png",
+			"images/ï¿½nï¿½\u0007.png",
+			"images/ï¿½U:.png",
+			"images/ï¿½ï¿½.png",
+			"images/s\u0006ï¿½ï¿½.png",
+			"images/4ï¿½ï¿½o.png",
+			"images/\u001aï¿½ï¿½.png",
+			"images/*ï¿½-ï¿½.png",
+			"images/ï¿½oï¿½\u0001.png",
+			"images/ï¿½ï¿½ï¿½*-ï¿½\tï¿½.png",
+			"images/)\u0014.png",
+			"images/ï¿½U:.png",
+			"images/\u001aï¿½ï¿½.png",
+			"images/willtimeout.png",
+			"images/overtime.png",
+			"images/weather.png",
+			"images/mail.png",
+			"images/BusinessProgress.png",
+			"images/BottomNavigationCenterButton.png",
+			"images/Personalcenter.png",
+			"images/SetIcon.png",
+			"images/MessagePush.png",
+			"images/banner.png",
+			"images/information.png",
+			"images/StatisticsShow.png"
+		],
+		"refer": [
+			"workersList.html",
+			"notification.html",
+			"statisticsShow.html",
+			"personalCenter.html",
+			"siteSurvey.html",
+			"MessageList.html",
+			"IntermediateCheck.html",
+			"CompletionCheck.html"
+		]
+	},
+	"workersList.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"js/mui.min.js",
+			"images/s\u0006ï¿½ï¿½.png",
+			"images/ï¿½ï¿½.png",
+			"images/s\u0006ï¿½ï¿½.png",
+			"images/ï¿½ï¿½.png"
+		],
+		"refer": [
+			"businessProgress.html"
+		]
+	},
+	"businessProgress.html": {
+		"resources": [
+			"images/-ï¿½ï¿½ï¿½.png",
+			"images/\u001aï¿½ï¿½a.png",
+			"images/\u0027\tï¿½.png",
+			"css/mui.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"images/ï¿½ï¿½.png",
+			"images/-ï¿½ï¿½ï¿½.png",
+			"images/\u001aï¿½ï¿½a.png",
+			"images/\u0027\tï¿½.png",
+			"images/ï¿½ï¿½.png",
+			"images/\u001aï¿½ï¿½a.png",
+			"images/\u0027\tï¿½.png",
+			"images/overtime.png",
+			"images/IntermediateCheck.png",
+			"images/BusinessProgressBar.png"
+		],
+		"refer": []
+	},
+	"notification.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css"
+		],
+		"refer": []
+	},
+	"statisticsShow.html": {
+		"resources": [
+			"images/ï¿½ï¿½\u0016ï¿½h.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"images/ï¿½ï¿½\u0016ï¿½h.png",
+			"images/VisualizeTheChart.png"
+		],
+		"refer": []
+	},
+	"personalCenter.html": {
+		"resources": [
+			"images/H,ï¿½ï¿½.png",
+			"images/ï¿½o\u001aï¿½.png",
+			"images/ï¿½o.png",
+			"images/|Lï¿½\u000b\b-*ï¿½-ï¿½.jpg",
+			"images/ï¿½\u0001ï¿½\u0006.png",
+			"js/mui.min.js",
+			"images/\u0000ï¿½.png",
+			"images/\u00267ï¿½o.png",
+			"images/*ï¿½-ï¿½.png",
+			"css/mui.min.css",
+			"images/4ï¿½.png",
+			"images/Mnï¿½\u0006.png",
+			"images/ï¿½ï¿½-ï¿½\tï¿½.png",
+			"images/H,ï¿½ï¿½.png",
+			"images/ï¿½o\u001aï¿½.png",
+			"images/ï¿½o.png",
+			"images/|Lï¿½\u000b\b-*ï¿½-ï¿½.jpg",
+			"images/ï¿½\u0001ï¿½\u0006.png",
+			"images/\u0000ï¿½.png",
+			"images/\u00267ï¿½o.png",
+			"images/*ï¿½-ï¿½.png",
+			"images/4ï¿½.png",
+			"images/Mnï¿½\u0006.png",
+			"images/ï¿½ï¿½-ï¿½\tï¿½.png",
+			"images/Avatar.png",
+			"images/BottomCenterButton.png",
+			"images/notification.png",
+			"images/PasswordManagement.png",
+			"images/accountInformation.png",
+			"images/versionUpdate.png",
+			"images/quit.png",
+			"images/PersonalCenterBG.jpg",
+			"images/Personalcenter.png",
+			"images/information.png",
+			"images/Configurationmanagement.png",
+			"js/mui.view.js",
+			"fonts/mui.ttf",
+			"images/RightArrow.png",
+			"css/mui.css",
+			"images/plus.png"
+		],
+		"refer": [
+			"index.html"
+		]
+	},
+	"siteSurvey.html": {
+		"resources": [
+			"images/ï¿½ï¿½\u0001ï¿½\u0007.png",
+			"images/ï¿½\u0011.ï¿½\u0007.png",
+			"images/0ï¿½ï¿½Mï¿½\u0007.png",
+			"images/ï¿½ï¿½.png",
+			"fonts/mui.ttf",
+			"images/ï¿½a.png",
+			"images/ï¿½a6.png",
+			"images/ï¿½a4.png",
+			"images/ï¿½a3.png",
+			"images/ï¿½a2.png",
+			"images/ï¿½a5.png",
+			"js/mui.view.js",
+			"css/mui.css",
+			"images/ï¿½ï¿½\u0001ï¿½\u0007.png",
+			"images/ï¿½\u0011.ï¿½\u0007.png",
+			"images/0ï¿½ï¿½Mï¿½\u0007.png",
+			"images/ï¿½ï¿½.png",
+			"images/ï¿½a.png",
+			"images/ï¿½a6.png",
+			"images/ï¿½a4.png",
+			"images/ï¿½a3.png",
+			"images/ï¿½a2.png",
+			"images/ï¿½a5.png",
+			"js/mui.min.js",
+			"images/ï¿½a.png",
+			"images/ï¿½a6.png",
+			"images/ï¿½a4.png",
+			"images/ï¿½a3.png",
+			"images/ï¿½a2.png",
+			"images/ï¿½a5.png",
+			"images/RightArrow.png",
+			"images/progressBar5.png",
+			"images/progressBar6.png",
+			"images/progressBar.png",
+			"images/progressBar2.png",
+			"images/map.png",
+			"images/positioningIcon.png",
+			"images/progressBar4.png",
+			"images/photo.png",
+			"images/progressBar3.png",
+			"images/plus.png",
+			"images/QRcode.png"
+		],
+		"refer": []
+	},
+	"login.html": {
+		"resources": [
+			"js/mui.min.js",
+			"images/{U_10.jpg",
+			"css/mui.min.css",
+			"images/{U_07.jpg",
+			"images/{U_10.jpg",
+			"images/{U_07.jpg",
+			"images/{U_03.png",
+			"images/{U_03.png",
+			"images/logo.png",
+			"images/password.jpg",
+			"images/user.jpg",
+			"fonts/mui.ttf",
+			"img/logo.png"
+		],
+		"refer": [
+			"index.html",
+			"Engineer/index.html",
+			"Manager/index2.html",
+			"SeniorEngineer/index3.html"
+		]
+	},
+	"MessageList.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"js/mui.min.js"
+		],
+		"refer": [
+			"notification.html"
+		]
+	},
+	"IntermediateCheck.html": {
+		"resources": [
+			"js/mui.min.js",
+			"images/progressBar6.png",
+			"fonts/mui.ttf",
+			"images/progressBar4.png",
+			"images/progressBar.png",
+			"images/photo.png",
+			"css/mui.css",
+			"images/progressBar2.png",
+			"images/plus.png",
+			"js/mui.view.js"
+		],
+		"refer": []
+	},
+	"CompletionCheck.html": {
+		"resources": [
+			"images/map.png",
+			"images/progressBar5.png",
+			"js/mui.min.js",
+			"images/progressBar6.png",
+			"fonts/mui.ttf",
+			"images/progressBar4.png",
+			"images/progressBar.png",
+			"images/photo.png",
+			"css/mui.css",
+			"images/progressBar3.png",
+			"images/progressBar2.png",
+			"images/plus.png",
+			"js/mui.view.js"
+		],
+		"refer": []
+	},
+	"Engineer/index.html": {
+		"resources": [
+			"css/mui.css",
+			"images/willtimeout.png",
+			"images/overtime.png",
+			"images/BottomNavigationCenterButton.png",
+			"images/Personalcenter.png",
+			"images/SetIcon.png",
+			"images/banner.png",
+			"images/information.png",
+			"images/weather.png",
+			"images/mail.png",
+			"images/BusinessProgress.png",
+			"images/MessagePush.png",
+			"images/StatisticsShow.png",
+			"js/mui.min.js",
+			"js/jquery-2.1.1.min.js",
+			"images/moveJob.png",
+			"images/workOrdersAccepted.png",
+			"img/tq.png"
+		],
+		"refer": [
+			"Engineer/workersList.html",
+			"Engineer/siteSurvey.html",
+			"Engineer/IntermediateCheck.html",
+			"Engineer/CompletionCheck.html",
+			"Engineer/MessageList.html",
+			"Engineer/statisticsShow.html",
+			"personalCenter.html",
+			"Engineer/personalCenter.html",
+			"Engineer/ConversList.html",
+			"Engineer/MoveJob.html",
+			"Engineer/assessment_link.html",
+			"Engineer/BusinessProgressShrink.html"
+		]
+	},
+	"Engineer/workersList.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.css",
+			"images/willtimeout.png",
+			"images/overtime.png",
+			"js/hui-tab.js",
+			"css/hui.css",
+			"js/hui.js",
+			"js/hui-select-beautify.js",
+			"fonts/iconfont.woff"
+		],
+		"refer": [
+			"Engineer/businessProgress.html",
+			"Engineer/BusinessProgressShrink.html"
+		]
+	},
+	"Engineer/siteSurvey.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"js/mui.view.js",
+			"images/RightArrow.png",
+			"images/progressBar5.png",
+			"images/progressBar6.png",
+			"images/progressBar.png",
+			"images/progressBar2.png",
+			"images/map.png",
+			"images/positioningIcon.png",
+			"images/progressBar4.png",
+			"images/photo.png",
+			"images/progressBar3.png",
+			"images/plus.png",
+			"images/QRcode.png"
+		],
+		"refer": []
+	},
+	"Engineer/businessProgress.html": {
+		"resources": [
+			"images/overtime.png",
+			"images/IntermediateCheck.png",
+			"css/mui.css",
+			"images/BusinessProgressBar.png",
+			"layer_mobile/need/layer.css",
+			"layer_mobile/layer.js"
+		],
+		"refer": [
+			"Engineer/chart.html",
+			"Engineer/questionList.html"
+		]
+	},
+	"Engineer/IntermediateCheck.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"js/mui.view.js",
+			"images/progressBar6.png",
+			"images/progressBar4.png",
+			"images/progressBar.png",
+			"images/photo.png",
+			"images/progressBar2.png",
+			"images/plus.png"
+		],
+		"refer": []
+	},
+	"Engineer/CompletionCheck.html": {
+		"resources": [
+			"images/progressBar5.png",
+			"js/mui.min.js",
+			"images/progressBar6.png",
+			"fonts/mui.ttf",
+			"images/progressBar4.png",
+			"images/progressBar.png",
+			"images/photo.png",
+			"css/mui.css",
+			"images/progressBar3.png",
+			"images/progressBar2.png",
+			"images/plus.png",
+			"js/mui.view.js"
+		],
+		"refer": []
+	},
+	"Engineer/MessageList.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css"
+		],
+		"refer": [
+			"Engineer/notification.html"
+		]
+	},
+	"Engineer/statisticsShow.html": {
+		"resources": [
+			"images/VisualizeTheChart.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"css/animate.min.css"
+		],
+		"refer": []
+	},
+	"Manager/index2.html": {
+		"resources": [
+			"images/overtime.png",
+			"images/weather.png",
+			"images/moveJob.png",
+			"images/BottomNavigationCenterButton.png",
+			"images/workOrdersAccepted.png",
+			"images/banner.png",
+			"images/taskProgress.png",
+			"css/mui.css",
+			"images/StatisticsShow.png",
+			"images/willtimeout.png",
+			"images/mail.png",
+			"js/mui.min.js",
+			"images/Personalcenter.png",
+			"images/MessagePush.png",
+			"images/information.png",
+			"images/rask_icon.png",
+			"images/StatisticsShow_icon.png",
+			"images/CustomerDemands_icon.png",
+			"images/IntegratedFunction_icon.png",
+			"js/jquery-2.1.1.min.js"
+		],
+		"refer": [
+			"Manager/Manager_workList.html",
+			"Manager/Manager_personalCenter.html",
+			"Manager/ManagerStatisticsShow.html",
+			"Manager/Manager_businessProgress.html",
+			"Manager/ManagerMoveJob.html",
+			"Manager/ManagerIntegratedFunction.html",
+			"Manager/Manager_TaskManagement.html",
+			"Manager/Manager_work_list.html",
+			"Manager/Manager_CustomerDemands.html",
+			"Manager/ManagerWorkOrder_assessment_link.html",
+			"Manager/Maneger_BusinessProgressShrink.html",
+			"Manager/Manager_fastCheck.html"
+		]
+	},
+	"Manager/Manager_workList.html": {
+		"resources": [
+			"images/back.png",
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"js/mui.min.js",
+			"js/hui-tab.js",
+			"css/hui.css",
+			"images/ti.png",
+			"js/hui.js"
+		],
+		"refer": [
+			"Manager/Manager_workOrdersAccepted.html",
+			"Manager/Manager_businessProgress.html"
+		]
+	},
+	"Manager/Manager_workOrdersAccepted.html": {
+		"resources": [
+			"css/mui.min.css",
+			"css/mui.css",
+			"images/RightArrow.png"
+		],
+		"refer": [
+			"Manager/ElectricityInformation.html",
+			"Manager/CapacityList.html",
+			"Manager/PersonnelSetUp.html"
+		]
+	},
+	"Manager/ElectricityInformation.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css"
+		],
+		"refer": []
+	},
+	"Manager/CapacityList.html": {
+		"resources": [
+			"css/mui.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf"
+		],
+		"refer": []
+	},
+	"Manager/Manager_personalCenter.html": {
+		"resources": [
+			"images/RightArrow.png",
+			"images/BottomCenterButton.png",
+			"images/Avatar.png",
+			"images/notification.png",
+			"images/versionUpdate.png",
+			"images/quit.png",
+			"images/PasswordManagement.png",
+			"fonts/mui.ttf",
+			"images/PersonalCenterBG.jpg",
+			"images/accountInformation.png",
+			"css/mui.css",
+			"images/plus.png",
+			"js/mui.view.js",
+			"images/Configurationmanagement.png",
+			"js/mui.min.js",
+			"images/Personalcenter.png",
+			"images/information.png"
+		],
+		"refer": [
+			"Manager/Manager_ConversList.html"
+		]
+	},
+	"Manager/ManagerStatisticsShow.html": {
+		"resources": [
+			"js/hui-tab.js",
+			"images/VisualizeTheChart.png",
+			"css/hui.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"js/hui.js",
+			"css/mui.css",
+			"js/hui-picker.js"
+		],
+		"refer": [
+			"Manager/ManagerWorkOrder_assessment_link.html"
+		]
+	},
+	"Manager/ManagerWorkOrder_assessment_link.html": {
+		"refer": [
+			"Manager/Manager_work_list.html"
+		],
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css"
+		]
+	},
+	"Manager/Manager_work_list.html": {
+		"resources": [
+			"css/mui.css",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"Manager/Manager_chart.html"
+		]
+	},
+	"Manager/Manager_businessProgress.html": {
+		"resources": [
+			"images/overtime.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"images/IntermediateCheck.png",
+			"css/mui.css",
+			"images/BusinessProgressBar.png",
+			"images/back_Btn.png"
+		],
+		"refer": [
+			"Manager/ManagePersonnelEvaluation.html"
+		]
+	},
+	"Manager/ManagePersonnelEvaluation.html": {
+		"resources": [
+			"images/avator.png",
+			"css/hui.css",
+			"js/hui-star.js",
+			"js/hui.js",
+			"css/mui.css",
+			"fonts/iconfont.woff"
+		],
+		"refer": []
+	},
+	"Manager/PersonnelSetUp.html": {
+		"resources": [
+			"js/hui-select-beautify.js",
+			"css/hui.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"js/hui.js",
+			"css/mui.css",
+			"fonts/iconfont.woff"
+		],
+		"refer": []
+	},
+	"Manager/ManagerMoveJob.html": {
+		"resources": [
+			"images/willtimeout.png",
+			"images/overtime.png",
+			"css/hui.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"fonts/iconfont.woff",
+			"js/hui-select-beautify.js"
+		],
+		"refer": [
+			"Manager/ManagerIntermediateCheck.html",
+			"Manager/Manager_SiteSurvey.html"
+		]
+	},
+	"Manager/ManagerIntermediateCheck.html": {
+		"resources": [
+			"css/hui.css",
+			"css/mui.css"
+		],
+		"refer": []
+	},
+	"Manager/ManagerIntegratedFunction.html": {
+		"resources": [
+			"js/hui-tab.js",
+			"css/hui.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"js/hui.js",
+			"css/mui.css",
+			"fonts/iconfont.woff",
+			"js/hui-accordion.js",
+			"js/jquery-2.1.1.min.js",
+			"images/no1.png",
+			"images/avator.png",
+			"images/upArrow.png",
+			"images/downArrow.png",
+			"images/no2.png",
+			"images/henggang.png",
+			"images/no3.png",
+			"js/mui.picker.js",
+			"img/shuju.png"
+		],
+		"refer": [
+			"Manager/ManagePersonnelEvaluation.html",
+			"Manager/ManagerNotification.html"
+		]
+	},
+	"Manager/ManagerNotification.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css"
+		],
+		"refer": []
+	},
+	"SeniorEngineer/index3.html": {
+		"resources": [
+			"images/weather.png",
+			"images/mail.png",
+			"js/echarts.js",
+			"images/BusinessProgress.png",
+			"images/Mention_level.png",
+			"images/BottomNavigationCenterButton.png",
+			"images/Personalcenter.png",
+			"images/MessagePush.png",
+			"images/banner.png",
+			"images/information.png",
+			"images/taskProgress.png",
+			"images/StatisticsShow.png",
+			"css/mui.css"
+		],
+		"refer": [
+			"SeniorEngineer/SeniorEngineer_ToRaiseWorkOrders.html",
+			"SeniorEngineer/SeniorEngineer_WorkList.html",
+			"SeniorEngineer/SeniorEngineer_IntegratedFunction.html",
+			"SeniorEngineer/SeniorEngineer_NumberOfDistribution.html",
+			"SeniorEngineer/SeniorEngineer_Onthewaybill.html",
+			"SeniorEngineer/SeniorEngineer_Timeouts.html",
+			"SeniorEngineer/SeniorEnginner_Early_warning.html",
+			"SeniorEngineer/SeniorEngineer_personalCenter.html"
+		]
+	},
+	"SeniorEngineer/SeniorEngineer_ToRaiseWorkOrders.html": {
+		"resources": [
+			"images/willtimeout.png",
+			"images/overtime.png",
+			"css/hui.css",
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"fonts/iconfont.woff",
+			"js/hui-select-beautify.js",
+			"js/hui-tab.js",
+			"js/hui.js"
+		],
+		"refer": [
+			"SeniorEngineer/SeniorEngineer_MentionProcessing.html"
+		]
+	},
+	"SeniorEngineer/SeniorEngineer_WorkList.html": {
+		"resources": [
+			"images/willtimeout.png",
+			"images/overtime.png",
+			"css/hui.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"fonts/iconfont.woff"
+		],
+		"refer": [
+			"SeniorEngineer/SeniorEngineer_BusinessProgress.html",
+			"SeniorEngineer/SeniorEngineer_MentionProcessing.html"
+		]
+	},
+	"SeniorEngineer/SeniorEngineer_MentionProcessing.html": {
+		"resources": [
+			"css/mui.css"
+		],
+		"refer": []
+	},
+	"SeniorEngineer/SeniorEngineer_BusinessProgress.html": {
+		"resources": [
+			"images/IntermediateCheck.png",
+			"css/mui.css",
+			"images/BusinessProgressBar.png"
+		],
+		"refer": []
+	},
+	"SeniorEngineer/SeniorEngineer_IntegratedFunction.html": {
+		"resources": [
+			"js/hui-select-beautify.js",
+			"js/hui-tab.js",
+			"images/avator.png",
+			"css/hui.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"js/hui-star.js",
+			"js/hui.js",
+			"css/mui.css",
+			"fonts/iconfont.woff"
+		],
+		"refer": []
+	},
+	"SeniorEngineer/SeniorEngineer_NumberOfDistribution.html": {
+		"resources": [
+			"css/mui.css",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"SeniorEngineer/SeniorEngineer_VisualDisplay.html",
+			"SeniorEngineer/Manager_work_list.html"
+		]
+	},
+	"SeniorEngineer/SeniorEngineer_VisualDisplay.html": {
+		"resources": [
+			"images/VisualizeTheChart.png",
+			"SeniorEngineer/dongguan.json",
+			"css/hui.css",
+			"js/echarts.js",
+			"js/hui-tab.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"js/hui.js",
+			"css/mui.css",
+			"images/map.png",
+			"images/map2.png",
+			"js/hui-picker.js",
+			"images/map-n.png"
+		],
+		"refer": [
+			"SeniorEngineer/ManagerWorkOrder_assessment_link.html"
+		]
+	},
+	"SeniorEngineer/Manager_work_list.html": {
+		"resources": [
+			"css/mui.css"
+		],
+		"refer": []
+	},
+	"SeniorEngineer/ManagerWorkOrder_assessment_link.html": {
+		"refer": [
+			"SeniorEngineer/Manager_work_list.html"
+		],
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.css"
+		]
+	},
+	"SeniorEngineer/SeniorEngineer_Onthewaybill.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css"
+		],
+		"refer": []
+	},
+	"SeniorEngineer/SeniorEngineer_Timeouts.html": {
+		"resources": [
+			"images/overtime.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css"
+		],
+		"refer": []
+	},
+	"SeniorEngineer/SeniorEnginner_Early_warning.html": {
+		"resources": [
+			"images/willtimeout.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css"
+		],
+		"refer": []
+	},
+	"SeniorEngineer/SeniorEngineer_personalCenter.html": {
+		"resources": [
+			"images/Avatar.png",
+			"images/BottomCenterButton.png",
+			"images/RightArrow.png",
+			"images/notification.png",
+			"images/PasswordManagement.png",
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"images/accountInformation.png",
+			"images/versionUpdate.png",
+			"js/mui.min.js",
+			"images/quit.png",
+			"images/PersonalCenterBG.jpg",
+			"images/Personalcenter.png",
+			"images/information.png",
+			"images/plus.png",
+			"js/mui.view.js",
+			"images/Configurationmanagement.png"
+		],
+		"refer": [
+			"SeniorEngineer/SeniorEngineer_ConversList.html"
+		]
+	},
+	"Engineer/personalCenter.html": {
+		"resources": [
+			"images/BottomCenterButton.png",
+			"images/Avatar.png",
+			"images/notification.png",
+			"images/versionUpdate.png",
+			"images/quit.png",
+			"images/PasswordManagement.png",
+			"images/PersonalCenterBG.jpg",
+			"images/accountInformation.png",
+			"css/mui.css",
+			"images/Configurationmanagement.png",
+			"images/RightArrow.png",
+			"images/plus.png",
+			"js/mui.view.js",
+			"js/mui.min.js"
+		],
+		"refer": [
+			"Engineer/ConversList.html"
+		]
+	},
+	"Engineer/notification.html": {
+		"resources": [
+			"css/mui.css"
+		],
+		"refer": []
+	},
+	"Manager/Manager_SiteSurvey.html": {
+		"resources": [
+			"css/hui.css",
+			"js/hui-accordion.js",
+			"css/mui.css",
+			"layer_mobile/need/layer.css"
+		],
+		"refer": [
+			"Manager/Maneger_contactClients.html",
+			"Manager/Manager_chart.html"
+		]
+	},
+	"Engineer/ConversList.html": {
+		"resources": [
+			"images/avator.png",
+			"css/mui.css"
+		],
+		"refer": [
+			"Engineer/chart.html",
+			"Engineer/personalCenter.html"
+		]
+	},
+	"Engineer/chart.html": {
+		"resources": [
+			"images/customer-dialogue.png",
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"js/mui.imageViewer.js",
+			"css/app.css",
+			"css/mui.imageviewer.css",
+			"js/arttmpl.js"
+		],
+		"refer": []
+	},
+	"Manager/Manager_ConversList.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.css",
+			"images/avator.png"
+		],
+		"refer": [
+			"Manager/Manager_chart.html"
+		]
+	},
+	"Engineer/BusinessProgressShrink.html": {
+		"resources": [
+			"images/noscluel.png",
+			"images/noselect@2x.png",
+			"images/selected@2x.png",
+			"images/schedule2x.png",
+			"css/mui.css",
+			"images/select@2x.png",
+			"images/overtime.png"
+		],
+		"refer": [
+			"Engineer/businessProgress.html",
+			"Engineer/chart.html"
+		]
+	},
+	"Engineer/MoveJob.html": {
+		"resources": [
+			"js/hui-tab.js",
+			"css/hui.css",
+			"layer_mobile/need/layer.css",
+			"css/mui.css",
+			"js/hui-select-beautify.js",
+			"fonts/mui.ttf",
+			"js/hui.js",
+			"layer_mobile/layer.js",
+			"fonts/iconfont.woff",
+			"js/jquery-2.1.1.min.js",
+			"js/mui.min.js"
+		],
+		"refer": [
+			"Engineer/siteSurvey2.html"
+		]
+	},
+	"Engineer/assessment_link.html": {
+		"resources": [
+			"css/mui.css"
+		],
+		"refer": [
+			"Engineer/Timeouts.html"
+		]
+	},
+	"Manager/Manager_TaskManagement.html": {
+		"resources": [
+			"css/hui.css",
+			"layer_mobile/need/layer.css",
+			"js/hui-select-beautify.js",
+			"js/hui-tab.js",
+			"fonts/mui.ttf",
+			"js/hui.js",
+			"css/mui.css",
+			"layer_mobile/layer.js",
+			"fonts/iconfont.woff",
+			"js/jquery-2.1.1.min.js",
+			"js/mui.min.js",
+			"images/overtime.png",
+			"images/willtimeout.png"
+		],
+		"refer": [
+			"Manager/Maneger_TaskDetails.html",
+			"Manager/Manager_SiteSurvey.html",
+			"Manager/Manager_CompletionInspection.html",
+			"Manager/Maneger_IntermediateInspectionSubmissions.html",
+			"Manager/Manager_ComponentTeam.html",
+			"Manager/Manager_questionList.html"
+		]
+	},
+	"Manager/Maneger_contactClients.html": {
+		"resources": [
+			"css/mui.css"
+		],
+		"refer": []
+	},
+	"Engineer/siteSurvey2.html": {
+		"resources": [
+			"css/mui.css",
+			"layer_mobile/need/layer.css",
+			"css/hui.css",
+			"layer/layer.js",
+			"layer/skin/default/layer.css",
+			"js/jquery-2.1.1.min.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"layer_mobile/layer.js"
+		],
+		"refer": [
+			"Engineer/CustomerMaintenance.html"
+		]
+	},
+	"Engineer/CustomerMaintenance.html": {
+		"resources": [
+			"images/photo3.png",
+			"images/photo1.png",
+			"images/photo2.png",
+			"js/mui.js",
+			"css/mui.css",
+			"layer_mobile/need/layer.css"
+		],
+		"refer": [
+			"Engineer/CheckBeforePreparation.html",
+			"Engineer/IntermediateCheck.html",
+			"Engineer/InspectionRecords.html",
+			"Engineer/signed.html"
+		]
+	},
+	"Engineer/CheckBeforePreparation.html": {
+		"resources": [
+			"css/mui.css"
+		],
+		"refer": []
+	},
+	"Engineer/CompletionMap.html": {
+		"resources": [
+			"images/hook.png"
+		],
+		"refer": []
+	},
+	"Engineer/InspectionRecords1.html": {
+		"resources": [
+			"css/mui.css"
+		],
+		"refer": [
+			"Engineer/CompletionMap.html"
+		]
+	},
+	"Engineer/InspectionRecords.html": {
+		"refer": [
+			"Engineer/InspectionRecords1.html"
+		],
+		"resources": []
+	},
+	"Engineer/signed.html": {
+		"resources": [
+			"js/jSignature.min.noconflict.js",
+			"css/mui.css",
+			"js/jsSignature.js"
+		],
+		"refer": []
+	},
+	"Manager/Manager_chart.html": {
+		"resources": [
+			"images/customer-dialogue.png",
+			"css/mui.css",
+			"js/mui.imageViewer.js",
+			"css/app.css",
+			"css/mui.imageviewer.css",
+			"js/arttmpl.js"
+		],
+		"refer": []
+	},
+	"Engineer/Timeouts.html": {
+		"resources": [
+			"css/mui.css"
+		],
+		"refer": []
+	},
+	"Manager/Manager_CustomerDemands.html": {
+		"resources": [
+			"js/hui-picker.js",
+			"fonts/mui.ttf",
+			"js/hui-select-beautify.js",
+			"css/hui.css",
+			"js/hui.js",
+			"fonts/iconfont.woff"
+		]
+	},
+	"Manager/Maneger_InspectionRecords.html": {
+		"refer": [
+			"Manager/Maneger_InspectionRecords1.html"
+		],
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css"
+		]
+	},
+	"Manager/Manager_CompletionInspection.html": {
+		"refer": [
+			"Manager/Maneger_InspectionRecords.html",
+			"Manager/Manager_CheckBeforePreparation.html",
+			"Manager/Manager_question.html",
+			"Manager/Manager_questionList.html"
+		],
+		"resources": [
+			"js/jquery-2.1.1.min.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css"
+		]
+	},
+	"Manager/Maneger_InspectionRecords1.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css"
+		],
+		"refer": [
+			"Manager/Maneger_CompletionMap.html"
+		]
+	},
+	"Manager/Maneger_CompletionMap.html": {
+		"resources": [
+			"images/hook.png"
+		]
+	},
+	"Manager/Manager_CheckBeforePreparation.html": {
+		"resources": [
+			"js/mui.js",
+			"js/jquery-2.1.1.min.js",
+			"css/mui.css"
+		]
+	},
+	"Manager/Manager_question.html": {
+		"resources": [
+			"js/jquery-2.1.1.min.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css"
+		]
+	},
+	"Manager/Manager_questionList.html": {
+		"resources": [
+			"js/jquery-2.1.1.min.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css"
+		],
+		"refer": [
+			"Manager/Manager_questionEdit.html"
+		]
+	},
+	"Manager/Maneger_BusinessProgressShrink.html": {
+		"resources": [
+			"images/noscluel.png",
+			"images/overtime.png",
+			"images/select@2x.png",
+			"images/noselect@2x.png",
+			"images/selected@2x.png",
+			"images/schedule2x.png",
+			"fonts/mui.ttf",
+			"layer_mobile/need/layer.css",
+			"layer_mobile/layer.js"
+		],
+		"refer": [
+			"Manager/Manager_chart.html",
+			"Manager/Manager_businessProgress.html"
+		]
+	},
+	"Manager/Manager_ComponentTeam.html": {
+		"resources": [
+			"js/mui.picker.js",
+			"js/mui.poppicker.js",
+			"css/mui.poppicker.css",
+			"css/mui.picker.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css"
+		]
+	},
+	"Manager/Manager_fastCheck.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"js/mui.js",
+			"css/mui.css",
+			"Manager/Manager_fastCheck.html"
+		],
+		"refer": [
+			"Manager/Manager_fastCheck.html",
+			"Manager/Manager_fastCheckdetails.html"
+		]
+	},
+	"Manager/Manager_questionEdit.html": {
+		"resources": [
+			"js/jquery-2.1.1.min.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.css"
+		]
+	},
+	"Manager/Manager_fastCheckdetails.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"js/mui.js",
+			"css/mui.css",
+			"images/kfgdjdt.jpg"
+		]
+	}
 }

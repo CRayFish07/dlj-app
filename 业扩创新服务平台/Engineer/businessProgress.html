@@ -109,6 +109,10 @@
 		textarea {
 			padding:0px;
 		}
+		.right-all-btn button{
+			background: #009FE9;
+			color: #fff;
+		}
 	</style>
 
 	<body style="position: absolute;height: 100%;background-color: #fff;">
@@ -161,7 +165,10 @@
 					<h4>节点状态：</h4>
 					<p>未完成</p>
 				</div>
-				<button class="communicationBtn">实时沟通</button>
+				<div class="right-all-btn" style="display: flex; padding-right:10px;">
+					<button style="flex-grow: 1;" class="communicationBtn">实时沟通</button>
+					<button style="flex-grow: 1;" class="questionMemo">问题备忘录</button>					
+				</div>
 			</div>
 			<!--蒙版-->
 			<div class="mui-backdrop" style="display: none;"></div>
@@ -223,7 +230,14 @@
 					id:'chart'
 				})
 			})
-				
+			
+			mui('.right').on('tap','.questionMemo',function(){
+				mui.openWindow({
+					url:'questionList.html',
+					id:'questionList'
+				})
+			})
+			
 			var titleH4 = localStorage.getItem('TitleH4');
 			if( (titleH4 != '') || (titleH4 != null) ) {
 				$('#title h4').html(titleH4);

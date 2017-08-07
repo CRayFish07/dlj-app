@@ -65,7 +65,7 @@
 		<header>
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1>竣工检验环节</h1>
-			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 10px;"></span>
 		</header>
 		<div class="mui-content">
 			<div class="detai">
@@ -139,6 +139,7 @@
 		<div class="btns">
 			<button class="btn" id="CheckBeforePreparationBtn">检查前准备</button>
 			<button class="btn" id="InspectionRecordsBtn">检查记录</button>
+			<button class="btn" id="questionBtn">问题备忘录</button>
 		</div>
 
 		</div>
@@ -198,7 +199,13 @@
 					id: 'Maneger_InspectionRecords'
 				})
 			})
-
+			
+			document.getElementById('questionBtn').addEventListener('tap',function(){
+				mui.openWindow({
+					url: 'Manager_questionList.html',
+					id: 'Manager_questionList'
+				})
+			})
 			//			进度条
 			mui("#demo1").progressbar({
 				progress: 75

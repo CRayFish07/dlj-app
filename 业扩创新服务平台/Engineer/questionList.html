@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js"></script>
+		<style>
+			button{
+				height: 30px;
+				border-color: #73D5F7;
+				border-radius: 10px;
+				margin: 6px;
+				float: right;
+				color: #73D5F7;
+			}
+			.wrap{
+				clear: both;
+				background-color: #fff;
+				overflow: hidden;
+				margin-bottom: 15px;
+			}
+			.workOrder-form .taskCase{
+				color: #007AFF;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1>问题备忘录</h1>
+		</header>
+		<div class="mui-content">
+			<div class="wrap">
+				<div class="workOrder">
+					<div class="workOrder-form">
+						<p>这里是备忘录信息这里是备忘录信息这里是备忘录信息这里是备忘录信息这里是备忘录信息</p>
+						<p>环节：<span class="taskCase">竣工检验</span></p>
+						<p>时间：2017年7月10日</p>
+						<p>负责人：李天明</p>
+					</div>
+				</div>
+			</div>
+			<div class="wrap">
+				<div class="workOrder">
+					<div class="workOrder-form">
+						<p>这里是备忘录信息这里是备忘录信息这里是备忘录信息这里是备忘录信息这里是备忘录信息</p>
+						<p>环节：<span class="taskCase">中间检查</span></p>
+						<p>时间：2017年7月10日</p>
+						<p>负责人：黄渤</p>
+					</div>
+				</div>
+			</div>
+			<div class="wrap">
+				<div class="workOrder">
+					<div class="workOrder-form">
+						<p>这里是备忘录信息这里是备忘录信息这里是备忘录信息这里是备忘录信息这里是备忘录信息</p>
+						<p>环节：<span class="taskCase">图纸审核</span></p>
+						<p>时间：2017年7月10日</p>
+						<p>负责人：李亮</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			mui.init()
+			$(function(){
+				$('.taskCaseEdit').on('tap',function(){
+					mui.openWindow({
+						url: 'Manager_questionEdit.html',
+						id: 'Manager_questionEdit'
+					})
+				})			
+			})
+			
+		</script>
+	</body>
+</html>

@@ -22,7 +22,9 @@
 		
 		.btn,
 		.btn2,
-		.btn3 {
+		.btn3,
+		.btn4,
+		.btn5 {
 			height: 30px;
 			border-color: #73D5F7;
 			border-radius: 10px;
@@ -36,7 +38,7 @@
 			color: #ccc;
 		}
 		
-		.btn3 {
+		.btn3,.btn4,.btn5 {
 			border-color: #47B8ED;
 			color: #47B8ED;
 		}
@@ -88,13 +90,14 @@
 		.layui-m-layercont {
 			color: #fff;
 		}
+		
 	</style>
 
 	<body>
 		<header>
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1>任务管理</h1>
-			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 28px;"></span>
+			<span class="mui-icon mui-icon-home" style="color:#fff;float: right;margin-right:12px;margin-top: 10px;"></span>
 		</header>
 		<div class="hui-tab">
 			<div class="hui-tab-title">
@@ -171,7 +174,7 @@
 						</div>
 					</div>
 					<section class="main-body two">
-						<!--<div class="wrap">
+						<div class="wrap">
 							<div class="workOrder">
 								<div class="workOrder-form">
 									<p>工单号：2940478341212</p>
@@ -179,10 +182,34 @@
 									<p>客户地址：广州市黄埔大道西平云路163号</p>
 									<p class="progress">业务进度：<span class="CompletionInspectionColor">竣工检验</span></p>
 								</div>
+								<div class="state-icon">
+									<img src="../images/overtime.png" />
+									<span class="overtime">已超时9日</span>
+								</div>
 							</div>
 							<button type="button" class="btn2">回 退</button>
-							<button type="button" class="btn3">用户工程进度</button>
-						</div>-->
+							<button type="button" class="btn3">用户工程</button>
+							<button type="button" class="btn4">备忘录</button>
+							<button type="button" class="btn5">组建团队</button>
+						</div>
+						<div class="wrap">
+							<div class="workOrder">
+								<div class="workOrder-form">
+									<p>工单号：2940478341212</p>
+									<p>客户名称：广州科腾信息技术有限公司</p>
+									<p>客户地址：广州市黄埔大道西平云路163号</p>
+									<p class="progress">业务进度：<span class="CompletionInspectionColor">竣工检验</span></p>
+								</div>
+								<div class="state-icon">
+									<img src="../images/willtimeout.png" />
+									<span class="overtime">还剩9日</span>
+								</div>
+							</div>
+							<button type="button" class="btn2">回 退</button>
+							<button type="button" class="btn3">用户工程</button>
+							<button type="button" class="btn4">备忘录</button>
+							<button type="button" class="btn5">组建团队</button>
+						</div>
 					</section>
 				</div>
 				<div class="hui-tab-item hui-list">
@@ -274,7 +301,7 @@
 							var html = '<div class="wrap"><div class="workOrder"><div class="workOrder-form"><p>工单号：<span>' + data.taskList[i].taskCode + '</span></p><p>客户名称：' + data.taskList[i].userName + '</p><p>客户地址：' + data.taskList[i].electricityAddress + '</p><p class="progress">业务进度：<span class="UpcomingColor">待办</span></p></div></div><button type="button" class="btn2">回 退</button> <button type="button" class="btn">签 收</button></div>';
 							$('.one').append(html);
 						} else if(data.taskList[i].partNumberName == '现场勘查' || data.taskList[i].partNumberName == '中间检查' || data.taskList[i].partNumberName == '竣工检验') {
-							var html2 = '<div class="wrap"><div class="workOrder"><div class="workOrder-form"><p>工单号：' + data.taskList[i].taskCode + '</p><p>客户名称：' + data.taskList[i].userName + '</p><p>客户地址：' + data.taskList[i].electricityAddress + '</p><p class="progress">业务进度：<span class="CompletionInspectionColor">' + data.taskList[i].partNumberName + '</span></p></div></div><button type="button" class="btn2">回 退</button> <button type="button" class="btn3">用户工程进度</button></div>';
+							var html2 = '<div class="wrap"><div class="workOrder"><div class="workOrder-form"><p>工单号：' + data.taskList[i].taskCode + '</p><p>客户名称：' + data.taskList[i].userName + '</p><p>客户地址：' + data.taskList[i].electricityAddress + '</p><p class="progress">业务进度：<span class="CompletionInspectionColor">' + data.taskList[i].partNumberName + '</span></p></div></div><button type="button" class="btn2">回 退</button> <button type="button" class="btn3">用户工程</button> <button type="button" class="btn4">备忘录</button> <button type="button" class="btn5">组建团队</button> </div>';
 							$('.two').append(html2);
 						} else if(data.taskList[i].partNumberName == '已办') {
 							var html3 = '<div class="wrap"><div class="workOrder"><div class="workOrder-form"><p>工单号：' + data.taskList[i].taskCode + '</p><p>客户名称：' + data.taskList[i].userName + '</p><p>客户地址：' + data.taskList[i].electricityAddress + '</p><p class="progress">业务进度：<span class="completedColor">' + data.taskList[i].partNumberName + '</span></p></div></div></div>';
@@ -345,6 +372,20 @@
 						}
 					})
 				});
+				$('.two').on('tap', '.btn4', function() {
+					mui.openWindow({
+						url: 'Manager_questionList.html',
+						id: 'Manager_questionList'
+					})
+					
+				})
+				$('.two').on('tap', '.btn5', function() {
+					mui.openWindow({
+						url: 'Manager_ComponentTeam.html',
+						id: 'Manager_ComponentTeam'
+					})
+					
+				})
 
 				//			在办项点击回退事件
 				mui('.main-body').on('tap', '.btn2', function() {
